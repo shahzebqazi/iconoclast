@@ -10,15 +10,18 @@
 
 ## About
 
-**Iconoclast Audio** is where we share **audio engineering** in public: experiments, releases, and process—not only polished demos. This repository is the **face of our presence** on GitHub: narrative here, longer writing in **docs**, and a small **website** you can open anywhere.
+**Iconoclast Audio** is where we share **audio engineering** in public: experiments, releases, and process—not only polished demos.
+
+**Canonical public site (not this README):** **[iconoclastaud.io/site/](https://iconoclastaud.io/site/)** — static HTML built from [`site/`](site/). The GitHub README is repo documentation only; the live homepage is under **`/site/`** on the custom domain.
 
 | | |
 | :--- | :--- |
-| **Website** | **[Live site (GitHub Pages)](https://shahzebqazi.github.io/iconoclast/)** — static HTML under [`site/`](site/). Deployed with **GitHub Actions** (see [AGENTS.md](AGENTS.md)). If it 404s, set Pages **Source** to **GitHub Actions** and run the workflow on `main`. |
-| **This repo** | **[github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)** — hub, `docs/` (Markdown), and [`site/`](site/) (public pages). |
+| **Website (canonical)** | **[https://iconoclastaud.io/site/](https://iconoclastaud.io/site/)** — deployed with **GitHub Actions** (see [AGENTS.md](AGENTS.md)). Apex `https://iconoclastaud.io/` redirects to `/site/`. |
+| **GitHub Pages (project URL)** | `https://shahzebqazi.github.io/iconoclast/site/` — same content; **`/site/`** is the site root. |
+| **This repo** | **[github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)** — hub, `docs/` (Markdown), and [`site/`](site/) (published site source). |
 | **Organization** | **[github.com/shahzebqazi](https://github.com/shahzebqazi)** — our other public repositories and projects. |
 
-**Site map** (folders use `index.html` so URLs stay clean): `/` home, `/ritual/`, `/rates/`, `/links/`, `/contact/` (same link list as `/links/`), `/legal/`, `/faq/`, plus `/404.html` for missing pages. **Asset gallery** (generated): **`/public/`** lists favicons, OG images, and theme files from `npm run assets:build`. **Local preview:** open `site/index.html` in a browser, or run `python -m http.server` from inside `site/` and open `http://localhost:8000/`.
+**Site map** (live URLs are under **`https://iconoclastaud.io/site/`**): home, `ritual/`, `rates/`, `links/`, `contact/`, `legal/`, `faq/`, `404.html`. **Generated asset gallery:** `site/public/` → **`/site/public/`** (`npm run assets:build`). **Local preview:** `cd site && python3 -m http.server` → paths match production without the `/site/` prefix.
 
 ## Documentation
 
