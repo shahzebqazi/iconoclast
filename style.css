@@ -1,12 +1,23 @@
-/* Iconoclast Audio — minimal GitHub Pages fallback */
+/* Iconoclast Audio — Bauhaus-inspired palette (rose gold, gold, baby blue, seafoam) */
 
 :root {
   color-scheme: light dark;
+  /* Neutrals — dark */
   --bg: #0f0f10;
-  --fg: #e8e8ea;
-  --muted: #9a9aa3;
-  --accent: #c9a227;
+  --fg: #eceae7;
+  --muted: #9c9893;
   --border: #2a2a2e;
+  /* Bauhaus accents — dark */
+  --rose-gold: #c9a090;
+  --gold: #c4a035;
+  --baby-blue: #8ec5f2;
+  --baby-blue-hover: #b8d4ff;
+  --seafoam: #6eb8a8;
+  /* Semantic */
+  --accent: var(--rose-gold);
+  --link: var(--baby-blue);
+  --link-hover: var(--baby-blue-hover);
+  --on-accent: #0f0f10;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
     sans-serif;
   line-height: 1.5;
@@ -42,7 +53,7 @@ body {
   height: auto;
   padding: 0.5rem 1rem;
   background: var(--accent);
-  color: var(--bg);
+  color: var(--on-accent);
   z-index: 100;
   border-radius: 4px;
 }
@@ -64,6 +75,7 @@ main,
   font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: -0.02em;
+  color: var(--gold);
 }
 
 .tagline {
@@ -97,13 +109,13 @@ ul {
 }
 
 a {
-  color: #7eb8ff;
+  color: var(--link);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
 a:hover {
-  color: #b8d4ff;
+  color: var(--link-hover);
 }
 
 a:focus-visible {
@@ -135,18 +147,18 @@ a:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: #f6f6f4;
-    --fg: #1a1a1c;
-    --muted: #5c5c64;
-    --accent: #8a6a0a;
-    --border: #d4d4ce;
-  }
-
-  a {
-    color: #0b57d0;
-  }
-
-  a:hover {
-    color: #0842a0;
+    --bg: #f4f2ef;
+    --fg: #141210;
+    --muted: #5c5854;
+    --border: #d8d4cd;
+    --rose-gold: #9a6b58;
+    --gold: #8a6f18;
+    --baby-blue: #1e5f9e;
+    --baby-blue-hover: #164a7a;
+    --seafoam: #2d7a6a;
+    --accent: var(--rose-gold);
+    --link: var(--baby-blue);
+    --link-hover: var(--baby-blue-hover);
+    --on-accent: #141210;
   }
 }
