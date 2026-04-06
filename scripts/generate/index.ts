@@ -98,7 +98,7 @@ async function main(): Promise<void> {
 
   const galleryHtml = buildGalleryHtml(assetCatalog, brand.name, {
     assetPrefix: "generated/",
-    homeHref: "https://iconoclastaud.io/",
+    homeHref: "https://iconoclastaud.io/site/",
   });
   await mkdir(path.join(repoRoot, "site", "public"), { recursive: true });
   await writeFile(path.join(repoRoot, "site", "public", "index.html"), galleryHtml, "utf8");

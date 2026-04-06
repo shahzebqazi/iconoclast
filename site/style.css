@@ -359,6 +359,11 @@ code {
   margin-bottom: 0.5rem;
 }
 
+.site-footer .footer-links {
+  margin: 0 0 0.5rem;
+  line-height: 1.5;
+}
+
 .site-footer a {
   font-weight: 500;
 }

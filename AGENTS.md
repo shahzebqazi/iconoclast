@@ -6,27 +6,29 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 
 | Path | Role |
 |------|------|
-| `site/` | **Public website** — HTML + CSS; routes like `ritual/index.html` → `/ritual/` on Pages |
-| `site/public/` | **Generated asset gallery** — `index.html` plus `generated/` from `npm run assets:build` (URL `/public/`) |
-| `site/404.html` | GitHub Pages custom not-found page |
-| `assets/readme-banner.svg` | Banner image for README only (GitHub Markdown has no custom CSS; not the live site theme) |
-| `README.md` | Public landing; organization and visitor copy |
-| `docs/executive-summary.md` | Longer narrative and product alignment defaults (source; mirrored in `site/executive-summary.html`) |
-| `AGENTS.md` | This file (source; summary in `site/agents.html`) |
+| `site/` | **Public website source** — HTML + CSS (edit here); live under **`/site/`** on the host |
+| `site/public/` | **Generated asset gallery** — `index.html` plus `generated/` from `npm run assets:build` (URL **`/site/public/`**) |
+| `index.html`, `404.html`, `.nojekyll` (repo root) | **Pages apex** — copied into the deploy artifact; apex `index.html` redirects to **`/site/`** so the README is not the homepage |
+| `CNAME` | Custom domain `iconoclastaud.io` (copied into the Pages artifact root) |
+| `README.md` | GitHub org/repo landing (not the canonical marketing URL; use **`/site/`** on the domain) |
+| `docs/` | Markdown sources; not served as the public site |
+| `docs/executive-summary.md` | Longer narrative and product alignment defaults |
 | `docs/agent-prompt-typescript-github-pages.md` | Prompt for a future TypeScript GitHub Pages slice (replace `OWNER/REPO`) |
-| `.github/workflows/pages.yml` | Deploys **`site/`** to GitHub Pages |
+| `.github/workflows/pages.yml` | `npm run assets:build`, then assembles `_pages/` and deploys |
 
-## GitHub Pages
+## GitHub Pages (canonical URL)
 
-The live site is built from the **`site/`** directory using **GitHub Actions**, not “Deploy from a branch” at repo root.
+**Public site home:** **`https://iconoclastaud.io/site/`** — static pages and generated assets. The repo **README** only appears on github.com, not as the apex of the domain (apex **`/`** redirects to **`/site/`**).
 
-1. **Settings → Pages → Build and deployment**
-2. Set **Source** to **GitHub Actions** (not “Deploy from a branch” for the HTML site).
-3. The workflow **Deploy GitHub Pages** (`.github/workflows/pages.yml`) runs **`npm ci`** and **`npm run assets:build`**, then uploads `site/` as the Pages artifact on pushes to `main`.
+1. **Settings → Pages → Build and deployment** → **Source: GitHub Actions**
+2. **Custom domain:** `iconoclastaud.io` (DNS per GitHub Pages docs)
+3. Workflow runs **`npm ci`** and **`npm run assets:build`**, then builds **`_pages/`** = `site/` → **`site/`** + **`CNAME`** + repo-root **`index.html`**, **`404.html`**, **`.nojekyll`**
 
-**First-time setup:** After the workflow exists on `main`, GitHub may prompt once to approve the `github-pages` environment. The public URL is **`https://iconoclastaud.io/`** (see repo root `CNAME`). GitHub may also show a `github.io` URL on the Pages settings page; the custom domain is canonical.
+**GitHub project URL:** `https://<user>.github.io/<repo>/site/` — same content.
 
-**Editing content:** Change Markdown under `docs/` for version control on GitHub; update the matching HTML under `site/` when you want the public site to change (or automate that in a later slice).
+**First-time setup:** After the workflow exists on `main`, GitHub may prompt once to approve the `github-pages` environment.
+
+**Editing:** change **`site/`** (and asset scripts if needed); push to `main`.
 
 ## Next implementation slice
 
