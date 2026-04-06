@@ -4,6 +4,12 @@
     <strong>Public hub</strong> for our work on GitHub — sound, tools, and how we build them.<br />
     <sub>GitHub READMEs can’t load custom styles; the glass look above is baked into the banner image.</sub>
   </p>
+  <p>
+    <img src="assets/readme-logo-wordmark.png" alt="Iconoclast — AUDIO (metal wordmark)" height="72" />
+    &nbsp;&nbsp;
+    <img src="assets/readme-logo-mastering.png" alt="Iconoclast MASTERING (blackletter)" height="72" />
+  </p>
+  <p><sub>Wordmark and blackletter logos (transparent PNGs; copies of <code>site/public/generated/logo/</code>).</sub></p>
 </div>
 
 ---

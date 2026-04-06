@@ -142,9 +142,12 @@ body {
 }
 
 .site-nav .nav-brand img {
-  width: 1.35rem;
-  height: 1.35rem;
+  height: 1.75rem;
+  width: auto;
+  max-width: 9rem;
   flex-shrink: 0;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .site-nav .nav-sep {
@@ -341,6 +344,34 @@ a:focus-visible {
 
 .link-stack a:focus-visible {
   outline-offset: 4px;
+}
+
+.rates-hero-strip {
+  margin: 0 0 1rem;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.rates-hero-strip img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.rates-grid-img {
+  margin: 0 0 0.85rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.rates-grid-img img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .rates-grid {
