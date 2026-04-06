@@ -6,7 +6,7 @@ Copy everything below the line into a task for a coding agent that is refactorin
 
 ## Context
 
-The live site at **https://iconoclastaud.io/** (redirects to `/site/`) should keep its **palette and background** (deep base, radial gradients, accent blues, gold highlights) but must **not** feel like a stack of floating dashboard cards. Prior work over-used **glass panels** on every block, which reads as misaligned “cards” and fights the content.
+The live site at **https://iconoclastaud.io/** (repo **`site/`** is the published site root) should keep its **palette and background** (deep base, radial gradients, accent blues, gold highlights) but must **not** feel like a stack of floating dashboard cards. Prior work over-used **glass panels** on every block, which reads as misaligned “cards” and fights the content.
 
 ## UX review (findings to fix)
 
