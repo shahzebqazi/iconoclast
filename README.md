@@ -38,7 +38,7 @@
 
 ## Generated assets (MVP)
 
-- **Build:** `npm install` then `npm run assets:build` — writes **`site/public/generated/`** and **`site/public/index.html`** (gallery with descriptions; catalog in `scripts/generate/assetCatalog.ts`).
+- **Build:** `npm install` then `npm run assets:build` — writes **`site/public/generated/`** and **`site/public/index.html`** (gallery with descriptions; catalog in `scripts/generate/assetCatalog.ts`). The build runs vector templates, then **`postprocessAiIcons.ts`** (oni favicons from `scripts/generate/ai-cache/`, circular fireball logo).
 - **CI:** the Pages workflow runs the same build before deploy so `site/public/` stays in sync.
 - See `assets/MVP_ASSETS.md` for what ships from generators vs what you still supply (photography, final logo, copy).
 - Brand questions: `docs/BRAND_CONSULTATION.md`.
