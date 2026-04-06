@@ -80,6 +80,37 @@ export const assetCatalog: AssetEntry[] = [
     description: "1920×1080 raster export for static site hero slots.",
   },
   {
+    category: "Hero — AI (metal logo concepts)",
+    relativePath: "hero/ai-metal-hero-primary.png",
+    title: "AI hero — primary (gold / default)",
+    description:
+      "1920×1080 AI-generated wide hero: death-metal logo style, Leviathan cross, inverted pentagrams, grim reaper / occult motifs. Gold-on-charcoal palette (brand accent). Same image as gold-accent variant; stable filename for layouts.",
+  },
+  {
+    category: "Hero — AI (metal logo concepts)",
+    relativePath: "hero/ai-metal-hero-gold-accent.png",
+    title: "AI hero — gold accent",
+    description: "Palette: charcoal #06080d, antique gold #d4b84a, cool blue edge glow #8ab4ff.",
+  },
+  {
+    category: "Hero — AI (metal logo concepts)",
+    relativePath: "hero/ai-metal-hero-digital-cool.png",
+    title: "AI hero — digital (cool blue)",
+    description: "Palette: dominant electric blue #8ab4ff / cyan with sparse gold #d4b84a.",
+  },
+  {
+    category: "Hero — AI (metal logo concepts)",
+    relativePath: "hero/ai-metal-hero-ember-analog.png",
+    title: "AI hero — ember / analog",
+    description: "Palette: ember/rust #b85c4a, dark charcoal, gold sparks #d4b84a.",
+  },
+  {
+    category: "Hero — AI (metal logo concepts)",
+    relativePath: "hero/ai-metal-hero-vinyl-lab.png",
+    title: "AI hero — vinyl / lab",
+    description: "Palette: purple/violet #9b8bc9, lab green #5cb89a accents, gold glints #d4b84a.",
+  },
+  {
     category: "Theme & config",
     relativePath: "theme.css",
     title: "Theme tokens (CSS)",
