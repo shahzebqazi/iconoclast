@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Palette · Iconoclast Audio</title>
+    <meta
+      name="description"
+      content="Design reference: color tokens for Iconoclast Audio (same variables as the live site)."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="design-docs">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="design-nav" aria-label="Design documentation">
+        <a class="design-nav__live" href="https://iconoclastaud.io/">Live site</a>
+        <ul class="design-nav__pages">
+          <li>
+            <a href="palette.html" aria-current="page">Palette</a>
+          </li>
+          <li>
+            <a href="typography.html">Typography</a>
+          </li>
+        </ul>
+      </nav>
+      <h1>Palette</h1>
+      <p class="tagline">CSS custom properties in <code>site/style.css</code> — shared with the public site.</p>
+    </header>
+    <main id="main">
+      <section aria-labelledby="palette-heading">
+        <h2 id="palette-heading" class="visually-hidden">Color tokens</h2>
+        <p class="palette-lede">
+          Bauhaus-inspired accents (rose gold, gold, baby blue, seafoam) on warm neutrals. Border
+          tokens step from hairline to strong. In <strong>high contrast</strong> mode, colors map to
+          pure black and white for legibility.
+        </p>
+        <h3 class="palette-subheading">Neutrals &amp; surfaces</h3>
+        <table class="palette-table">
+          <thead>
+            <tr>
+              <th scope="col">Swatch</th>
+              <th scope="col">Role</th>
+              <th scope="col">Token</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="palette-swatch palette-swatch--bg" aria-hidden="true"></span></td>
+              <td>Background</td>
+              <td><code>--bg</code></td>
+            </tr>
+            <tr>
+              <td><span class="palette-swatch palette-swatch--fg" aria-hidden="true"></span></td>
+              <td>Foreground</td>
+              <td><code>--fg</code></td>
+            </tr>
+            <tr>
+              <td><span class="palette-swatch palette-swatch--muted" aria-hidden="true"></span></td>
+              <td>Muted</td>
+              <td><code>--muted</code></td>
+            </tr>
+            <tr>
+              <td><span class="palette-swatch palette-swatch--surface-subtle" aria-hidden="true"></span></td>
+              <td>Surface subtle</td>
+              <td><code>--surface-subtle</code></td>
+            </tr>
+            <tr>
+              <td><span class="palette-swatch palette-swatch--surface" aria-hidden="true"></span></td>
+              <td>Surface</td>
+              <td><code>--surface</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 class="palette-subheading">Borders</h3>
+        <table class="palette-table">
+          <thead>
+            <tr>
+              <th scope="col">Sample</th>
+              <th scope="col">Role</th>
+              <th scope="col">Token</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span
+                  class="palette-swatch palette-swatch--border"
+                  style="--swatch-border: var(--border-subtle)"
+                  aria-hidden="true"
+                ></span>
+              </td>
+              <td>Border subtle</td>
+              <td><code>--border-subtle</code></td>
+            </tr>
+            <tr>
+              <td>
+                <span
+                  class="palette-swatch palette-swatch--border"
+                  style="--swatch-border: var(--border)"
+                  aria-hidden="true"
+                ></span>
+              </td>
+              <td>Border</td>
+              <td><code>--border</code></td>
+            </tr>
+            <tr>
+              <td>
+                <span
+                  class="palette-swatch palette-swatch--border"
+                  style="--swatch-border: var(--border-strong)"
+                  aria-hidden="true"
+                ></span>
+              </td>
+              <td>Border strong</td>
+              <td><code>--border-strong</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 class="palette-subheading">Accents</h3>
+        <table class="palette-table">
+          <thead>
+            <tr>
+              <th scope="col">Swatch</th>
+              <th scope="col">Role</th>
+              <th scope="col">Token</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="palette-swatch palette-swatch--rose-gold" aria-hidden="true"></span></td>
+              <td>Rose gold (section labels, focus)</td>
+              <td><code>--accent</code> → <code>--rose-gold</code></td>
+            </tr>
+            <tr>
+              <td><span class="palette-swatch palette-swatch--gold" aria-hidden="true"></span></td>
+              <td>Gold (page title)</td>
+              <td><code>--gold</code></td>
+            </tr>
+            <tr>
+              <td><span class="palette-swatch palette-swatch--baby-blue" aria-hidden="true"></span></td>
+              <td>Links</td>
+              <td><code>--link</code> → <code>--baby-blue</code></td>
+            </tr>
+            <tr>
+              <td><span class="palette-swatch palette-swatch--seafoam" aria-hidden="true"></span></td>
+              <td>Seafoam (reserved)</td>
+              <td><code>--seafoam</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p><a href="https://iconoclastaud.io/">Home</a> · Design reference.</p>
+    </footer>
+  </body>
+</html>

@@ -25,13 +25,14 @@ These assumptions are in place unless you change them in a future revision:
 
 - **Brand:** Iconoclast Audio — audio engineering, not a generic SaaS landing.
 - **Tone:** Direct, technical, honest about WIP; no hype, no fake metrics.
+- **Visual / UX:** Flat static HTML and CSS under `site/style.css` — Bauhaus-inspired palette (rose gold, gold, baby blue, seafoam on warm neutrals), typography-led layout, borders and spacing instead of glass panels or card stacks. No decorative gradients or faux-3D chrome on the live pages.
 - **Scope v1:** Static content, accessible pages, no user accounts or API in the first TypeScript slice.
 - **Hosting:** GitHub Pages from `main`; the workflow uploads the **`site/`** directory as the site root (see **`.github/workflows/pages.yml`** and **`site/.nojekyll`**).
 
 ## Out of scope (for now)
 
 - Automated GitHub Actions beyond what Pages needs (add when there is a concrete workflow).
-- Cursor or “glass UI” telemetry in CI—only document if you introduce it deliberately.
+- “AI slop” UI patterns (generic card grids, glassmorphism stacks, oversized hero blobs) on the public site—keep the surface honest and readable.
 
 ---
 

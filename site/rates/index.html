@@ -13,21 +13,33 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <div class="site-shell">
-      <nav class="site-nav glass" aria-label="Primary">
-        <a class="nav-brand" href="../index.html">Iconoclast Audio</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="nav-brand" href="../index.html"
+          ><img
+            src="../public/generated/logo/wordmark-dark-bg.svg"
+            alt="Iconoclast Audio"
+            class="nav-brand__logo"
+            width="200"
+            height="43"
+        /></a>
         <span class="nav-sep" aria-hidden="true"></span>
         <a href="../index.html">Home</a>
         <a href="../ritual/index.html">Ritual</a>
         <a href="index.html" aria-current="page">Rates</a>
         <a href="../links/index.html">Links</a>
+        <a href="../faq/index.html">FAQ</a>
+        <a href="../legal/index.html">Legal</a>
+        <a href="../contact/index.html">Contact</a>
+        <a href="../public/index.html">Assets</a>
+        <a href="../design/palette.html">Design</a>
       </nav>
     </div>
-    <header class="site-header glass">
+    <header class="site-header">
       <h1>Rates &amp; booking</h1>
       <p class="tagline">Clear enough to act on; numbers can flex with the project—ask.</p>
     </header>
     <main id="main">
-      <section class="panel glass" aria-labelledby="how-heading">
+      <section aria-labelledby="how-heading">
         <h2 id="how-heading">How booking works</h2>
         <ol>
           <li>
@@ -48,8 +60,8 @@
           <a href="../links/index.html">Links</a>.
         </p>
       </section>
-      <div class="rates-grid">
-        <section class="panel glass" aria-labelledby="std-heading">
+      <div class="rates-columns">
+        <section aria-labelledby="std-heading">
           <h2 id="std-heading">Stereo master</h2>
           <p>Single stereo mix → finished master(s) for digital (and other targets we agree on).</p>
           <p class="price-note">
@@ -57,7 +69,7 @@
             real numbers when you publish pricing—this is intentionally non-binding copy.
           </p>
         </section>
-        <section class="panel glass" aria-labelledby="stem-heading">
+        <section aria-labelledby="stem-heading">
           <h2 id="stem-heading">Stem / rescue</h2>
           <p>
             When the mix needs more than two channels to survive—vocals / instruments split with a
@@ -66,7 +78,7 @@
           <p class="price-note">Quoted after hearing the material and scope.</p>
         </section>
       </div>
-      <section class="panel glass" aria-labelledby="rush-heading">
+      <section aria-labelledby="rush-heading">
         <h2 id="rush-heading">Turnaround</h2>
         <p>
           Standard queue is not same-day unless we say so. Rush costs extra when we can take it—life
@@ -74,13 +86,14 @@
         </p>
       </section>
     </main>
-    <footer class="site-footer glass">
-      <p class="footer-links">
+    <footer class="site-footer">
+      <nav aria-label="Footer">
         <a href="../faq/index.html">FAQ</a>
-        · <a href="../legal/index.html">Legal</a>
-        · <a href="../contact/index.html">Contact</a>
-        · <a href="https://github.com/shahzebqazi/iconoclast">GitHub</a>
-      </p>
+        <a href="../legal/index.html">Legal</a>
+        <a href="../contact/index.html">Contact</a>
+        <a href="../design/palette.html">Design</a>
+        <a href="https://github.com/shahzebqazi/iconoclast">GitHub</a>
+      </nav>
       <p class="wip">Site is a living document—rough edges are honest.</p>
     </footer>
   </body>

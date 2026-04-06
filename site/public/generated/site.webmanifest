@@ -2,7 +2,7 @@
   "name": "Iconoclast Audio",
   "short_name": "Iconoclast",
   "description": "Mastering & audio lab. Digital mastering, analog & vinyl, lab: Tone3000, AI, plugins.",
-  "start_url": "../",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#0c0d10",
   "theme_color": "#0c0d10",
