@@ -6,19 +6,25 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 
 | Path | Role |
 |------|------|
+| `site/` | **Public website** — HTML + CSS deployed to GitHub Pages (no `.md` links on the live site) |
 | `assets/readme-banner.svg` | Glass-style banner image for README (GitHub Markdown has no custom CSS) |
 | `README.md` | Public landing; organization and visitor copy |
-| `docs/executive-summary.md` | Longer narrative and product alignment defaults |
+| `docs/executive-summary.md` | Longer narrative and product alignment defaults (source; mirrored in `site/executive-summary.html`) |
+| `AGENTS.md` | This file (source; summary in `site/agents.html`) |
 | `docs/agent-prompt-typescript-github-pages.md` | Prompt for a future TypeScript GitHub Pages slice (replace `OWNER/REPO`) |
-| `index.html`, `style.css` | Minimal static site for GitHub Pages |
-| `.nojekyll` | Disables Jekyll so static assets behave as expected |
+| `.github/workflows/pages.yml` | Deploys **`site/`** to GitHub Pages |
 
 ## GitHub Pages
 
-1. **Settings → Pages** → deploy from **`main`**, folder **`/` (root)** so `index.html` is the entry.
-2. Site URL pattern: `https://<user>.github.io/<repo>/` (exact URL is on the Pages settings page).
+The live site is built from the **`site/`** directory using **GitHub Actions**, not “Deploy from a branch” at repo root.
 
-**Note:** On Pages, links to `.md` files are served as plain text. Rendered Markdown is on the GitHub repo UI.
+1. **Settings → Pages → Build and deployment**
+2. Set **Source** to **GitHub Actions** (not “Deploy from a branch” for the HTML site).
+3. The workflow **Deploy GitHub Pages** (`.github/workflows/pages.yml`) uploads `site/` as the Pages artifact on pushes to `main` that touch `site/` or the workflow.
+
+**First-time setup:** After the workflow exists on `main`, GitHub may prompt once to approve the `github-pages` environment. The site URL is `https://<user>.github.io/<repo>/` (exact URL on the Pages settings page).
+
+**Editing content:** Change Markdown under `docs/` for version control on GitHub; update the matching HTML under `site/` when you want the public site to change (or automate that in a later slice).
 
 ## Next implementation slice
 

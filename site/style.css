@@ -83,8 +83,29 @@ body {
   );
 }
 
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  margin: 1rem auto 0;
+  max-width: 44rem;
+}
+
+.site-nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.site-nav .nav-brand {
+  margin-right: auto;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 .site-header,
-main,
 .site-footer {
   position: relative;
   max-width: 44rem;
@@ -92,8 +113,15 @@ main,
   padding: 1.35rem 1.5rem;
 }
 
+main {
+  position: relative;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
 .site-header {
-  margin-top: 1.25rem;
+  margin-top: 0.5rem;
   padding: 1.75rem 1.75rem 1.5rem;
 }
 
@@ -118,10 +146,14 @@ main section {
   margin-top: 1rem;
 }
 
+main .panel,
+main article.panel {
+  margin-bottom: 1rem;
+}
+
 .panel {
   position: relative;
   padding: 1.25rem 1.35rem;
-  margin-bottom: 1rem;
 }
 
 .panel h2 {
@@ -131,6 +163,13 @@ main section {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
+}
+
+.panel h3 {
+  margin: 1.15rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--fg);
 }
 
 .panel p,
@@ -170,6 +209,20 @@ a:focus-visible {
   font-size: 0.92rem;
 }
 
+.meta {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.source-link {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  padding-top: 0.25rem;
+}
+
 .pages-note {
   font-size: 0.92rem;
   color: var(--muted);
@@ -192,6 +245,7 @@ a:focus-visible {
   color: var(--muted);
   text-align: center;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {

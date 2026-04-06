@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| **Website** | **[Live site (GitHub Pages)](https://shahzebqazi.github.io/iconoclast/)** — same story as this page, styled for the browser. If it 404s, enable Pages on this repo (see [AGENTS.md](AGENTS.md)). |
-| **This repo** | **[github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)** — hub, docs, and static site source. |
+| **Website** | **[Live site (GitHub Pages)](https://shahzebqazi.github.io/iconoclast/)** — HTML under [`site/`](site/). Deployed with **GitHub Actions** (see [AGENTS.md](AGENTS.md)). If it 404s, set Pages **Source** to **GitHub Actions** and run the workflow on `main`. |
+| **This repo** | **[github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)** — hub, `docs/` (Markdown), and [`site/`](site/) (public pages). |
 | **Organization** | **[github.com/shahzebqazi](https://github.com/shahzebqazi)** — our other public repositories and projects. |
 
 ## Documentation
