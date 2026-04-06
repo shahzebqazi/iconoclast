@@ -39,6 +39,14 @@ Follow **[Agent prompt: Site UX](agent-prompt-site-ux.md)**. Summary:
 - Build script and lockfile updates as needed.
 - Updated root `README.md` with build and deploy instructions.
 
+## When this task is complete
+
+After the work is merged and verified:
+
+1. **Delete this file** — `docs/agent-prompt-typescript-github-pages.md`.
+2. **Edit [AGENTS.md](../AGENTS.md)** — remove this prompt from the layout table and from **Next implementation slice** (and any other links to this file).
+3. **Edit [executive-summary.md](executive-summary.md)** — remove or rewrite the bullet that points to this prompt (e.g. “Later: TypeScript…”) so it does not reference a missing file.
+
 ---
 
 End of prompt.

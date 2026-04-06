@@ -13,13 +13,14 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <div class="site-shell">
-      <nav class="site-nav glass" aria-label="Primary">
+      <nav class="site-nav" aria-label="Primary">
         <a class="nav-brand" href="../index.html"
           ><img
             src="../public/generated/logo/iconoclast-mastering-blackletter.png"
-            width="180"
-            height="40"
             alt=""
+            class="nav-brand__logo"
+            width="200"
+            height="43"
           />Iconoclast Audio</a
         >
         <span class="nav-sep" aria-hidden="true"></span>
@@ -27,14 +28,19 @@
         <a href="../ritual/index.html">Ritual</a>
         <a href="../rates/index.html">Rates</a>
         <a href="../links/index.html">Links</a>
+        <a href="../faq/index.html">FAQ</a>
+        <a href="../legal/index.html">Legal</a>
+        <a href="index.html" aria-current="page">Contact</a>
+        <a href="../public/index.html">Assets</a>
+        <a href="../design/palette.html">Design</a>
       </nav>
     </div>
-    <header class="site-header glass">
+    <header class="site-header">
       <h1>Contact</h1>
       <p class="tagline">Same stack as Links—use whatever you actually check.</p>
     </header>
     <main id="main">
-      <section class="panel glass" aria-labelledby="stack-heading">
+      <section aria-labelledby="stack-heading">
         <h2 id="stack-heading" class="visually-hidden">Elsewhere</h2>
         <ul class="link-stack">
           <li><a href="mailto:willy@iconoclastaud.io">Email</a></li>
@@ -55,7 +61,7 @@
         </ul>
       </section>
     </main>
-    <footer class="site-footer glass">
+    <footer class="site-footer">
       <div class="site-footer-brand">
         <img
           src="../public/generated/icons/oni-mask-128.png"
@@ -63,12 +69,13 @@
           height="32"
           alt=""
         />
-        <p class="footer-links">
-        <a href="../faq/index.html">FAQ</a>
-        · <a href="../legal/index.html">Legal</a>
-        · <a href="index.html">Contact</a>
-        · <a href="https://github.com/shahzebqazi/iconoclast">GitHub</a>
-        </p>
+        <nav aria-label="Footer">
+          <a href="../faq/index.html">FAQ</a>
+          <a href="../legal/index.html">Legal</a>
+          <a href="index.html">Contact</a>
+          <a href="../design/palette.html">Design</a>
+          <a href="https://github.com/shahzebqazi/iconoclast">GitHub</a>
+        </nav>
       </div>
       <p class="wip">Site is a living document—rough edges are honest.</p>
     </footer>

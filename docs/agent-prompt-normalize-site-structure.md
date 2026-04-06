@@ -45,6 +45,13 @@ Replace ad-hoc copies with a **single source of truth** for layout and navigatio
 - [ ] No reliance on a **`/site/`** path prefix for the marketing site.
 - [ ] Local preview documented (`npm run dev` or `cd site && python3 -m http.server`).
 
+## When this task is complete
+
+After the structure work is merged and verified:
+
+1. **Delete this file** — `docs/agent-prompt-normalize-site-structure.md`.
+2. **Edit [AGENTS.md](../AGENTS.md)** — remove this prompt from the layout table and from **Next implementation slice** (and any other links).
+
 ---
 
 End of prompt.

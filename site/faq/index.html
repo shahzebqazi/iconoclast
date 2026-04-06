@@ -13,13 +13,14 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <div class="site-shell">
-      <nav class="site-nav glass" aria-label="Primary">
+      <nav class="site-nav" aria-label="Primary">
         <a class="nav-brand" href="../index.html"
           ><img
             src="../public/generated/logo/iconoclast-mastering-blackletter.png"
-            width="180"
-            height="40"
             alt=""
+            class="nav-brand__logo"
+            width="200"
+            height="43"
           />Iconoclast Audio</a
         >
         <span class="nav-sep" aria-hidden="true"></span>
@@ -27,14 +28,19 @@
         <a href="../ritual/index.html">Ritual</a>
         <a href="../rates/index.html">Rates</a>
         <a href="../links/index.html">Links</a>
+        <a href="index.html" aria-current="page">FAQ</a>
+        <a href="../legal/index.html">Legal</a>
+        <a href="../contact/index.html">Contact</a>
+        <a href="../public/index.html">Assets</a>
+        <a href="../design/palette.html">Design</a>
       </nav>
     </div>
-    <header class="site-header glass">
+    <header class="site-header">
       <h1>FAQ</h1>
       <p class="tagline">Mastering for heavy music—questions we get before the first bounce.</p>
     </header>
     <main id="main">
-      <section class="panel glass" aria-labelledby="faq-list">
+      <section aria-labelledby="faq-list">
         <h2 id="faq-list" class="visually-hidden">Questions</h2>
         <dl>
           <dt>Do you only work on metal?</dt>
@@ -71,7 +77,7 @@
           </dd>
         </dl>
       </section>
-      <section class="panel glass">
+      <section>
         <h2>Still stuck?</h2>
         <p>
           <a href="mailto:willy@iconoclastaud.io">Email</a> or use the
@@ -79,7 +85,7 @@
         </p>
       </section>
     </main>
-    <footer class="site-footer glass">
+    <footer class="site-footer">
       <div class="site-footer-brand">
         <img
           src="../public/generated/icons/oni-mask-128.png"
@@ -87,12 +93,13 @@
           height="32"
           alt=""
         />
-        <p class="footer-links">
-        <a href="index.html">FAQ</a>
-        · <a href="../legal/index.html">Legal</a>
-        · <a href="../contact/index.html">Contact</a>
-        · <a href="https://github.com/shahzebqazi/iconoclast">GitHub</a>
-        </p>
+        <nav aria-label="Footer">
+          <a href="index.html">FAQ</a>
+          <a href="../legal/index.html">Legal</a>
+          <a href="../contact/index.html">Contact</a>
+          <a href="../design/palette.html">Design</a>
+          <a href="https://github.com/shahzebqazi/iconoclast">GitHub</a>
+        </nav>
       </div>
       <p class="wip">Site is a living document—rough edges are honest.</p>
     </footer>

@@ -16,13 +16,14 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <div class="site-shell">
-      <nav class="site-nav glass" aria-label="Primary">
+      <nav class="site-nav" aria-label="Primary">
         <a class="nav-brand" href="../index.html"
           ><img
             src="../public/generated/logo/iconoclast-mastering-blackletter.png"
-            width="180"
-            height="40"
             alt=""
+            class="nav-brand__logo"
+            width="200"
+            height="43"
           />Iconoclast Audio</a
         >
         <span class="nav-sep" aria-hidden="true"></span>
@@ -30,9 +31,14 @@
         <a href="../ritual/index.html">Ritual</a>
         <a href="index.html" aria-current="page">Rates</a>
         <a href="../links/index.html">Links</a>
+        <a href="../faq/index.html">FAQ</a>
+        <a href="../legal/index.html">Legal</a>
+        <a href="../contact/index.html">Contact</a>
+        <a href="../public/index.html">Assets</a>
+        <a href="../design/palette.html">Design</a>
       </nav>
     </div>
-    <header class="site-header glass">
+    <header class="site-header">
       <h1>Rates &amp; booking</h1>
       <p class="tagline">Clear enough to act on; numbers can flex with the project—ask.</p>
     </header>
@@ -47,7 +53,7 @@
           decoding="async"
         />
       </div>
-      <section class="panel glass" aria-labelledby="how-heading">
+      <section aria-labelledby="how-heading">
         <h2 id="how-heading">How booking works</h2>
         <ol>
           <li>
@@ -68,8 +74,8 @@
           <a href="../links/index.html">Links</a>.
         </p>
       </section>
-      <div class="rates-grid">
-        <section class="panel glass" aria-labelledby="std-heading">
+      <div class="rates-columns">
+        <section aria-labelledby="std-heading">
           <div class="rates-grid-img" role="presentation">
             <img
               src="../public/generated/hero/mastering-analog-02.png"
@@ -87,7 +93,7 @@
             real numbers when you publish pricing—this is intentionally non-binding copy.
           </p>
         </section>
-        <section class="panel glass" aria-labelledby="stem-heading">
+        <section aria-labelledby="stem-heading">
           <div class="rates-grid-img" role="presentation">
             <img
               src="../public/generated/hero/mastering-analog-03.png"
@@ -106,7 +112,7 @@
           <p class="price-note">Quoted after hearing the material and scope.</p>
         </section>
       </div>
-      <section class="panel glass" aria-labelledby="rush-heading">
+      <section aria-labelledby="rush-heading">
         <h2 id="rush-heading">Turnaround</h2>
         <p>
           Standard queue is not same-day unless we say so. Rush costs extra when we can take it—life
@@ -114,7 +120,7 @@
         </p>
       </section>
     </main>
-    <footer class="site-footer glass">
+    <footer class="site-footer">
       <div class="site-footer-brand">
         <img
           src="../public/generated/icons/oni-mask-128.png"
@@ -122,12 +128,13 @@
           height="32"
           alt=""
         />
-        <p class="footer-links">
-        <a href="../faq/index.html">FAQ</a>
-        · <a href="../legal/index.html">Legal</a>
-        · <a href="../contact/index.html">Contact</a>
-        · <a href="https://github.com/shahzebqazi/iconoclast">GitHub</a>
-        </p>
+        <nav aria-label="Footer">
+          <a href="../faq/index.html">FAQ</a>
+          <a href="../legal/index.html">Legal</a>
+          <a href="../contact/index.html">Contact</a>
+          <a href="../design/palette.html">Design</a>
+          <a href="https://github.com/shahzebqazi/iconoclast">GitHub</a>
+        </nav>
       </div>
       <p class="wip">Site is a living document—rough edges are honest.</p>
     </footer>

@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="assets/readme-banner.svg" alt="Iconoclast Audio — audio engineering in the open" width="100%" />
+  <img src="site/public/generated/logo/wordmark-light-bg.svg" alt="Iconoclast Audio" width="280" height="60" />
   <p>
     <strong>Public hub</strong> for our work on GitHub — sound, tools, and how we build them.<br />
-    <sub>GitHub READMEs can’t load custom styles; the glass look above is baked into the banner image.</sub>
+    <sub>Generated wordmark; the live site uses the dark-background variant in the nav.</sub>
   </p>
   <p>
     <img src="assets/readme-logo-wordmark.png" alt="Iconoclast — AUDIO (metal wordmark)" height="72" />
@@ -32,7 +32,7 @@
 | **This repo** | **[github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)** — hub, `docs/` (Markdown), and [`site/`](site/) (published site). |
 | **Organization** | **[github.com/shahzebqazi](https://github.com/shahzebqazi)** — our other public repositories and projects. |
 
-**Site map** (paths are under the domain root): `/`, `/ritual/`, `/rates/`, `/links/`, `/contact/`, `/legal/`, `/faq/`, `/404.html`. **Assets:** `site/public/` → **`/public/`** on the host (`npm run assets:build`). **Local preview:** `cd site && python3 -m http.server` → matches production paths.
+**Site map** (paths are under the domain root): `/`, `/ritual/`, `/rates/`, `/links/`, `/contact/`, `/legal/`, `/faq/`, `/design/palette.html`, `/design/typography.html`, `/404.html`. **Styling:** one flat stylesheet, `site/style.css` — Bauhaus palette, no glass panels or card UI on the public pages. **Assets:** `site/public/` → **`/public/`** on the host (`npm run assets:build`). **Local preview:** `cd site && python3 -m http.server` → matches production paths.
 
 ## Documentation
 
@@ -43,7 +43,7 @@
 
 ## Generated assets (MVP)
 
-- **Build:** `npm install` then `npm run assets:build` — writes **`site/public/generated/`** and **`site/public/index.html`** (gallery with descriptions; catalog in `scripts/generate/assetCatalog.ts`). The build runs vector templates, then **`postprocessAiIcons.ts`** (oni favicons from `scripts/generate/ai-cache/`, circular fireball logo).
+- **Build:** `npm install` then `npm run assets:build` — writes **`site/public/generated/`** and **`site/public/index.html`** (flat asset index; catalog in `scripts/generate/assetCatalog.ts`). The build runs vector templates, then **`postprocessAiIcons.ts`** (oni favicons from `scripts/generate/ai-cache/`, circular fireball logo).
 - **CI:** the Pages workflow runs the same build before deploy so `site/public/` stays in sync.
 - See `assets/MVP_ASSETS.md` for what ships from generators vs what you still supply (photography, final logo, copy).
 - Brand questions: `docs/BRAND_CONSULTATION.md`.

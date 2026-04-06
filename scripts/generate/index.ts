@@ -63,8 +63,8 @@ async function main(): Promise<void> {
     name: brand.name,
     short_name: "Iconoclast",
     description: `${brand.tagline}. Digital mastering, analog & vinyl, lab: Tone3000, AI, plugins.`,
-    /** Served from `site/public/generated/`; parent is site root on Pages. */
-    start_url: "../",
+    /** Site root on custom domain (iconoclastaud.io). */
+    start_url: "/",
     display: "standalone",
     background_color: brand.colors.background,
     theme_color: brand.colors.background,
@@ -99,7 +99,7 @@ async function main(): Promise<void> {
 
   const galleryHtml = buildGalleryHtml(assetCatalog, brand.name, {
     assetPrefix: "generated/",
-    homeHref: "../index.html",
+    homeHref: "https://iconoclastaud.io/",
   });
   await mkdir(path.join(repoRoot, "site", "public"), { recursive: true });
   await writeFile(path.join(repoRoot, "site", "public", "index.html"), galleryHtml, "utf8");
