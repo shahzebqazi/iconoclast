@@ -6,7 +6,13 @@
   --bg: #0f0f10;
   --fg: #eceae7;
   --muted: #9c9893;
+  --surface-subtle: #121214;
+  --surface: #161618;
+  --surface-raised: #1c1c1f;
+  --border-subtle: #1e1e22;
   --border: #2a2a2e;
+  --border-strong: #3d3d44;
+  --border-focus: #5a5a62;
   /* Bauhaus accents — dark */
   --rose-gold: #c9a090;
   --gold: #c4a035;
@@ -56,6 +62,7 @@ body {
   color: var(--on-accent);
   z-index: 100;
   border-radius: 4px;
+  border: 1px solid var(--border-strong);
 }
 
 .site-header,
@@ -68,6 +75,7 @@ main,
 
 .site-header {
   border-bottom: 1px solid var(--border);
+  background: var(--surface-subtle);
 }
 
 .site-header h1 {
@@ -132,6 +140,9 @@ a:focus-visible {
   font-size: 0.95rem;
   color: var(--muted);
   margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--border-strong);
+  background: var(--surface);
 }
 
 .pages-note code {
@@ -143,6 +154,99 @@ a:focus-visible {
   border-top: 1px solid var(--border);
   font-size: 0.9rem;
   color: var(--muted);
+  background: var(--surface-subtle);
+}
+
+/* Palette showcase (mockup) */
+.palette-lede {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.palette-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  box-shadow: 0 1px 0 var(--border-subtle);
+}
+
+.palette-card__chip {
+  width: 100%;
+  height: 2.25rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-strong);
+}
+
+.palette-card__name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.palette-card__token {
+  margin: 0;
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  word-break: break-all;
+}
+
+.palette-card--border .palette-card__chip {
+  background: var(--bg);
+  border-width: 2px;
+  border-color: var(--border-token, var(--border));
+}
+
+.palette-subheading {
+  margin: 1.25rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.palette-card__chip--bg {
+  background: var(--bg);
+}
+.palette-card__chip--fg {
+  background: var(--fg);
+}
+.palette-card__chip--muted {
+  background: var(--muted);
+}
+.palette-card__chip--surface-subtle {
+  background: var(--surface-subtle);
+}
+.palette-card__chip--surface {
+  background: var(--surface);
+}
+.palette-card__chip--surface-raised {
+  background: var(--surface-raised);
+}
+.palette-card__chip--rose-gold {
+  background: var(--rose-gold);
+}
+.palette-card__chip--gold {
+  background: var(--gold);
+}
+.palette-card__chip--baby-blue {
+  background: var(--baby-blue);
+}
+.palette-card__chip--seafoam {
+  background: var(--seafoam);
 }
 
 @media (prefers-color-scheme: light) {
@@ -150,7 +254,13 @@ a:focus-visible {
     --bg: #f4f2ef;
     --fg: #141210;
     --muted: #5c5854;
+    --surface-subtle: #efede8;
+    --surface: #e8e6e1;
+    --surface-raised: #e0ddd6;
+    --border-subtle: #dcd8d0;
     --border: #d8d4cd;
+    --border-strong: #c4bfb6;
+    --border-focus: #a8a29a;
     --rose-gold: #9a6b58;
     --gold: #8a6f18;
     --baby-blue: #1e5f9e;
@@ -160,5 +270,54 @@ a:focus-visible {
     --link: var(--baby-blue);
     --link-hover: var(--baby-blue-hover);
     --on-accent: #141210;
+  }
+}
+
+/* High contrast: only #000 and #fff — neutrals and accents map to monochrome */
+@media (prefers-contrast: more) {
+  :root {
+    --bg: #000000;
+    --fg: #ffffff;
+    --muted: #ffffff;
+    --surface-subtle: #000000;
+    --surface: #000000;
+    --surface-raised: #000000;
+    --border-subtle: #ffffff;
+    --border: #ffffff;
+    --border-strong: #ffffff;
+    --border-focus: #ffffff;
+    --rose-gold: #ffffff;
+    --gold: #ffffff;
+    --baby-blue: #ffffff;
+    --baby-blue-hover: #ffffff;
+    --seafoam: #ffffff;
+    --accent: #ffffff;
+    --link: #ffffff;
+    --link-hover: #ffffff;
+    --on-accent: #000000;
+  }
+}
+
+@media (prefers-color-scheme: light) and (prefers-contrast: more) {
+  :root {
+    --bg: #ffffff;
+    --fg: #000000;
+    --muted: #000000;
+    --surface-subtle: #ffffff;
+    --surface: #ffffff;
+    --surface-raised: #ffffff;
+    --border-subtle: #000000;
+    --border: #000000;
+    --border-strong: #000000;
+    --border-focus: #000000;
+    --rose-gold: #000000;
+    --gold: #000000;
+    --baby-blue: #000000;
+    --baby-blue-hover: #000000;
+    --seafoam: #000000;
+    --accent: #000000;
+    --link: #000000;
+    --link-hover: #000000;
+    --on-accent: #ffffff;
   }
 }
