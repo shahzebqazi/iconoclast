@@ -2,21 +2,13 @@ import type { Brand } from "../brand.js";
 
 export type LeviathanStroke = {
   stroke: string;
-  /** Width in the same units as the parent viewBox (before any scale transform). */
   strokeWidth: number;
 };
 
-/**
- * Closed lemniscate in 100×100 space, centered at (50, 50). Stroked outline of a figure-eight.
- * When placed inside a scaled `<g>`, set stroke-width to parentStroke / scale so the stroke
- * matches non-scaled lines (SVG scales stroke with transform by default).
- */
+/** Lemniscate path in 100×100; stroke width must compensate for nested scale(). */
 const INFINITY_D_100 =
   "M 15 50 C 15 32 35 32 50 50 C 65 32 85 32 85 50 C 85 68 65 68 50 50 C 35 68 15 68 15 50 Z";
 
-/**
- * Leviathan / Brimstone cross: vertical staff + horizontal bar + sulphur (lemniscate) at the junction.
- */
 export function leviathanCrossGroup(
   cx: number,
   cy: number,
@@ -27,7 +19,6 @@ export function leviathanCrossGroup(
   const sw = s.strokeWidth;
   const vHalf = 22 * u;
   const hHalf = 18 * u;
-  /** Lemniscate template is 100×100; scale to ~36×18 user units (× unit). */
   const infScale = 0.36 * u;
   const infinityStroke = sw / infScale;
 
@@ -40,7 +31,6 @@ export function leviathanCrossGroup(
 </g>`;
 }
 
-/** Tab / PWA icon: Leviathan cross on brand background. */
 export function leviathanCrossFavicon(brand: Brand): string {
   const { background } = brand.colors;
   const stroke = brand.colors.accent;

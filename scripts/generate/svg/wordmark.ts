@@ -4,9 +4,6 @@ import { leviathanCrossGroup } from "./leviathanCross.js";
 
 export type WordmarkVariant = "default" | "darkBg";
 
-/**
- * Wordmark with Leviathan cross logomark + headline + subline.
- */
 export function wordmarkSvg(brand: Brand, variant: WordmarkVariant): string {
   const bg =
     variant === "darkBg" ? brand.colors.background : "#ffffff";

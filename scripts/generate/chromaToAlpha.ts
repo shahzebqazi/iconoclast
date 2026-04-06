@@ -1,22 +1,7 @@
-/**
- * Remove solid chroma green (#00FF00) from an image and write PNG with alpha.
- * Usage: npx tsx scripts/generate/chromaToAlpha.ts <input.png> <output.png>
- */
+/** Usage: npx tsx scripts/generate/chromaToAlpha.ts <input.png> <output.png> */
 import { readFile, writeFile } from "node:fs/promises";
 import sharp from "sharp";
-
-const GREEN = { r: 0, g: 255, b: 0 };
-
-function distSq(
-  r: number,
-  g: number,
-  b: number,
-): number {
-  const dr = r - GREEN.r;
-  const dg = g - GREEN.g;
-  const db = b - GREEN.b;
-  return dr * dr + dg * dg + db * db;
-}
+import { keyChromaGreenTransparent } from "./lib/chromaGreen.js";
 
 async function main(): Promise<void> {
   const [inPath, outPath] = process.argv.slice(2);
@@ -28,16 +13,7 @@ async function main(): Promise<void> {
   const buf = await readFile(inPath);
   const { data, info } = await sharp(buf).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   const ch = info.channels;
-  const tolerance = 120 * 120 * 3; // squared distance threshold (tune if edges are harsh)
-
-  for (let i = 0; i < data.length; i += ch) {
-    const r = data[i]!;
-    const g = data[i + 1]!;
-    const b = data[i + 2]!;
-    if (distSq(r, g, b) < tolerance && g > r + 40 && g > b + 40) {
-      data[i + 3] = 0;
-    }
-  }
+  keyChromaGreenTransparent(data, ch);
 
   await sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } })
     .png()

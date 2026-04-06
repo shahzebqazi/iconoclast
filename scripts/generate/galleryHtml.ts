@@ -105,7 +105,7 @@ ${rows}
       <div>
         <p class="gallery-back"><a href="${esc(homeHref)}">← ${esc(hostLabel)}</a></p>
         <h1>${esc(siteTitle)} — assets</h1>
-        <p class="tagline">Generated files under <code>public/generated/</code>. Regenerate with <code>npm run assets:build</code> (vector pass, then oni / icon postprocess).</p>
+        <p class="tagline">Generated files under <code>public/generated/</code>. Rebuild with <code>npm run assets:build</code>.</p>
       </div>
     </div>
   </header>

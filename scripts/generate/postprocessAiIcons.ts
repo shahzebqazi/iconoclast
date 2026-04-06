@@ -1,36 +1,16 @@
 /**
- * One-off / batch: chroma-key fireball logo, white-key oni mask, export icon sizes.
- * Expects webp paths as args or uses defaults under scripts/generate/ai-cache/
- *
- * Usage:
- *   npx tsx scripts/generate/postprocessAiIcons.ts [fireball.webp] [oni.webp]
+ * After `index.ts`: chroma-key fireball, white-key oni → favicons and PNGs.
+ * CLI: npx tsx scripts/generate/postprocessAiIcons.ts [fireball.webp] [oni.webp]
  */
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
+import { keyChromaGreenTransparent } from "./lib/chromaGreen.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "../..");
 const gen = path.join(repoRoot, "site", "public", "generated");
-
-const GREEN = { r: 0, g: 255, b: 0 };
-
-function chromaGreenTransparent(data: Buffer, width: number, height: number, channels: number): void {
-  const tolerance = 120 * 120 * 3;
-  for (let i = 0; i < data.length; i += channels) {
-    const r = data[i]!;
-    const g = data[i + 1]!;
-    const b = data[i + 2]!;
-    const dr = r - GREEN.r;
-    const dg = g - GREEN.g;
-    const db = b - GREEN.b;
-    const dist = dr * dr + dg * dg + db * db;
-    if (dist < tolerance && g > r + 40 && g > b + 40) {
-      data[i + 3] = 0;
-    }
-  }
-}
 
 function whiteTransparent(data: Buffer, channels: number, threshold: number): void {
   for (let i = 0; i < data.length; i += channels) {
@@ -47,25 +27,19 @@ async function rawWithAlpha(buf: Buffer): Promise<{ data: Buffer; info: sharp.Ou
   return sharp(buf).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
 }
 
-/**
- * Run after `index.ts` vector pass: overwrites favicon + raster icons from cached AI sources.
- * Cache files: `scripts/generate/ai-cache/fireball-ring.webp`, `oni-mask.webp`.
- */
 export async function runPostprocessAiIcons(
   fireballSrc?: string,
   oniSrc?: string,
 ): Promise<void> {
-  const fb =
-    fireballSrc ?? path.join(__dirname, "ai-cache", "fireball-ring.webp");
+  const fb = fireballSrc ?? path.join(__dirname, "ai-cache", "fireball-ring.webp");
   const oni = oniSrc ?? path.join(__dirname, "ai-cache", "oni-mask.webp");
 
   await mkdir(path.join(gen, "icons"), { recursive: true });
   await mkdir(path.join(__dirname, "ai-cache"), { recursive: true });
 
-  // --- Fireball circular logo (transparent) ---
   const fbBuf = await readFile(fb);
   let { data: fbData, info: fbInfo } = await rawWithAlpha(fbBuf);
-  chromaGreenTransparent(fbData, fbInfo.width, fbInfo.height, fbInfo.channels);
+  keyChromaGreenTransparent(fbData, fbInfo.channels);
   const fireballPng = await sharp(fbData, {
     raw: { width: fbInfo.width, height: fbInfo.height, channels: 4 },
   })
@@ -75,9 +49,7 @@ export async function runPostprocessAiIcons(
     .resize(1024, 1024, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .png()
     .toFile(path.join(gen, "logo", "iconoclast-audio-blackmetal-fire.png"));
-  console.log("Wrote logo/iconoclast-audio-blackmetal-fire.png");
 
-  // --- Oni mask icons (transparent) ---
   const oniBuf = await readFile(oni);
   let { data: oniData, info: oniInfo } = await rawWithAlpha(oniBuf);
   whiteTransparent(oniData, oniInfo.channels, 235);
@@ -101,10 +73,8 @@ export async function runPostprocessAiIcons(
       .resize(w, w, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
       .png()
       .toFile(path.join(gen, name));
-    console.log(`Wrote ${name}`);
   }
 
-  // favicon.svg wraps 64×64 PNG as data URL (tabs/bookmarks, transparent)
   const favicon64 = await sharp(oniBase)
     .resize(64, 64, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .png()
@@ -115,10 +85,8 @@ export async function runPostprocessAiIcons(
   <image width="64" height="64" href="data:image/png;base64,${b64}" preserveAspectRatio="xMidYMid meet"/>
 </svg>`;
   await writeFile(path.join(gen, "favicon.svg"), faviconSvg, "utf8");
-  console.log("Wrote favicon.svg (oni, transparent)");
 }
 
-/** CLI: `npx tsx scripts/generate/postprocessAiIcons.ts [fireball.webp] [oni.webp]` */
 export async function cliPostprocess(): Promise<void> {
   const args = process.argv.slice(2);
   await runPostprocessAiIcons(args[0], args[1]);

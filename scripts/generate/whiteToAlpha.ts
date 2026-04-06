@@ -1,7 +1,4 @@
-/**
- * Make near-white pixels transparent (for pen art on white paper).
- * Usage: npx tsx scripts/generate/whiteToAlpha.ts <input.png|webp> <output.png> [threshold 0-255]
- */
+/** Usage: npx tsx scripts/generate/whiteToAlpha.ts <input> <output.png> [threshold] */
 import { readFile, writeFile } from "node:fs/promises";
 import sharp from "sharp";
 
