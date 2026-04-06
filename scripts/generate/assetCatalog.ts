@@ -15,7 +15,7 @@ export const assetCatalog: AssetEntry[] = [
     relativePath: "favicon.svg",
     title: "Favicon (vector)",
     description:
-      "Vector favicon with the IA monogram. Use as the primary tab icon reference; raster sizes are exported below.",
+      "Vector favicon with the Leviathan (Brimstone) cross. Use as the primary tab icon reference; raster sizes are exported below.",
   },
   {
     category: "Favicon & app icons",
@@ -46,13 +46,13 @@ export const assetCatalog: AssetEntry[] = [
     relativePath: "logo/wordmark-light-bg.svg",
     title: "Wordmark (light background)",
     description:
-      "Placeholder wordmark for light surfaces until a final logomark is supplied.",
+      "Wordmark with Leviathan cross for light surfaces.",
   },
   {
     category: "Logo",
     relativePath: "logo/wordmark-dark-bg.svg",
     title: "Wordmark (dark background)",
-    description: "Same wordmark tuned for dark UI backgrounds and headers.",
+    description: "Same wordmark tuned for dark UI backgrounds and headers (gold cross on deep field).",
   },
   {
     category: "Social",

@@ -1,6 +1,7 @@
 import type { Brand } from "../brand.js";
+import { leviathanCrossGroup } from "./leviathanCross.js";
 
-/** Abstract hero placeholder (no photo): gradient + service pills. Replace with photography later. */
+/** Abstract hero placeholder (no photo): gradient + Leviathan cross + service pills. */
 export function heroPlaceholderSvg(brand: Brand, width = 1920, height = 1080): string {
   const { background, surface, digital, analog, vinyl, lab, primary, accent } =
     brand.colors;
@@ -20,6 +21,11 @@ export function heroPlaceholderSvg(brand: Brand, width = 1920, height = 1080): s
     })
     .join("\n  ");
 
+  const mark = leviathanCrossGroup(width * 0.5, height * 0.42, 4.2, {
+    stroke: accent,
+    strokeWidth: 5,
+  });
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
   <defs>
@@ -31,6 +37,9 @@ export function heroPlaceholderSvg(brand: Brand, width = 1920, height = 1080): s
   <rect width="${width}" height="${height}" fill="url(#r)"/>
   <circle cx="${width * 0.75}" cy="${height * 0.35}" r="280" fill="${digital}" fill-opacity="0.08"/>
   <circle cx="${width * 0.25}" cy="${height * 0.55}" r="200" fill="${accent}" fill-opacity="0.06"/>
+  <g opacity="0.22">
+${mark}
+  </g>
   ${pillEls}
 </svg>`;
 }

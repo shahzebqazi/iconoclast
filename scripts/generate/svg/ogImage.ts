@@ -1,5 +1,6 @@
 import type { Brand } from "../brand.js";
 import { escapeXml } from "../lib/escape.js";
+import { leviathanCrossGroup } from "./leviathanCross.js";
 
 const W = 1200;
 const H = 630;
@@ -9,6 +10,8 @@ export function ogImageSvg(brand: Brand): string {
   const fg = brand.colors.primary;
   const accent = brand.colors.accent;
   const line2 = escapeXml(`${brand.tagline} · Digital · Analog · Vinyl · Lab`);
+
+  const mark = leviathanCrossGroup(980, 300, 4.5, { stroke: accent, strokeWidth: 6 });
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
@@ -20,6 +23,7 @@ export function ogImageSvg(brand: Brand): string {
   </defs>
   <rect width="${W}" height="${H}" fill="url(#g)"/>
   <rect x="0" y="0" width="${W}" height="6" fill="${accent}"/>
+  ${mark}
   <text x="80" y="280" font-family="${brand.fonts.display}, system-ui, sans-serif" font-size="72" font-weight="600" fill="${fg}">${escapeXml(
     brand.name,
   )}</text>
