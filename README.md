@@ -18,7 +18,7 @@
 | **This repo** | **[github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)** — hub, `docs/` (Markdown), and [`site/`](site/) (public pages). |
 | **Organization** | **[github.com/shahzebqazi](https://github.com/shahzebqazi)** — our other public repositories and projects. |
 
-**Site map** (folders use `index.html` so URLs stay clean): `/` home, `/ritual/`, `/rates/`, `/links/`, `/contact/` (same link list as `/links/`), `/legal/`, `/faq/`, plus `/404.html` for missing pages. **Local preview:** open `site/index.html` in a browser, or run `python -m http.server` from inside `site/` and open `http://localhost:8000/`.
+**Site map** (folders use `index.html` so URLs stay clean): `/` home, `/ritual/`, `/rates/`, `/links/`, `/contact/` (same link list as `/links/`), `/legal/`, `/faq/`, plus `/404.html` for missing pages. **Asset gallery** (generated): **`/public/`** lists favicons, OG images, and theme files from `npm run assets:build`. **Local preview:** open `site/index.html` in a browser, or run `python -m http.server` from inside `site/` and open `http://localhost:8000/`.
 
 ## Documentation
 
@@ -26,6 +26,13 @@
 | :--- | :--- |
 | [**Executive summary**](docs/executive-summary.md) | Audience, direction, tone, and what we’re building toward. |
 | [**AGENTS.md**](AGENTS.md) | For contributors and automation: layout, Pages, next steps. |
+
+## Generated assets (MVP)
+
+- **Build:** `npm install` then `npm run assets:build` — writes **`site/public/generated/`** and **`site/public/index.html`** (gallery with descriptions; catalog in `scripts/generate/assetCatalog.ts`).
+- **CI:** the Pages workflow runs the same build before deploy so `site/public/` stays in sync.
+- See `assets/MVP_ASSETS.md` for what ships from generators vs what you still supply (photography, final logo, copy).
+- Brand questions: `docs/BRAND_CONSULTATION.md`.
 
 ---
 
