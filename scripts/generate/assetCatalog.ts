@@ -42,14 +42,34 @@ export const assetCatalog: AssetEntry[] = [
     description: "High-resolution PWA icon for splash screens and stores.",
   },
   {
-    category: "Logo",
-    relativePath: "logo/wordmark-light-bg.svg",
-    title: "Wordmark (light background)",
+    category: "Logo (AI, transparent PNG)",
+    relativePath: "logo/iconoclast-wordmark-metal.png",
+    title: "Metal wordmark — ICONOCLAST / AUDIO",
     description:
-      "Wordmark with Leviathan cross for light surfaces.",
+      "AI-generated blackletter mark on chroma green, keyed to transparency. No crosses or reaper in the prompt set; review before production use.",
   },
   {
-    category: "Logo",
+    category: "Logo (AI, transparent PNG)",
+    relativePath: "logo/iconoclast-mastering-blackletter.png",
+    title: "Blackletter — ICONOCLAST + MASTERING",
+    description:
+      "Second line must read MASTERING (regenerate if the model misspells). O may be a pentagram-shaped letterform only. Transparent PNG.",
+  },
+  {
+    category: "Logo (AI, transparent PNG)",
+    relativePath: "logo/iconoclast-audio-blackmetal-fire.png",
+    title: "ICONOCLAST AUDIO — fire",
+    description:
+      "Black metal style wordmark with flame; transparent PNG. Prompts forbid random pentagrams/crosses; review edges after chroma key.",
+  },
+  {
+    category: "Logo (vector)",
+    relativePath: "logo/wordmark-light-bg.svg",
+    title: "Wordmark (light background)",
+    description: "Wordmark with Leviathan cross for light surfaces.",
+  },
+  {
+    category: "Logo (vector)",
     relativePath: "logo/wordmark-dark-bg.svg",
     title: "Wordmark (dark background)",
     description: "Same wordmark tuned for dark UI backgrounds and headers (gold cross on deep field).",
@@ -70,8 +90,7 @@ export const assetCatalog: AssetEntry[] = [
     category: "Hero",
     relativePath: "hero/placeholder-wide.svg",
     title: "Hero placeholder (SVG)",
-    description:
-      "Wide abstract hero with service and lab cues; replace with photography when ready.",
+    description: "Wide abstract hero with service and lab cues; replace with photography when ready.",
   },
   {
     category: "Hero",
@@ -80,35 +99,22 @@ export const assetCatalog: AssetEntry[] = [
     description: "1920×1080 raster export for static site hero slots.",
   },
   {
-    category: "Hero — AI (metal logo concepts)",
-    relativePath: "hero/ai-metal-hero-primary.png",
-    title: "AI hero — primary (gold / default)",
-    description:
-      "1920×1080 AI-generated wide hero: death-metal logo style, Leviathan cross, inverted pentagrams, grim reaper / occult motifs. Gold-on-charcoal palette (brand accent). Same image as gold-accent variant; stable filename for layouts.",
+    category: "Hero — analog mastering (AI)",
+    relativePath: "hero/mastering-analog-01.png",
+    title: "Analog studio — hardware",
+    description: "1920×1080 scene: tubes, tape, warm light. No text/logos in prompt.",
   },
   {
-    category: "Hero — AI (metal logo concepts)",
-    relativePath: "hero/ai-metal-hero-gold-accent.png",
-    title: "AI hero — gold accent",
-    description: "Palette: charcoal #06080d, antique gold #d4b84a, cool blue edge glow #8ab4ff.",
+    category: "Hero — analog mastering (AI)",
+    relativePath: "hero/mastering-analog-02.png",
+    title: "Abstract — vinyl / tape",
+    description: "1920×1080 macro abstract: groove and tape texture mood.",
   },
   {
-    category: "Hero — AI (metal logo concepts)",
-    relativePath: "hero/ai-metal-hero-digital-cool.png",
-    title: "AI hero — digital (cool blue)",
-    description: "Palette: dominant electric blue #8ab4ff / cyan with sparse gold #d4b84a.",
-  },
-  {
-    category: "Hero — AI (metal logo concepts)",
-    relativePath: "hero/ai-metal-hero-ember-analog.png",
-    title: "AI hero — ember / analog",
-    description: "Palette: ember/rust #b85c4a, dark charcoal, gold sparks #d4b84a.",
-  },
-  {
-    category: "Hero — AI (metal logo concepts)",
-    relativePath: "hero/ai-metal-hero-vinyl-lab.png",
-    title: "AI hero — vinyl / lab",
-    description: "Palette: purple/violet #9b8bc9, lab green #5cb89a accents, gold glints #d4b84a.",
+    category: "Hero — analog mastering (AI)",
+    relativePath: "hero/mastering-analog-03.png",
+    title: "Studio atmosphere — meters & reels",
+    description: "1920×1080 dim studio, consoles and analog cues.",
   },
   {
     category: "Theme & config",
