@@ -14,7 +14,7 @@
 ## Goals (near term)
 
 - A clear public landing ([README](../README.md)) and a longer narrative in this document.
-- A small static site (`index.html`) so the project has a real URL on GitHub Pages without a full generator yet.
+- A multi-page static site under [`site/`](../site/) (`/`, `/ritual/`, `/rates/`, `/links/`, `/contact/`, `/legal/`, `/faq/`, `404.html`) deployed via GitHub Actions.
 - Later: a TypeScript-based GitHub Pages site (see [Agent prompt: TypeScript GitHub Pages site](agent-prompt-typescript-github-pages.md)).
 
 **Repo mechanics** (layout, Pages, agent prompts): [AGENTS.md](../AGENTS.md).
