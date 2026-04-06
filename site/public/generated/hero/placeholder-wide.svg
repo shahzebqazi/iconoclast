@@ -2,19 +2,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
   <defs>
     <radialGradient id="r" cx="30%" cy="20%" r="70%">
-      <stop offset="0%" stop-color="#14151a"/>
-      <stop offset="100%" stop-color="#0c0d10"/>
+      <stop offset="0%" stop-color="#0e1118"/>
+      <stop offset="100%" stop-color="#06080d"/>
     </radialGradient>
   </defs>
   <rect width="1920" height="1080" fill="url(#r)"/>
-  <circle cx="1440" cy="378" r="280" fill="#6eb5d9" fill-opacity="0.08"/>
-  <circle cx="480" cy="594" r="200" fill="#c9a227" fill-opacity="0.06"/>
-  <rect x="120" y="900" width="200" height="44" rx="22" fill="#6eb5d9" fill-opacity="0.35"/>
-  <text x="220" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8e6e1" text-anchor="middle">Digital mastering</text>
-  <rect x="340" y="900" width="200" height="44" rx="22" fill="#c97d6e" fill-opacity="0.35"/>
-  <text x="440" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8e6e1" text-anchor="middle">Analog</text>
+  <circle cx="1440" cy="378" r="280" fill="#8ab4ff" fill-opacity="0.08"/>
+  <circle cx="480" cy="594" r="200" fill="#d4b84a" fill-opacity="0.06"/>
+  <g opacity="0.22">
+<g fill="none" stroke="#d4b84a" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(960 453.59999999999997) scale(1.5120) translate(-50 -50)">
+    <path d="M 15 50 C 15 32 35 32 50 50 C 65 32 85 32 85 50 C 85 68 65 68 50 50 C 35 68 15 68 15 50 Z" stroke-width="3.3069"/>
+  </g>
+  <line x1="960" y1="361.19999999999993" x2="960" y2="546" stroke-width="5"/>
+  <line x1="884.4" y1="453.59999999999997" x2="1035.6" y2="453.59999999999997" stroke-width="5"/>
+</g>
+  </g>
+  <rect x="120" y="900" width="200" height="44" rx="22" fill="#8ab4ff" fill-opacity="0.35"/>
+  <text x="220" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#eef0f5" text-anchor="middle">Digital mastering</text>
+  <rect x="340" y="900" width="200" height="44" rx="22" fill="#b85c4a" fill-opacity="0.35"/>
+  <text x="440" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#eef0f5" text-anchor="middle">Analog</text>
   <rect x="560" y="900" width="200" height="44" rx="22" fill="#9b8bc9" fill-opacity="0.35"/>
-  <text x="660" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8e6e1" text-anchor="middle">Vinyl</text>
+  <text x="660" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#eef0f5" text-anchor="middle">Vinyl</text>
   <rect x="780" y="900" width="200" height="44" rx="22" fill="#5cb89a" fill-opacity="0.35"/>
-  <text x="880" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8e6e1" text-anchor="middle">Lab · AI · Plugins</text>
+  <text x="880" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#eef0f5" text-anchor="middle">Lab · AI · Plugins</text>
 </svg>

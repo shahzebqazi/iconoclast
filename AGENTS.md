@@ -10,6 +10,8 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 | `site/.nojekyll` | Disables Jekyll when building from this folder |
 | `site/public/` | **Generated asset gallery** — `npm run assets:build`; live at **`/public/`** on the host (e.g. `/public/generated/…`) |
 | `CNAME` | Copied into **`site/`** by the workflow — custom domain `iconoclastaud.io` |
+| `assets/readme-banner.svg` | Glass-style banner for the GitHub README only |
+| `assets/readme-oni-mask.png` | Copy of `site/public/generated/icons/oni-mask-128.png` for README (favicon / brand glyph) |
 | `README.md` | GitHub repo landing (not rendered as the live homepage) |
 | `docs/` | Markdown sources; not the static site |
 | `docs/executive-summary.md` | Longer narrative and product alignment |

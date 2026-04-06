@@ -11,7 +11,7 @@ The generators use a **default direction** you can change in `scripts/generate/b
 
 ## 2. Logo form
 
-- **Current:** Text-only wordmark (“Iconoclast” + “AUDIO”) + simple “IA” monogram in the favicon.
+- **Current:** AI blackletter PNGs in `site/public/generated/logo/` (e.g. mastering wordmark in the nav) plus a **pen-style oni mask** as the **favicon** / small glyph (`site/public/generated/icons/`). Vector Leviathan wordmarks still exist for some templates.
 - **Alternatives:** Custom lettermark, abstract mark (waveform, break/glass motif for “iconoclast”), or commissioned mark from a designer.
 
 **Your preference:**

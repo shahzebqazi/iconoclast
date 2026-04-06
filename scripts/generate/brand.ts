@@ -12,15 +12,17 @@ export const brand = {
     subline: "AUDIO",
   },
 
-  /** Primary surfaces: deep charcoal / near-black (studio, precision). */
+  /**
+   * Align with `site/style.css` (dark theme): metal / glass, gold + cool accent.
+   */
   colors: {
-    background: "#0c0d10",
-    surface: "#14151a",
-    primary: "#e8e6e1",
-    accent: "#c9a227",
-    accentMuted: "#8a7a4a",
-    digital: "#6eb5d9",
-    analog: "#c97d6e",
+    background: "#06080d",
+    surface: "#0e1118",
+    primary: "#eef0f5",
+    accent: "#d4b84a",
+    accentMuted: "#94823a",
+    digital: "#8ab4ff",
+    analog: "#b85c4a",
     vinyl: "#9b8bc9",
     lab: "#5cb89a",
   },

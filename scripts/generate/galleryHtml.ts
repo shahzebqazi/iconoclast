@@ -84,6 +84,7 @@ ${rows}
   <meta name="description" content="Favicons, wordmarks, and generated files for Iconoclast Audio. Rebuild with npm run assets:build." />
   <link rel="stylesheet" href="../style.css" />
   <link rel="icon" href="${esc(`${assetPrefix}favicon.svg`)}" type="image/svg+xml" />
+  <link rel="icon" href="${esc(`${assetPrefix}favicon-32.png`)}" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="${esc(`${assetPrefix}apple-touch-icon.png`)}" />
 </head>
 <body class="gallery">
@@ -91,7 +92,7 @@ ${rows}
   <div class="site-shell">
     <nav class="site-nav" aria-label="Primary">
       <a class="nav-brand" href="${esc(homeHref)}">
-        <img src="${esc(`${assetPrefix}logo/wordmark-dark-bg.svg`)}" alt="Iconoclast Audio" class="nav-brand__logo" width="200" height="43" />
+        <img src="${esc(`${assetPrefix}logo/iconoclast-mastering-blackletter.png`)}" alt="" class="nav-brand__logo" width="200" height="43" />
       </a>
       <span class="nav-sep" aria-hidden="true"></span>
       <a href="${esc(homeHref)}">Home</a>
@@ -99,15 +100,23 @@ ${rows}
     </nav>
   </div>
   <header class="site-header gallery-header">
-    <p class="gallery-back"><a href="${esc(homeHref)}">← ${esc(hostLabel)}</a></p>
-    <h1>${esc(siteTitle)} — assets</h1>
-    <p class="tagline">Generated files under <code>public/generated/</code>. Regenerate with <code>npm run assets:build</code>.</p>
+    <div class="gallery-header-brand">
+      <img src="${esc(`${assetPrefix}icons/oni-mask-128.png`)}" width="40" height="40" alt="" />
+      <div>
+        <p class="gallery-back"><a href="${esc(homeHref)}">← ${esc(hostLabel)}</a></p>
+        <h1>${esc(siteTitle)} — assets</h1>
+        <p class="tagline">Generated files under <code>public/generated/</code>. Rebuild with <code>npm run assets:build</code>.</p>
+      </div>
+    </div>
   </header>
   <main id="main">
 ${sections}
   </main>
   <footer class="site-footer">
-    <p><a href="${esc(homeHref)}">Home</a> · Iconoclast Audio</p>
+    <div class="site-footer-brand">
+      <img src="${esc(`${assetPrefix}icons/oni-mask-64.png`)}" width="24" height="24" alt="" />
+      <p><a href="${esc(homeHref)}">Home</a> · Iconoclast Audio</p>
+    </div>
   </footer>
 </body>
 </html>

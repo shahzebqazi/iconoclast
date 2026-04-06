@@ -4,6 +4,17 @@
     <strong>Public hub</strong> for our work on GitHub — sound, tools, and how we build them.<br />
     <sub>Generated wordmark; the live site uses the dark-background variant in the nav.</sub>
   </p>
+  <p>
+    <img src="assets/readme-logo-wordmark.png" alt="Iconoclast — AUDIO (metal wordmark)" height="72" />
+    &nbsp;&nbsp;
+    <img src="assets/readme-logo-mastering.png" alt="Iconoclast MASTERING (blackletter)" height="72" />
+  </p>
+  <p><sub>Wordmark and blackletter logos (transparent PNGs; copies of <code>site/public/generated/logo/</code>).</sub></p>
+  <p>
+    <img src="assets/readme-oni-mask.png" alt="" width="40" height="40" />
+    <br />
+    <sub>Site favicon: pen-style oni mask (<code>site/public/generated/icons/</code>).</sub>
+  </p>
 </div>
 
 ---
@@ -32,7 +43,7 @@
 
 ## Generated assets (MVP)
 
-- **Build:** `npm install` then `npm run assets:build` — writes **`site/public/generated/`** and **`site/public/index.html`** (flat asset index; catalog in `scripts/generate/assetCatalog.ts`).
+- **Build:** `npm install` then `npm run assets:build` — writes **`site/public/generated/`** and **`site/public/index.html`** (flat asset index; catalog in `scripts/generate/assetCatalog.ts`). The build runs vector templates, then **`postprocessAiIcons.ts`** (oni favicons from `scripts/generate/ai-cache/`, circular fireball logo).
 - **CI:** the Pages workflow runs the same build before deploy so `site/public/` stays in sync.
 - See `assets/MVP_ASSETS.md` for what ships from generators vs what you still supply (photography, final logo, copy).
 - Brand questions: `docs/BRAND_CONSULTATION.md`.

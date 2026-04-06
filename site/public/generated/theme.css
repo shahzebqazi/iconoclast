@@ -1,11 +1,11 @@
 /* Generated — run npm run assets:build */
 :root {
-  --color-bg: #0c0d10;
-  --color-surface: #14151a;
-  --color-fg: #e8e6e1;
-  --color-accent: #c9a227;
-  --color-digital: #6eb5d9;
-  --color-analog: #c97d6e;
+  --color-bg: #06080d;
+  --color-surface: #0e1118;
+  --color-fg: #eef0f5;
+  --color-accent: #d4b84a;
+  --color-digital: #8ab4ff;
+  --color-analog: #b85c4a;
   --color-vinyl: #9b8bc9;
   --color-lab: #5cb89a;
   --font-display: "IBM Plex Sans", system-ui, sans-serif;
