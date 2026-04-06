@@ -136,6 +136,15 @@ body {
   font-weight: 700;
   letter-spacing: -0.02em;
   font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.site-nav .nav-brand img {
+  width: 1.35rem;
+  height: 1.35rem;
+  flex-shrink: 0;
 }
 
 .site-nav .nav-sep {
