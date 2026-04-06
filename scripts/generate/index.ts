@@ -11,6 +11,7 @@ import sharp from "sharp";
 import { assetCatalog } from "./assetCatalog.js";
 import { brand } from "./brand.js";
 import { buildGalleryHtml } from "./galleryHtml.js";
+import { runPostprocessAiIcons } from "./postprocessAiIcons.js";
 import { faviconSvg } from "./svg/favicon.js";
 import { heroPlaceholderSvg } from "./svg/heroPlaceholder.js";
 import { ogImageSvg } from "./svg/ogImage.js";
@@ -102,6 +103,8 @@ async function main(): Promise<void> {
   });
   await mkdir(path.join(repoRoot, "site", "public"), { recursive: true });
   await writeFile(path.join(repoRoot, "site", "public", "index.html"), galleryHtml, "utf8");
+
+  await runPostprocessAiIcons();
 
   console.log(`Wrote MVP assets to ${path.relative(repoRoot, outDir)}/`);
   console.log(`Gallery: ${path.relative(repoRoot, path.join(repoRoot, "site", "public", "index.html"))}`);

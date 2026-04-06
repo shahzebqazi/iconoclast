@@ -15,13 +15,13 @@ export const assetCatalog: AssetEntry[] = [
     relativePath: "favicon.svg",
     title: "Favicon (vector)",
     description:
-      "Vector favicon with the Leviathan (Brimstone) cross. Use as the primary tab icon reference; raster sizes are exported below.",
+      "SVG wrapper with embedded transparent oni-mask PNG (pen-style, AI). Tabs/bookmarks; raster fallbacks below.",
   },
   {
     category: "Favicon & app icons",
     relativePath: "favicon-32.png",
     title: "Favicon 32×32",
-    description: "PNG fallback for browsers that prefer raster favicons.",
+    description: "Transparent PNG (oni mask) for raster favicon fallbacks.",
   },
   {
     category: "Favicon & app icons",
@@ -58,9 +58,21 @@ export const assetCatalog: AssetEntry[] = [
   {
     category: "Logo (AI, transparent PNG)",
     relativePath: "logo/iconoclast-audio-blackmetal-fire.png",
-    title: "ICONOCLAST AUDIO — fire",
+    title: "Circular black metal — fireball mark",
     description:
-      "Black metal style wordmark with flame; transparent PNG. Prompts forbid random pentagrams/crosses; review edges after chroma key.",
+      "Circular ring text + stylized rose-gold/gold energy center (not photoreal fire). Chroma-keyed PNG for icons; regenerate from ai-cache if needed.",
+  },
+  {
+    category: "Favicon & app icons",
+    relativePath: "icons/oni-mask-64.png",
+    title: "Mini icon — oni 64×64",
+    description: "Transparent oni mask (pen art) for UI or social avatars.",
+  },
+  {
+    category: "Favicon & app icons",
+    relativePath: "icons/oni-mask-128.png",
+    title: "Mini icon — oni 128×128",
+    description: "Larger transparent oni for bookmarks or thumbnails.",
   },
   {
     category: "Logo (vector)",
