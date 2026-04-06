@@ -6,6 +6,7 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 
 | Path | Role |
 |------|------|
+| `assets/readme-banner.svg` | Glass-style banner image for README (GitHub Markdown has no custom CSS) |
 | `README.md` | Public landing; organization and visitor copy |
 | `docs/executive-summary.md` | Longer narrative and product alignment defaults |
 | `docs/agent-prompt-typescript-github-pages.md` | Prompt for a future TypeScript GitHub Pages slice (replace `OWNER/REPO`) |
