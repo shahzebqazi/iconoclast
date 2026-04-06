@@ -40,6 +40,18 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 - **Layout / responsiveness / visual structure:** [docs/agent-prompt-site-ux.md](docs/agent-prompt-site-ux.md)
 - **Normalize structure (shared templates, less duplicated HTML):** read **[docs/agent-prompt-normalize-site-structure.md](docs/agent-prompt-normalize-site-structure.md)** — spec for hosting/URLs plus the agent task for refactoring.
 
+## Backlog — bugs and changes
+
+**Workflow:** Log items here as they are identified. **Do not implement** fixes until this file is updated to say implementation is started (or a separate go-ahead is given).
+
+**Repo scan (ad hoc):** No `TODO` / `FIXME` markers were found in tracked `*.md`, `*.html`, `*.css`, `*.js`, `*.ts`, `*.json`, `*.yml` files at the time this section was added.
+
+| ID | Type | Description | Notes |
+|----|------|-------------|-------|
+| — | — | *(none yet)* | Add rows as items are agreed. |
+
+---
+
 ## Conventions
 
 - Public-safe content only; no secrets in commits.
