@@ -1,33 +1,25 @@
 # Iconoclast Audio
 
-Public **website** and org-facing hub on GitHub: audio engineering presence, documentation, and a minimal static landing you can host on **GitHub Pages**.
+We build and share **audio engineering** work in the open—tools, experiments, and process as much as polished releases.
 
-- **Heavier engineering / CI** may live on **GitLab** (or elsewhere)—wire remotes when you are ready.
-- **This repo** ships what belongs on the open web: the README, [executive summary](docs/executive-summary.md), and a tiny HTML/CSS fallback at the repo root.
+This repository is the **public home** for our GitHub presence: the story you are reading now, deeper context in the docs, and a small static site you can open in a browser.
 
-## Executive summary
+## Website
 
-For narrative, goals, and default product assumptions for the next site iteration, see **[docs/executive-summary.md](docs/executive-summary.md)**.
+**Live site (GitHub Pages):** [shahzebqazi.github.io/iconoclast](https://shahzebqazi.github.io/iconoclast/) — static landing and links; if it 404s, Pages may not be enabled yet on this repo.
 
-## GitHub Pages (fallback site)
+**Source for that site:** this repository (`index.html` and `style.css` at the root).
 
-1. In the repo **Settings → Pages**, set **Source** to deploy from the **`main`** branch and **`/` (root)** so `index.html` is the site entry point.
-2. After the first deploy, your project URL will look like `https://<user>.github.io/<repo>/` (exact URL is shown on the Pages settings page).
+## Organization on GitHub
 
-The static page duplicates the essentials and links into this repo’s docs.
+**This hub repository:** [github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)
 
-## Next slice
+**More from our GitHub:** [github.com/shahzebqazi](https://github.com/shahzebqazi) — other public repositories and projects live alongside this one.
 
-To generate a **TypeScript** GitHub Pages site in a follow-up task, use the prompt in **[docs/agent-prompt-typescript-github-pages.md](docs/agent-prompt-typescript-github-pages.md)** (replace `OWNER/REPO` with this repository’s path).
+## Documentation
 
-## Repo layout
-
-| Path | Role |
-|------|------|
-| `README.md` | Landing copy on GitHub; link hub for docs |
-| `docs/executive-summary.md` | Longer public narrative |
-| `index.html`, `style.css` | Minimal Pages-compatible fallback |
+- **[Executive summary](docs/executive-summary.md)** — who this is for, what we are building toward, and how we talk about the work.
 
 ---
 
-*Work in progress—safe for public reading.*
+*We are early. If something is rough, that is honest progress—not a placeholder attitude.*
