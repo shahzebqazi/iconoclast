@@ -16,7 +16,7 @@
 ## Goals (near term)
 
 - A clear public landing ([README](../README.md)) and a longer narrative in this document.
-- A multi-page static site under [`site/`](../site/) deployed via GitHub Actions; canonical URL on the custom domain is **`https://iconoclastaud.io/site/`** (paths under `/site/` on the host).
+- A multi-page static site under [`site/`](../site/) deployed via GitHub Actions; canonical URL on the custom domain is **`https://iconoclastaud.io/`** (repo `site/` maps to the domain root; the old **`/site/`** URL prefix is deprecated).
 - Later: a TypeScript-based GitHub Pages site (see [Agent prompt: TypeScript GitHub Pages site](agent-prompt-typescript-github-pages.md)).
 
 **Repo mechanics** (layout, Pages, agent prompts): [AGENTS.md](../AGENTS.md).
@@ -28,7 +28,7 @@ These assumptions are in place unless you change them in a future revision:
 - **Brand:** Iconoclast Audio — audio engineering, not a generic SaaS landing.
 - **Tone:** Direct, technical, honest about WIP; no hype, no fake metrics.
 - **Scope v1:** Static content, accessible pages, no user accounts or API in the first TypeScript slice.
-- **Hosting:** GitHub Pages from `main`; artifact uses **`/site/`** for pages + root **`index.html`** → **`/site/`** (see workflow and repo root `index.html`).
+- **Hosting:** GitHub Pages from `main`; the workflow uploads the **`site/`** directory as the site root (see **`.github/workflows/pages.yml`** and **`site/.nojekyll`**).
 
 ## Out of scope (for now)
 
