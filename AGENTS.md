@@ -14,6 +14,8 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 | `docs/` | Markdown sources; not served as the public site |
 | `docs/executive-summary.md` | Longer narrative and product alignment defaults |
 | `docs/agent-prompt-typescript-github-pages.md` | Prompt for a future TypeScript GitHub Pages slice (replace `OWNER/REPO`) |
+| `docs/agent-prompt-site-ux.md` | Prompt for site layout/UX refactors (no default section cards; aligned responsive grid) |
+| `docs/agent-prompt-normalize-site-structure.md` | Prompt to dedupe layout (folder `index.html` → templates/build) |
 | `.github/workflows/pages.yml` | `npm run assets:build`, then assembles `_pages/` and deploys |
 
 ## GitHub Pages (canonical URL)
@@ -33,6 +35,10 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 ## Next implementation slice
 
 To scaffold a **TypeScript** GitHub Pages build, use **[docs/agent-prompt-typescript-github-pages.md](docs/agent-prompt-typescript-github-pages.md)** and set the repo path in that prompt.
+
+To refactor **layout, responsiveness, or visual structure** of the public site (e.g. iconoclastaud.io), use **[docs/agent-prompt-site-ux.md](docs/agent-prompt-site-ux.md)**.
+
+To **dedupe HTML** across routes (shared templates / build output), use **[docs/agent-prompt-normalize-site-structure.md](docs/agent-prompt-normalize-site-structure.md)**.
 
 ## Conventions
 

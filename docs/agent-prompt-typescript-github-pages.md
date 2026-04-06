@@ -8,6 +8,7 @@ You are implementing a **TypeScript** static site for **Iconoclast Audio**, depl
 
 - `README.md` — org landing copy
 - `docs/executive-summary.md` — narrative and alignment defaults (source markdown)
+- `docs/agent-prompt-site-ux.md` — **UX and layout constraints** (read before building pages)
 - `site/` — hand-written HTML + CSS (current public site; replace or generate into this folder or `dist/`)
 
 **Goals**
@@ -17,6 +18,14 @@ You are implementing a **TypeScript** static site for **Iconoclast Audio**, depl
 3. **Accessibility:** semantic HTML, readable contrast, focus styles, skip link if needed.
 4. **No secrets** in repo; no API keys; no private data.
 5. Document in `README.md` how to run `dev`, `build`, and where Pages should point.
+
+**UX and layout (mandatory)**
+
+Follow **[Agent prompt: Site UX](agent-prompt-site-ux.md)**. Summary:
+
+- **Preserve** the existing **color system and background** (deep base, radial gradients, accent/gold) for iconoclastaud.io–style pages.
+- **Do not** implement the main layout as a stack of **glass “card” panels** around every section — use a **single content column**, **shared gutters** (`--page-gutter` / `--content-max`), and **flat sections** separated by spacing or hairline rules.
+- **Responsive:** one coherent grid from narrow phones to wide screens; avoid mixed horizontal padding that misaligns nav, main, and footer; avoid breakpoint-only alignment jumps unless using an explicit mobile nav pattern.
 
 **Constraints**
 
