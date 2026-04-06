@@ -78,6 +78,31 @@ main,
   background: var(--surface-subtle);
 }
 
+.design-back {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+.design-back a {
+  color: var(--muted);
+}
+
+.design-back a:hover {
+  color: var(--link);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .site-header h1 {
   margin: 0 0 0.35rem;
   font-size: 1.75rem;
