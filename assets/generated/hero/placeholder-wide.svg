@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="r" cx="30%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#14151a"/>
+      <stop offset="100%" stop-color="#0c0d10"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#r)"/>
+  <circle cx="1440" cy="378" r="280" fill="#6eb5d9" fill-opacity="0.08"/>
+  <circle cx="480" cy="594" r="200" fill="#c9a227" fill-opacity="0.06"/>
+  <rect x="120" y="900" width="200" height="44" rx="22" fill="#6eb5d9" fill-opacity="0.35"/>
+  <text x="220" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8e6e1" text-anchor="middle">Digital mastering</text>
+  <rect x="340" y="900" width="200" height="44" rx="22" fill="#c97d6e" fill-opacity="0.35"/>
+  <text x="440" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8e6e1" text-anchor="middle">Analog</text>
+  <rect x="560" y="900" width="200" height="44" rx="22" fill="#9b8bc9" fill-opacity="0.35"/>
+  <text x="660" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8e6e1" text-anchor="middle">Vinyl</text>
+  <rect x="780" y="900" width="200" height="44" rx="22" fill="#5cb89a" fill-opacity="0.35"/>
+  <text x="880" y="928" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="16" font-weight="600" fill="#e8e6e1" text-anchor="middle">Lab · AI · Plugins</text>
+</svg>
