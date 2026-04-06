@@ -6,7 +6,8 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 
 | Path | Role |
 |------|------|
-| `site/` | **Public website** — HTML + CSS deployed to GitHub Pages (no `.md` links on the live site) |
+| `site/` | **Public website** — HTML + CSS; routes like `ritual/index.html` → `/ritual/` on Pages |
+| `site/404.html` | GitHub Pages custom not-found page |
 | `assets/readme-banner.svg` | Glass-style banner image for README (GitHub Markdown has no custom CSS) |
 | `README.md` | Public landing; organization and visitor copy |
 | `docs/executive-summary.md` | Longer narrative and product alignment defaults (source; mirrored in `site/executive-summary.html`) |

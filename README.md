@@ -14,9 +14,11 @@
 
 | | |
 | :--- | :--- |
-| **Website** | **[Live site (GitHub Pages)](https://shahzebqazi.github.io/iconoclast/)** — HTML under [`site/`](site/). Deployed with **GitHub Actions** (see [AGENTS.md](AGENTS.md)). If it 404s, set Pages **Source** to **GitHub Actions** and run the workflow on `main`. |
+| **Website** | **[Live site (GitHub Pages)](https://shahzebqazi.github.io/iconoclast/)** — static HTML under [`site/`](site/). Deployed with **GitHub Actions** (see [AGENTS.md](AGENTS.md)). If it 404s, set Pages **Source** to **GitHub Actions** and run the workflow on `main`. |
 | **This repo** | **[github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)** — hub, `docs/` (Markdown), and [`site/`](site/) (public pages). |
 | **Organization** | **[github.com/shahzebqazi](https://github.com/shahzebqazi)** — our other public repositories and projects. |
+
+**Site map** (folders use `index.html` so URLs stay clean): `/` home, `/ritual/`, `/rates/`, `/links/`, `/contact/` (same link list as `/links/`), `/legal/`, `/faq/`, plus `/404.html` for missing pages. **Local preview:** open `site/index.html` in a browser, or run `python -m http.server` from inside `site/` and open `http://localhost:8000/`.
 
 ## Documentation
 
