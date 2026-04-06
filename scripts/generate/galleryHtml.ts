@@ -83,6 +83,16 @@ export function buildGalleryHtml(
       border-bottom: 1px solid color-mix(in srgb, var(--color-fg) 12%, transparent);
       background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
     }
+    .gallery-brand {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .gallery-brand img {
+      flex-shrink: 0;
+      opacity: 0.9;
+      margin-top: 0.15rem;
+    }
     header h1 {
       margin: 0 0 0.35rem;
       font-family: var(--font-display);
@@ -152,18 +162,31 @@ export function buildGalleryHtml(
       color: color-mix(in srgb, var(--color-fg) 55%, transparent);
       border-top: 1px solid color-mix(in srgb, var(--color-fg) 10%, transparent);
     }
+    footer .gallery-footer-icon {
+      vertical-align: middle;
+      opacity: 0.85;
+      margin-right: 0.35rem;
+    }
   </style>
 </head>
 <body>
   <header>
     <p class="crumb"><a href="${esc(homeHref)}">← Iconoclast Audio site</a></p>
-    <h1>${esc(siteTitle)}</h1>
-    <p>Generated MVP assets (favicons, wordmarks, social and hero images, theme tokens, web manifest). Rebuild with <code>npm run assets:build</code>.</p>
+    <div class="gallery-brand">
+      <img src="${esc(`${assetPrefix}icons/oni-mask-128.png`)}" width="40" height="40" alt="" />
+      <div>
+        <h1>${esc(siteTitle)}</h1>
+        <p>Generated MVP assets (favicons, wordmarks, social and hero images, theme tokens, web manifest). Rebuild with <code>npm run assets:build</code>.</p>
+      </div>
+    </div>
   </header>
   <main>
 ${sections}
   </main>
-  <footer>Iconoclast Audio · asset gallery</footer>
+  <footer>
+    <img class="gallery-footer-icon" src="${esc(`${assetPrefix}icons/oni-mask-64.png`)}" width="24" height="24" alt="" />
+    Iconoclast Audio · asset gallery
+  </footer>
 </body>
 </html>
 `;
