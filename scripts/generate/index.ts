@@ -2,11 +2,13 @@
  * Build raster assets from SVG templates + brand tokens.
  * Run: npm run assets:build
  */
-import { mkdir, writeFile } from "node:fs/promises";
+import { cp, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
+import { assetCatalog } from "./assetCatalog.js";
 import { brand } from "./brand.js";
+import { buildGalleryHtml } from "./galleryHtml.js";
 import { faviconSvg } from "./svg/favicon.js";
 import { heroPlaceholderSvg } from "./svg/heroPlaceholder.js";
 import { ogImageSvg } from "./svg/ogImage.js";
@@ -15,6 +17,7 @@ import { wordmarkSvg } from "./svg/wordmark.js";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "../..");
 const outDir = path.join(repoRoot, "assets", "generated");
+const docsAssetsDir = path.join(repoRoot, "docs", "assets", "generated");
 
 async function svgToPng(svg: string, file: string, width: number): Promise<void> {
   const buf = await sharp(Buffer.from(svg, "utf8")).resize(width).png().toBuffer();
@@ -58,13 +61,14 @@ async function main(): Promise<void> {
     name: brand.name,
     short_name: "Iconoclast",
     description: `${brand.tagline}. Digital mastering, analog & vinyl, lab: Tone3000, AI, plugins.`,
-    start_url: "/",
+    /** GitHub Project Pages: manifest lives in `assets/generated/`; `../..` resolves to site root. */
+    start_url: "../..",
     display: "standalone",
     background_color: brand.colors.background,
     theme_color: brand.colors.background,
     icons: [
-      { src: "/assets/generated/pwa-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
-      { src: "/assets/generated/pwa-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
+      { src: "pwa-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
+      { src: "pwa-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
     ],
   };
 
@@ -91,7 +95,15 @@ async function main(): Promise<void> {
 
   await writeFile(path.join(outDir, "theme.css"), themeCss, "utf8");
 
+  await mkdir(path.join(repoRoot, "docs"), { recursive: true });
+  await cp(outDir, docsAssetsDir, { recursive: true });
+
+  const galleryHtml = buildGalleryHtml(assetCatalog, brand.name);
+  await writeFile(path.join(repoRoot, "docs", "index.html"), galleryHtml, "utf8");
+  await writeFile(path.join(repoRoot, "docs", ".nojekyll"), "", "utf8");
+
   console.log(`Wrote MVP assets to ${path.relative(repoRoot, outDir)}/`);
+  console.log(`GitHub Pages: ${path.relative(repoRoot, path.join(repoRoot, "docs", "index.html"))} (assets copied to docs/assets/generated/)`);
 }
 
 main().catch((err) => {
