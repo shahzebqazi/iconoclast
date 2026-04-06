@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Typography · Iconoclast Audio</title>
+    <meta
+      name="description"
+      content="Design reference: type scale and font stack for Iconoclast Audio (not part of the public site content)."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="design-nav" aria-label="Design documentation">
+        <a class="design-nav__live" href="../index.html">Live site</a>
+        <ul class="design-nav__pages">
+          <li>
+            <a href="palette.html">Palette</a>
+          </li>
+          <li>
+            <a href="typography.html" aria-current="page">Typography</a>
+          </li>
+        </ul>
+      </nav>
+      <h1>Typography</h1>
+      <p class="tagline">Design reference — font stack and type scale.</p>
+    </header>
+    <main id="main">
+      <section aria-labelledby="type-stack-heading">
+        <h2 id="type-stack-heading">Font stack</h2>
+        <p class="type-lede">
+          The site uses the system UI stack for fast loading and native feel. Monospace is reserved for
+          code and token names.
+        </p>
+        <div class="type-sample">
+          <p class="type-meta">body</p>
+          <p>
+            The quick brown fox jumps over the lazy dog. 0123456789 — em dash, “smart quotes”, and
+            <code>inline code</code> when needed.
+          </p>
+        </div>
+        <div class="type-sample">
+          <p class="type-meta">font-family (from style.css)</p>
+          <p>
+            <code
+              >system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif</code
+            >
+          </p>
+        </div>
+        <div class="type-sample">
+          <p class="type-meta">Monospace (code, hints)</p>
+          <p>
+            <code
+              >ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace</code
+            >
+          </p>
+        </div>
+      </section>
+      <section aria-labelledby="type-scale-heading">
+        <h2 id="type-scale-heading">Type scale</h2>
+        <p class="type-lede">
+          Approximate sizes used on the public pages and design docs. Line height is <code>1.5</code> on
+          <code>:root</code>.
+        </p>
+        <table class="type-scale-table">
+          <thead>
+            <tr>
+              <th scope="col">Role</th>
+              <th scope="col">Size</th>
+              <th scope="col">Weight</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Site title (<code>h1</code>)</td>
+              <td>1.75rem</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Section title (<code>h2</code>)</td>
+              <td>1.15rem</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Body / tagline</td>
+              <td>1rem</td>
+              <td>400</td>
+            </tr>
+            <tr>
+              <td>Muted / hints</td>
+              <td>0.95rem / 0.9rem</td>
+              <td>400</td>
+            </tr>
+            <tr>
+              <td>Footer</td>
+              <td>0.9rem</td>
+              <td>400</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="type-sample">
+          <h3>Preview</h3>
+          <p class="type-preview-h1">Heading 1 sample</p>
+          <p class="type-preview-h2">Heading 2 sample</p>
+          <p>Body paragraph. Secondary line for rhythm and line-height check.</p>
+          <p class="hint">Muted hint text — documentation paths and asides.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p><a href="../index.html">Home</a> · Design reference only.</p>
+    </footer>
+  </body>
+</html>
