@@ -24,7 +24,7 @@ The live site is built from the **`site/`** directory using **GitHub Actions**, 
 2. Set **Source** to **GitHub Actions** (not “Deploy from a branch” for the HTML site).
 3. The workflow **Deploy GitHub Pages** (`.github/workflows/pages.yml`) runs **`npm ci`** and **`npm run assets:build`**, then uploads `site/` as the Pages artifact on pushes to `main`.
 
-**First-time setup:** After the workflow exists on `main`, GitHub may prompt once to approve the `github-pages` environment. The site URL is `https://<user>.github.io/<repo>/` (exact URL on the Pages settings page).
+**First-time setup:** After the workflow exists on `main`, GitHub may prompt once to approve the `github-pages` environment. The public URL is **`https://iconoclastaud.io/`** (see repo root `CNAME`). GitHub may also show a `github.io` URL on the Pages settings page; the custom domain is canonical.
 
 **Editing content:** Change Markdown under `docs/` for version control on GitHub; update the matching HTML under `site/` when you want the public site to change (or automate that in a later slice).
 

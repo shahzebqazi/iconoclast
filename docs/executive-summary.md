@@ -14,7 +14,7 @@
 ## Goals (near term)
 
 - A clear public landing ([README](../README.md)) and a longer narrative in this document.
-- A multi-page static site under [`site/`](../site/) (`/`, `/ritual/`, `/rates/`, `/links/`, `/contact/`, `/legal/`, `/faq/`, `404.html`) deployed via GitHub Actions.
+- A multi-page static site under [`site/`](../site/) (`/`, `/ritual/`, `/rates/`, `/links/`, `/contact/`, `/legal/`, `/faq/`, `404.html`) deployed via GitHub Actions to **`https://iconoclastaud.io/`** (custom domain; `CNAME` in repo root).
 - Later: a TypeScript-based GitHub Pages site (see [Agent prompt: TypeScript GitHub Pages site](agent-prompt-typescript-github-pages.md)).
 
 **Repo mechanics** (layout, Pages, agent prompts): [AGENTS.md](../AGENTS.md).
@@ -27,7 +27,7 @@ These assumptions are in place unless you change them in a future revision:
 - **Tone:** Direct, technical, honest about WIP; no hype, no fake metrics.
 - **Visual / UX:** Flat static HTML and CSS under `site/style.css` — Bauhaus-inspired palette (rose gold, gold, baby blue, seafoam on warm neutrals), typography-led layout, borders and spacing instead of glass panels or card stacks. No decorative gradients or faux-3D chrome on the live pages.
 - **Scope v1:** Static content, accessible pages, no user accounts or API in the first TypeScript slice.
-- **Hosting:** GitHub Pages from this repo’s default branch; keep build output compatible with `gh-pages` or branch-root deploy.
+- **Hosting:** GitHub Pages from this repo’s default branch (Actions uploads the `site/` artifact). Canonical URL: **`https://iconoclastaud.io/`**.
 
 ## Out of scope (for now)
 
