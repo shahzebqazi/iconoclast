@@ -9,7 +9,7 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 | `site/` | **Public website** — HTML + CSS; routes like `ritual/index.html` → `/ritual/` on Pages |
 | `site/public/` | **Generated asset gallery** — `index.html` plus `generated/` from `npm run assets:build` (URL `/public/`) |
 | `site/404.html` | GitHub Pages custom not-found page |
-| `assets/readme-banner.svg` | Glass-style banner image for README (GitHub Markdown has no custom CSS) |
+| `assets/readme-banner.svg` | Banner image for README only (GitHub Markdown has no custom CSS; not the live site theme) |
 | `README.md` | Public landing; organization and visitor copy |
 | `docs/executive-summary.md` | Longer narrative and product alignment defaults (source; mirrored in `site/executive-summary.html`) |
 | `AGENTS.md` | This file (source; summary in `site/agents.html`) |
@@ -36,3 +36,4 @@ To scaffold a **TypeScript** GitHub Pages build, use **[docs/agent-prompt-typesc
 
 - Public-safe content only; no secrets in commits.
 - Prefer matching tone with [docs/executive-summary.md](docs/executive-summary.md) (direct, technical, WIP-friendly).
+- **Site CSS:** `site/style.css` — flat layout, Bauhaus palette tokens (`--bg`, `--rose-gold`, `--baby-blue`, etc.). Avoid glass/backdrop-filter, card stacks, and heavy shadows on user-facing pages; use borders and section spacing instead.
