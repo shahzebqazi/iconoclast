@@ -1,21 +1,20 @@
-<div align="center">
-  <img src="site/public/generated/logo/wordmark-light-bg.svg" alt="Iconoclast Audio" width="280" height="60" />
-  <p>
-    <strong>Public hub</strong> for our work on GitHub — sound, tools, and how we build them.<br />
-    <sub>Generated wordmark; the live site uses the dark-background variant in the nav.</sub>
-  </p>
-  <p>
-    <img src="assets/readme-logo-wordmark.png" alt="Iconoclast — AUDIO (metal wordmark)" height="72" />
-    &nbsp;&nbsp;
-    <img src="assets/readme-logo-mastering.png" alt="Iconoclast MASTERING (blackletter)" height="72" />
-  </p>
-  <p><sub>Wordmark and blackletter logos (transparent PNGs; copies of <code>site/public/generated/logo/</code>).</sub></p>
-  <p>
-    <img src="assets/readme-oni-mask.png" alt="" width="40" height="40" />
-    <br />
-    <sub>Site favicon: pen-style oni mask (<code>site/public/generated/icons/</code>).</sub>
-  </p>
-</div>
+<p align="center">
+  <img src="site/public/generated/logo/wordmark-dark-bg.svg" alt="Iconoclast Audio — wordmark" width="320" height="60" />
+</p>
+
+<p align="center">
+  <strong>Public hub</strong> for our work on GitHub — sound, tools, and how we build them.<br />
+  Live site: <a href="https://iconoclastaud.io/">iconoclastaud.io</a> (canonical; this README is GitHub-only).
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center"><img src="assets/readme-logo-wordmark.png" alt="Iconoclast AUDIO — metal wordmark" height="64" /></td>
+    <td align="center"><img src="assets/readme-logo-mastering.png" alt="Iconoclast MASTERING — blackletter" height="64" /></td>
+  </tr>
+</table>
+
+<p align="center"><small>Metal and blackletter marks (PNGs; copies under <code>site/public/generated/logo/</code>).</small></p>
 
 ---
 
@@ -23,16 +22,25 @@
 
 **Iconoclast Audio** is where we share **audio engineering** in public: experiments, releases, and process—not only polished demos.
 
-**Canonical public site (not this README):** **[iconoclastaud.io](https://iconoclastaud.io/)** — static HTML from [`site/`](site/), which GitHub Pages publishes as the **site root** (not under a `/site/` URL path). This README only appears on GitHub.
+The repo’s static site lives in [`site/`](site/) and is published by **GitHub Pages** at the **domain root** (not under a `/site/` path).
 
-| | |
+| Resource | Detail |
 | :--- | :--- |
-| **Website (canonical)** | **[https://iconoclastaud.io/](https://iconoclastaud.io/)** — deployed with **GitHub Actions** (see [AGENTS.md](AGENTS.md)). |
+| **Website (canonical)** | **[iconoclastaud.io](https://iconoclastaud.io/)** — deployed with **GitHub Actions** (see [AGENTS.md](AGENTS.md)). |
 | **GitHub Pages (project URL)** | `https://shahzebqazi.github.io/iconoclast/` — same files as `site/`. |
 | **This repo** | **[github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)** — hub, `docs/` (Markdown), and [`site/`](site/) (published site). |
 | **Organization** | **[github.com/shahzebqazi](https://github.com/shahzebqazi)** — our other public repositories and projects. |
 
-**Site map** (paths are under the domain root): `/`, `/ritual/`, `/rates/`, `/links/`, `/contact/`, `/legal/`, `/faq/`, `/design/palette.html`, `/design/typography.html`, `/404.html`. **Styling:** one flat stylesheet, `site/style.css` — Bauhaus palette, no glass panels or card UI on the public pages. **Assets:** `site/public/` → **`/public/`** on the host (`npm run assets:build`). **Local preview:** `cd site && python3 -m http.server` → matches production paths.
+**Site** (paths are under the domain root):
+
+- Pages: `/`, `/ritual/`, `/rates/`, `/links/`, `/contact/`, `/legal/`, `/faq/`, `/404.html`
+- Design refs: `/design/palette.html`, `/design/typography.html`
+
+**Styling:** one flat stylesheet, [`site/style.css`](site/style.css) — Bauhaus palette; no glass panels or card UI on public pages.
+
+**Assets:** `site/public/` is served as **`/public/`** on the host (`npm run assets:build`). Favicon and icons: `site/public/generated/icons/` (e.g. pen-style oni mask).
+
+**Local preview:** `cd site && python3 -m http.server` — paths match production.
 
 ## Documentation
 
@@ -50,6 +58,4 @@
 
 ---
 
-<p align="center">
-  <sub>Early days — rough edges are part of the record.</sub>
-</p>
+<p align="center"><small>Work in progress — public by default.</small></p>

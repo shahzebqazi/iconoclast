@@ -48,7 +48,7 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 
 | ID | Type | Description | Notes |
 |----|------|-------------|-------|
-| — | — | *(none yet)* | Add rows as items are agreed. |
+| README-1 | change | README hero and structure | Addressed: single primary wordmark (`wordmark-dark-bg.svg` for GitHub), one logo row table, split About/sitemap, table headers, footer tone. |
 
 ---
 
