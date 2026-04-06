@@ -37,20 +37,16 @@ jobs:
       - name: Generate site assets
         run: npm run assets:build
 
-      - name: Assemble Pages artifact (site at /site/, apex redirects to /site/)
+      - name: Prepare Pages artifact (repo site/ = published site root)
         run: |
           set -e
-          mkdir -p _pages
-          cp -r site _pages/site
-          cp CNAME _pages/
-          cp .nojekyll _pages/
-          cp index.html _pages/index.html
-          cp 404.html _pages/404.html
+          cp CNAME site/CNAME
+          test -f site/.nojekyll || touch site/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _pages
+          path: site
 
       - name: Deploy to GitHub Pages
         id: deployment

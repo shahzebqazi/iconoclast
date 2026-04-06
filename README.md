@@ -12,16 +12,16 @@
 
 **Iconoclast Audio** is where we share **audio engineering** in public: experiments, releases, and process—not only polished demos.
 
-**Canonical public site (not this README):** **[https://iconoclastaud.io/site/](https://iconoclastaud.io/site/)** — static HTML built from [`site/`](site/). Apex **`/`** redirects to **`/site/`** (repo root [`index.html`](index.html)); the GitHub README is repo documentation only.
+**Canonical public site (not this README):** **[iconoclastaud.io](https://iconoclastaud.io/)** — static HTML from [`site/`](site/), which GitHub Pages publishes as the **site root** (not under a `/site/` URL path). This README only appears on GitHub.
 
 | | |
 | :--- | :--- |
-| **Website (canonical)** | **[https://iconoclastaud.io/site/](https://iconoclastaud.io/site/)** — deployed with **GitHub Actions** (see [AGENTS.md](AGENTS.md)). |
-| **GitHub Pages (project URL)** | `https://shahzebqazi.github.io/iconoclast/site/` — same content under **`/site/`**. |
-| **This repo** | **[github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)** — hub, `docs/` (Markdown), and [`site/`](site/) (published site source). |
+| **Website (canonical)** | **[https://iconoclastaud.io/](https://iconoclastaud.io/)** — deployed with **GitHub Actions** (see [AGENTS.md](AGENTS.md)). |
+| **GitHub Pages (project URL)** | `https://shahzebqazi.github.io/iconoclast/` — same files as `site/`. |
+| **This repo** | **[github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)** — hub, `docs/` (Markdown), and [`site/`](site/) (published site). |
 | **Organization** | **[github.com/shahzebqazi](https://github.com/shahzebqazi)** — our other public repositories and projects. |
 
-**Site map** (paths on the live host are under **`https://iconoclastaud.io/site/`**): home, `ritual/`, `rates/`, `links/`, `contact/`, `legal/`, `faq/`, `design/palette.html`, `design/typography.html`, `404.html`. **Styling:** one flat stylesheet, `site/style.css` — Bauhaus palette, no glass panels or card UI on the public pages. **Asset gallery** (generated): **`/site/public/`** — `npm run assets:build` (same CSS as the main site). **Local preview:** `cd site && python3 -m http.server` → paths match production without the `/site/` prefix.
+**Site map** (paths are under the domain root): `/`, `/ritual/`, `/rates/`, `/links/`, `/contact/`, `/legal/`, `/faq/`, `/design/palette.html`, `/design/typography.html`, `/404.html`. **Styling:** one flat stylesheet, `site/style.css` — Bauhaus palette, no glass panels or card UI on the public pages. **Assets:** `site/public/` → **`/public/`** on the host (`npm run assets:build`). **Local preview:** `cd site && python3 -m http.server` → matches production paths.
 
 ## Documentation
 

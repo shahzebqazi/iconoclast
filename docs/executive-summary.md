@@ -14,7 +14,7 @@
 ## Goals (near term)
 
 - A clear public landing ([README](../README.md)) and a longer narrative in this document.
-- A multi-page static site under [`site/`](../site/) (`/site/`, `/site/ritual/`, `/site/rates/`, etc. on the custom domain) deployed via GitHub Actions; canonical URL **`https://iconoclastaud.io/site/`** (apex `/` redirects to `/site/`).
+- A multi-page static site under [`site/`](../site/) deployed via GitHub Actions; canonical URL on the custom domain is **`https://iconoclastaud.io/`** (repo `site/` maps to the domain root; the old **`/site/`** URL prefix is deprecated).
 - Later: a TypeScript-based GitHub Pages site (see [Agent prompt: TypeScript GitHub Pages site](agent-prompt-typescript-github-pages.md)).
 
 **Repo mechanics** (layout, Pages, agent prompts): [AGENTS.md](../AGENTS.md).
@@ -27,7 +27,7 @@ These assumptions are in place unless you change them in a future revision:
 - **Tone:** Direct, technical, honest about WIP; no hype, no fake metrics.
 - **Visual / UX:** Flat static HTML and CSS under `site/style.css` — Bauhaus-inspired palette (rose gold, gold, baby blue, seafoam on warm neutrals), typography-led layout, borders and spacing instead of glass panels or card stacks. No decorative gradients or faux-3D chrome on the live pages.
 - **Scope v1:** Static content, accessible pages, no user accounts or API in the first TypeScript slice.
-- **Hosting:** GitHub Pages from `main`; the workflow assembles `_pages/` with **`/site/`** for pages plus apex redirect (see repo root `index.html` and `.github/workflows/pages.yml`).
+- **Hosting:** GitHub Pages from `main`; the workflow uploads the **`site/`** directory as the site root (see **`.github/workflows/pages.yml`** and **`site/.nojekyll`**).
 
 ## Out of scope (for now)
 
