@@ -41,6 +41,14 @@ The live site at **https://iconoclastaud.io/** (redirects to `/site/`) should ke
 - Updated HTML structure (fewer decorative wrappers) and CSS that implements the layout system above.
 - Short note in the repo (e.g. README or contributor doc) describing `--content-max` / `--page-gutter` and the “no default section cards” rule so future edits stay consistent.
 
+## When this task is complete
+
+After the refactor is merged and verified:
+
+1. **Delete this file** — `docs/agent-prompt-site-ux.md`.
+2. **Edit [AGENTS.md](../AGENTS.md)** — remove this prompt from the layout table and from **Next implementation slice** (and any other links).
+3. **Edit [docs/agent-prompt-typescript-github-pages.md](agent-prompt-typescript-github-pages.md)** if it still exists — remove bullets that reference this file (UX constraints should live in `README.md`, `AGENTS.md`, or `site/style.css` comments by then).
+
 ---
 
 End of prompt.

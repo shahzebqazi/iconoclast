@@ -40,6 +40,13 @@ Replace ad-hoc copies with a **single source of truth** for layout and navigatio
 - [ ] Apex redirect (`/` → `/site/`) still works if unchanged.
 - [ ] Local preview: `npm run dev` or documented equivalent.
 
+## When this task is complete
+
+After the structure work is merged and verified:
+
+1. **Delete this file** — `docs/agent-prompt-normalize-site-structure.md`.
+2. **Edit [AGENTS.md](../AGENTS.md)** — remove this prompt from the layout table and from **Next implementation slice** (and any other links).
+
 ---
 
 End of prompt.

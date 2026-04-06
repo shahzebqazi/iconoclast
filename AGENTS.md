@@ -45,3 +45,4 @@ To **dedupe HTML** across routes (shared templates / build output), use **[docs/
 - Public-safe content only; no secrets in commits.
 - Prefer matching tone with [docs/executive-summary.md](docs/executive-summary.md) (direct, technical, WIP-friendly).
 - **Site CSS:** `site/style.css` — flat layout, Bauhaus palette tokens (`--bg`, `--rose-gold`, `--baby-blue`, etc.). Avoid glass/backdrop-filter, card stacks, and heavy shadows on user-facing pages; use borders and section spacing instead.
+- **Agent prompts** (`docs/agent-prompt-*.md`): each file is a **disposable task spec**. When the described work is done and merged, **delete that prompt file** and remove its row from the layout table and links in this file so the repo does not accumulate stale instructions.
