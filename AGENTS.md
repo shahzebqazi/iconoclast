@@ -13,7 +13,9 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 | `assets/readme-banner.svg` | Glass-style banner for GitHub README only |
 | `README.md` | GitHub org/repo landing (not the canonical marketing home) |
 | `docs/` | Markdown sources; not served as the public site |
-| `docs/agent-prompt-typescript-github-pages.md` | Prompt for a future TypeScript GitHub Pages slice |
+| `docs/executive-summary.md` | Longer narrative and product alignment defaults |
+| `docs/agent-prompt-typescript-github-pages.md` | Prompt for a future TypeScript GitHub Pages slice (replace `OWNER/REPO`) |
+| `docs/agent-prompt-site-ux.md` | Prompt for site layout/UX refactors (no default section cards; aligned responsive grid) |
 | `.github/workflows/pages.yml` | `npm run assets:build`, then assembles `_pages/` and deploys |
 
 ## GitHub Pages (canonical URL)
@@ -31,6 +33,8 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 ## Next implementation slice
 
 To scaffold a **TypeScript** GitHub Pages build, use **[docs/agent-prompt-typescript-github-pages.md](docs/agent-prompt-typescript-github-pages.md)** and set the repo path in that prompt.
+
+To refactor **layout, responsiveness, or visual structure** of the public site (e.g. iconoclastaud.io), use **[docs/agent-prompt-site-ux.md](docs/agent-prompt-site-ux.md)**.
 
 ## Conventions
 
