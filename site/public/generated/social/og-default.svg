@@ -8,12 +8,12 @@
   </defs>
   <rect width="1200" height="630" fill="url(#g)"/>
   <rect x="0" y="0" width="1200" height="6" fill="#d4b84a"/>
-  <g fill="none" stroke="#d4b84a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="#d4b84a" stroke-linecap="round" stroke-linejoin="round">
   <g transform="translate(980 300) scale(1.6200) translate(-50 -50)">
-    <path d="M 15 50 C 15 32 35 32 50 50 C 65 32 85 32 85 50 C 85 68 65 68 50 50 C 35 68 15 68 15 50 Z"/>
+    <path d="M 15 50 C 15 32 35 32 50 50 C 65 32 85 32 85 50 C 85 68 65 68 50 50 C 35 68 15 68 15 50 Z" stroke-width="3.7037"/>
   </g>
-  <line x1="980" y1="201" x2="980" y2="399"/>
-  <line x1="899" y1="300" x2="1061" y2="300"/>
+  <line x1="980" y1="201" x2="980" y2="399" stroke-width="6"/>
+  <line x1="899" y1="300" x2="1061" y2="300" stroke-width="6"/>
 </g>
   <text x="80" y="280" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="72" font-weight="600" fill="#eef0f5">Iconoclast Audio</text>
   <text x="80" y="360" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="28" font-weight="400" fill="#d4b84a">Mastering &amp; audio lab · Digital · Analog · Vinyl · Lab</text>
