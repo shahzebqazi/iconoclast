@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iconoclast Audio — Generated assets</title>
+  <link rel="stylesheet" href="generated/theme.css" />
+  <link rel="icon" href="generated/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="generated/apple-touch-icon.png" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-fg);
+      line-height: 1.5;
+    }
+    header {
+      padding: 2.5rem 1.5rem 2rem;
+      border-bottom: 1px solid color-mix(in srgb, var(--color-fg) 12%, transparent);
+      background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
+    }
+    header h1 {
+      margin: 0 0 0.35rem;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+    }
+    header p { margin: 0; color: color-mix(in srgb, var(--color-fg) 72%, transparent); max-width: 42rem; }
+    .crumb { margin: 0 0 1rem; font-size: 0.9rem; }
+    .crumb a { color: var(--color-digital); text-decoration: none; }
+    .crumb a:hover { text-decoration: underline; }
+    main { padding: 2rem 1.5rem 4rem; max-width: 1200px; margin: 0 auto; }
+    .block { margin-bottom: 2.75rem; }
+    .block h2 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      border: 1px solid color-mix(in srgb, var(--color-fg) 14%, transparent);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--color-surface);
+    }
+    .preview {
+      aspect-ratio: 16 / 10;
+      background: repeating-conic-gradient(color-mix(in srgb, var(--color-fg) 6%, transparent) 0% 25%, transparent 0% 50%) 50% / 20px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .preview img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .preview--file {
+      aspect-ratio: auto;
+      min-height: 5rem;
+      padding: 1rem;
+    }
+    .preview--file .ext {
+      font-family: ui-monospace, monospace;
+      font-size: 0.85rem;
+      color: var(--color-accent);
+    }
+    .meta { padding: 1rem 1.1rem 1.15rem; }
+    .meta h3 { margin: 0 0 0.35rem; font-size: 1rem; font-weight: 600; }
+    .path { margin: 0 0 0.5rem; font-size: 0.8rem; word-break: break-all; }
+    .path code { color: color-mix(in srgb, var(--color-fg) 78%, transparent); }
+    .desc { margin: 0 0 0.75rem; font-size: 0.9rem; color: color-mix(in srgb, var(--color-fg) 88%, transparent); }
+    .meta a { color: var(--color-digital); text-decoration: none; }
+    .meta a:hover { text-decoration: underline; }
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: color-mix(in srgb, var(--color-fg) 55%, transparent);
+      border-top: 1px solid color-mix(in srgb, var(--color-fg) 10%, transparent);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="crumb"><a href="../index.html">← Iconoclast Audio site</a></p>
+    <h1>Iconoclast Audio</h1>
+    <p>Generated MVP assets (favicons, wordmarks, social and hero images, theme tokens, web manifest). Rebuild with <code>npm run assets:build</code>.</p>
+  </header>
+  <main>
+<section class="block">
+  <h2>Favicon &amp; app icons</h2>
+  <div class="grid"><article class="card">
+  <div class="preview"><img src="generated/favicon.svg" alt="" loading="lazy" /></div>
+  <div class="meta">
+    <h3>Favicon (vector)</h3>
+    <p class="path"><code>generated/favicon.svg</code></p>
+    <p class="desc">Vector favicon with the IA monogram. Use as the primary tab icon reference; raster sizes are exported below.</p>
+    <p><a href="generated/favicon.svg" download>Download</a> · <a href="generated/favicon.svg" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="preview"><img src="generated/favicon-32.png" alt="" loading="lazy" /></div>
+  <div class="meta">
+    <h3>Favicon 32×32</h3>
+    <p class="path"><code>generated/favicon-32.png</code></p>
+    <p class="desc">PNG fallback for browsers that prefer raster favicons.</p>
+    <p><a href="generated/favicon-32.png" download>Download</a> · <a href="generated/favicon-32.png" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="preview"><img src="generated/apple-touch-icon.png" alt="" loading="lazy" /></div>
+  <div class="meta">
+    <h3>Apple touch icon</h3>
+    <p class="path"><code>generated/apple-touch-icon.png</code></p>
+    <p class="desc">180×180 PNG for iOS home screen and Safari pinned tabs.</p>
+    <p><a href="generated/apple-touch-icon.png" download>Download</a> · <a href="generated/apple-touch-icon.png" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="preview"><img src="generated/pwa-192.png" alt="" loading="lazy" /></div>
+  <div class="meta">
+    <h3>PWA icon 192×192</h3>
+    <p class="path"><code>generated/pwa-192.png</code></p>
+    <p class="desc">Maskable app icon for installable PWA and Android shortcuts.</p>
+    <p><a href="generated/pwa-192.png" download>Download</a> · <a href="generated/pwa-192.png" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="preview"><img src="generated/pwa-512.png" alt="" loading="lazy" /></div>
+  <div class="meta">
+    <h3>PWA icon 512×512</h3>
+    <p class="path"><code>generated/pwa-512.png</code></p>
+    <p class="desc">High-resolution PWA icon for splash screens and stores.</p>
+    <p><a href="generated/pwa-512.png" download>Download</a> · <a href="generated/pwa-512.png" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article></div>
+</section>
+<section class="block">
+  <h2>Logo</h2>
+  <div class="grid"><article class="card">
+  <div class="preview"><img src="generated/logo/wordmark-light-bg.svg" alt="" loading="lazy" /></div>
+  <div class="meta">
+    <h3>Wordmark (light background)</h3>
+    <p class="path"><code>generated/logo/wordmark-light-bg.svg</code></p>
+    <p class="desc">Placeholder wordmark for light surfaces until a final logomark is supplied.</p>
+    <p><a href="generated/logo/wordmark-light-bg.svg" download>Download</a> · <a href="generated/logo/wordmark-light-bg.svg" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="preview"><img src="generated/logo/wordmark-dark-bg.svg" alt="" loading="lazy" /></div>
+  <div class="meta">
+    <h3>Wordmark (dark background)</h3>
+    <p class="path"><code>generated/logo/wordmark-dark-bg.svg</code></p>
+    <p class="desc">Same wordmark tuned for dark UI backgrounds and headers.</p>
+    <p><a href="generated/logo/wordmark-dark-bg.svg" download>Download</a> · <a href="generated/logo/wordmark-dark-bg.svg" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article></div>
+</section>
+<section class="block">
+  <h2>Social</h2>
+  <div class="grid"><article class="card">
+  <div class="preview"><img src="generated/social/og-default.svg" alt="" loading="lazy" /></div>
+  <div class="meta">
+    <h3>Open Graph image (SVG source)</h3>
+    <p class="path"><code>generated/social/og-default.svg</code></p>
+    <p class="desc">Vector source for the default link preview card (1200×630).</p>
+    <p><a href="generated/social/og-default.svg" download>Download</a> · <a href="generated/social/og-default.svg" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="preview"><img src="generated/social/og-default.png" alt="" loading="lazy" /></div>
+  <div class="meta">
+    <h3>Open Graph image (PNG)</h3>
+    <p class="path"><code>generated/social/og-default.png</code></p>
+    <p class="desc">Raster OG/Twitter card at 1200×630 for social and messaging previews.</p>
+    <p><a href="generated/social/og-default.png" download>Download</a> · <a href="generated/social/og-default.png" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article></div>
+</section>
+<section class="block">
+  <h2>Hero</h2>
+  <div class="grid"><article class="card">
+  <div class="preview"><img src="generated/hero/placeholder-wide.svg" alt="" loading="lazy" /></div>
+  <div class="meta">
+    <h3>Hero placeholder (SVG)</h3>
+    <p class="path"><code>generated/hero/placeholder-wide.svg</code></p>
+    <p class="desc">Wide abstract hero with service and lab cues; replace with photography when ready.</p>
+    <p><a href="generated/hero/placeholder-wide.svg" download>Download</a> · <a href="generated/hero/placeholder-wide.svg" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="preview"><img src="generated/hero/placeholder-wide.png" alt="" loading="lazy" /></div>
+  <div class="meta">
+    <h3>Hero placeholder (PNG)</h3>
+    <p class="path"><code>generated/hero/placeholder-wide.png</code></p>
+    <p class="desc">1920×1080 raster export for static site hero slots.</p>
+    <p><a href="generated/hero/placeholder-wide.png" download>Download</a> · <a href="generated/hero/placeholder-wide.png" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article></div>
+</section>
+<section class="block">
+  <h2>Theme &amp; config</h2>
+  <div class="grid"><article class="card">
+  <div class="preview preview--file"><span class="ext">css</span></div>
+  <div class="meta">
+    <h3>Theme tokens (CSS)</h3>
+    <p class="path"><code>generated/theme.css</code></p>
+    <p class="desc">Generated custom properties: background, surfaces, accent, service colors, font stacks.</p>
+    <p><a href="generated/theme.css" download>Download</a> · <a href="generated/theme.css" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="preview preview--file"><span class="ext">webmanifest</span></div>
+  <div class="meta">
+    <h3>Web app manifest</h3>
+    <p class="path"><code>generated/site.webmanifest</code></p>
+    <p class="desc">PWA metadata: name, colors, icons; paths are relative to this file for GitHub Pages.</p>
+    <p><a href="generated/site.webmanifest" download>Download</a> · <a href="generated/site.webmanifest" target="_blank" rel="noopener">Open</a></p>
+  </div>
+</article></div>
+</section>
+  </main>
+  <footer>Iconoclast Audio · asset gallery</footer>
+</body>
+</html>
