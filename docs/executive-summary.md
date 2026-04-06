@@ -4,7 +4,9 @@
 
 ## What this is
 
-**Iconoclast Audio** is a public-facing hub for audio engineering work: experiments, releases, and how the work is approached. Engineering-heavy source and CI may live elsewhere (for example GitLab); this GitHub presence is what ships to the open web—README, documentation, and a minimal static site via GitHub Pages.
+**Iconoclast Audio** is a public-facing hub for audio engineering work: experiments, releases, and how the work is approached.
+
+**Visual identity (at a glance):** The public site uses a **pen-style oni mask** as the tab/bookmark icon (transparent PNGs under `site/public/generated/icons/`). **Wordmarks** live in `site/public/generated/logo/`. These are generated assets, not a claim of cultural ownership—see the Ritual page on the live site for tone. Engineering-heavy source and CI may live elsewhere (for example GitLab); this GitHub presence is what ships to the open web—README, documentation, and a minimal static site via GitHub Pages.
 
 ## Audience
 

@@ -11,6 +11,7 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 | `index.html`, `404.html`, `.nojekyll` | **Pages apex** — redirect to `/site/`; disable Jekyll so README is not the homepage |
 | `CNAME` | Custom domain `iconoclastaud.io` (copied into the Pages artifact root) |
 | `assets/readme-banner.svg` | Glass-style banner for GitHub README only |
+| `assets/readme-oni-mask.png` | Copy of `site/public/generated/icons/oni-mask-128.png` for README (favicon / brand glyph) |
 | `README.md` | GitHub org/repo landing (not the canonical marketing home) |
 | `docs/` | Markdown sources; not served as the public site |
 | `docs/agent-prompt-typescript-github-pages.md` | Prompt for a future TypeScript GitHub Pages slice |

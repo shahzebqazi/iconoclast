@@ -10,6 +10,11 @@
     <img src="assets/readme-logo-mastering.png" alt="Iconoclast MASTERING (blackletter)" height="72" />
   </p>
   <p><sub>Wordmark and blackletter logos (transparent PNGs; copies of <code>site/public/generated/logo/</code>).</sub></p>
+  <p>
+    <img src="assets/readme-oni-mask.png" alt="" width="40" height="40" />
+    <br />
+    <sub>Site favicon: pen-style oni mask (<code>site/public/generated/icons/</code>).</sub>
+  </p>
 </div>
 
 ---
