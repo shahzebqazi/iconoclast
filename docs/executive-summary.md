@@ -13,9 +13,11 @@
 
 ## Goals (near term)
 
-- A clear story on the repo landing page (`README.md`) and a longer narrative here.
-- A small static fallback (`index.html`) so the project has a real URL on GitHub Pages without committing to a full site generator yet.
+- A clear public landing ([README](../README.md)) and a longer narrative in this document.
+- A small static site (`index.html`) so the project has a real URL on GitHub Pages without a full generator yet.
 - Later: a TypeScript-based GitHub Pages site (see [Agent prompt: TypeScript GitHub Pages site](agent-prompt-typescript-github-pages.md)).
+
+**Repo mechanics** (layout, Pages, agent prompts): [AGENTS.md](../AGENTS.md).
 
 ## Product alignment (defaults for the next build)
 
