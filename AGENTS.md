@@ -8,7 +8,7 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 |------|------|
 | `site/` | **Public website source** — HTML + CSS (edit here) |
 | `site/public/` | **Generated asset gallery** — from `npm run assets:build` (live under **`/site/public/`** on the host) |
-| `deploy/` | **Pages extras** — apex `index.html` → `/site/`, root `404.html` stub |
+| `index.html`, `404.html`, `.nojekyll` | **Pages apex** — redirect to `/site/`; disable Jekyll so README is not the homepage |
 | `CNAME` | Custom domain `iconoclastaud.io` (copied into the Pages artifact root) |
 | `assets/readme-banner.svg` | Glass-style banner for GitHub README only |
 | `README.md` | GitHub org/repo landing (not the canonical marketing home) |
@@ -22,7 +22,7 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 
 1. **Settings → Pages → Build and deployment** → **Source: GitHub Actions**
 2. **Custom domain:** `iconoclastaud.io` (DNS per GitHub Pages docs)
-3. Workflow runs **`npm ci`** and **`npm run assets:build`**, then builds **`_pages/`** = `site/` copied to **`site/`** + **`CNAME`** + **`deploy/index.html`** (redirects apex to **`/site/`**) + **`deploy/404.html`**
+3. Workflow runs **`npm ci`** and **`npm run assets:build`**, then builds **`_pages/`** = `site/` → **`site/`** + **`CNAME`** + repo-root **`index.html`**, **`404.html`**, **`.nojekyll`**
 
 **Project URL:** `https://<user>.github.io/<repo>/site/` — same layout.
 

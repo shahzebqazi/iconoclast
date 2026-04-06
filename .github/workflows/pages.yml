@@ -43,8 +43,9 @@ jobs:
           mkdir -p _pages
           cp -r site _pages/site
           cp CNAME _pages/
-          cp deploy/index.html _pages/index.html
-          cp deploy/404.html _pages/404.html
+          cp .nojekyll _pages/
+          cp index.html _pages/index.html
+          cp 404.html _pages/404.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

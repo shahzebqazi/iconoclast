@@ -26,7 +26,7 @@ These assumptions are in place unless you change them in a future revision:
 - **Brand:** Iconoclast Audio — audio engineering, not a generic SaaS landing.
 - **Tone:** Direct, technical, honest about WIP; no hype, no fake metrics.
 - **Scope v1:** Static content, accessible pages, no user accounts or API in the first TypeScript slice.
-- **Hosting:** GitHub Pages from `main`; published artifact places the site at **`/site/`** on `iconoclastaud.io` (see `deploy/` + workflow).
+- **Hosting:** GitHub Pages from `main`; artifact uses **`/site/`** for pages + root **`index.html`** → **`/site/`** (see workflow and repo root `index.html`).
 
 ## Out of scope (for now)
 

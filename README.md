@@ -16,7 +16,7 @@
 
 | | |
 | :--- | :--- |
-| **Website (canonical)** | **[https://iconoclastaud.io/site/](https://iconoclastaud.io/site/)** — deployed with **GitHub Actions** (see [AGENTS.md](AGENTS.md)). Apex `https://iconoclastaud.io/` redirects to `/site/`. |
+| **Website (canonical)** | **[https://iconoclastaud.io/site/](https://iconoclastaud.io/site/)** — deployed with **GitHub Actions** (see [AGENTS.md](AGENTS.md)). Apex **`/`** uses repo-root [`index.html`](index.html) to redirect to **`/site/`** (stops Jekyll from using `README.md` as the homepage). |
 | **GitHub Pages (project URL)** | `https://shahzebqazi.github.io/iconoclast/site/` — same content; **`/site/`** is the site root. |
 | **This repo** | **[github.com/shahzebqazi/iconoclast](https://github.com/shahzebqazi/iconoclast)** — hub, `docs/` (Markdown), and [`site/`](site/) (published site source). |
 | **Organization** | **[github.com/shahzebqazi](https://github.com/shahzebqazi)** — our other public repositories and projects. |
