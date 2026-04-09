@@ -2,6 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- Pages may show this document while the URL is still a missing path; set <base> so nav links hit the real site root. -->
+    <script>
+      (function () {
+        var h = location.hostname;
+        var baseHref = location.origin + "/";
+        if (h.endsWith("github.io")) {
+          var parts = location.pathname.split("/").filter(Boolean);
+          if (parts.length) baseHref = location.origin + "/" + parts[0] + "/";
+        }
+        var b = document.createElement("base");
+        b.href = baseHref;
+        document.head.insertBefore(b, document.head.firstChild);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Page not found — Iconoclast Audio</title>
     <meta name="description" content="404 — this path does not exist on Iconoclast Audio." />
