@@ -1,3 +1,6 @@
+# Publishes the contents of site/ as the site root (not the repo root).
+# In repo Settings → Pages, use "GitHub Actions" as the source—not "Deploy from a branch",
+# or inner-page links that use ../ will break (they resolve to the repo layout, not site/).
 name: Deploy GitHub Pages
 
 on:
