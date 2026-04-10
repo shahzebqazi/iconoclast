@@ -1,6 +1,6 @@
 # Publishes the contents of site/ as the site root (not the repo root).
-# In repo Settings → Pages, use "GitHub Actions" as the source—not "Deploy from a branch",
-# or inner-page links that use ../ will break (they resolve to the repo layout, not site/).
+# Prefer Settings → Pages → Source: GitHub Actions so / is site/index.html (no /site/ prefix).
+# If Pages uses the repo root instead, GitHub shows README unless index.html exists—see repo root index.html.
 name: Deploy GitHub Pages
 
 on:
