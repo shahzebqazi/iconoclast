@@ -44,16 +44,38 @@ for (const file of publicPages) {
   if (/href=["'][^"']*legal\/index\.html["']/i.test(primaryNav)) {
     errors.push(`${file}: Legal must not be in primary nav`);
   }
+  if (/href=["'][^"']*links\/index\.html["']/i.test(primaryNav)) {
+    errors.push(`${file}: Links must not be in primary nav`);
+  }
+  if (/href=["'][^"']*contact\/index\.html["']/i.test(primaryNav)) {
+    errors.push(`${file}: Contact must not be in primary nav`);
+  }
+
+  const footerNav = html.match(/<nav aria-label="Footer">[\s\S]*?<\/nav>/)?.[0] ?? "";
+  if (!/href=["'][^"']*links\/index\.html["'][^>]*>Links<\/a>/i.test(footerNav)) {
+    errors.push(`${file}: footer must keep Links`);
+  }
 }
 
 const home = readFileSync(path.join(root, "site/index.html"), "utf8");
 if (!home.includes("public/generated/hero/mastering-analog-01.png")) {
   errors.push("site/index.html: homepage must use the rates hero image");
 }
+if (!/<div class="home-actions">[\s\S]*href="links\/index\.html"[\s\S]*href="contact\/index\.html"[\s\S]*<\/div>/.test(home)) {
+  errors.push("site/index.html: homepage must include Links and Contact buttons");
+}
+
+const links = readFileSync(path.join(root, "site/links/index.html"), "utf8");
+if (/One column, thumb-friendly|Same list as Contact/i.test(links)) {
+  errors.push("site/links/index.html: remove old Links tagline");
+}
+if (!/<body class="page-art links-page">/.test(links)) {
+  errors.push("site/links/index.html: Links page must use narrow-centering class");
+}
 
 for (const file of skinnedPages) {
   const html = readFileSync(path.join(root, file), "utf8");
-  if (!/<body class="page-art(?: theme-invert)?">/.test(html)) {
+  if (!/<body class="[^"]*\bpage-art\b[^"]*">/.test(html)) {
     errors.push(`${file}: public page must use the landing-page art skin`);
   }
 }
@@ -91,15 +113,20 @@ if (!/<input[^>]+type="email"[^>]+disabled/.test(contact)) {
 
 const rates = readFileSync(path.join(root, "site/rates/index.html"), "utf8");
 for (const requiredRate of [
+  "240 USD",
   "240 CAD",
   "5 day turnaround",
   "2x",
   "72 hour",
   "3x",
   "48 hour",
+  "250+ USD",
   "250+ CAD",
+  "500 USD",
   "500 CAD",
   "multitrack mastering",
+  "USD for USA/international",
+  "CAD for Canadians",
 ]) {
   if (!rates.includes(requiredRate)) {
     errors.push(`site/rates/index.html: missing rate detail "${requiredRate}"`);
@@ -129,6 +156,12 @@ if (!/\.coming-soon-form\b/.test(css)) {
 }
 if (!/\.rate-card\b/.test(css)) {
   errors.push("site/style.css: missing rate card styles");
+}
+if (!/\.home-actions\b/.test(css)) {
+  errors.push("site/style.css: missing landing page action button styles");
+}
+if (!/\.links-page\b/.test(css)) {
+  errors.push("site/style.css: missing narrow Links page centering styles");
 }
 
 if (existsSync(path.join(root, "site/public/index.html"))) {
