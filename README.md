@@ -34,11 +34,11 @@ The repo’s static site lives in [`site/`](site/) and is published by **GitHub 
 **Site** (paths are under the domain root):
 
 - Pages: `/`, `/ritual/`, `/rates/`, `/links/`, `/contact/`, `/legal/`, `/faq/`, `/404.html`
-- Design refs: `/design/palette.html`, `/design/typography.html`
+- Dev-only design refs may exist under `site/design/`, but they are removed from the Pages artifact.
 
 **Styling:** one flat stylesheet, [`site/style.css`](site/style.css) — Bauhaus palette; no glass panels or card UI on public pages.
 
-**Assets:** `site/public/` is served as **`/public/`** on the host (`npm run assets:build`). Favicon and icons: `site/public/generated/icons/` (e.g. pen-style oni mask).
+**Assets:** `site/public/generated/` is served as **`/public/generated/`** on the host (`npm run assets:build`). The browsable asset gallery is dev-only: use `npm run assets:gallery` locally.
 
 **Local preview:** `cd site && python3 -m http.server` — paths match production.
 
@@ -51,7 +51,7 @@ The repo’s static site lives in [`site/`](site/) and is published by **GitHub 
 
 ## Generated assets (MVP)
 
-- **Build:** `npm install` then `npm run assets:build` — writes **`site/public/generated/`** and **`site/public/index.html`** (flat asset index; catalog in `scripts/generate/assetCatalog.ts`). The build runs vector templates, then **`postprocessAiIcons.ts`** (oni favicons from `scripts/generate/ai-cache/`, circular fireball logo).
+- **Build:** `npm install` then `npm run assets:build` — writes **`site/public/generated/`**. Use `npm run assets:gallery` for a local-only flat asset index from `scripts/generate/assetCatalog.ts`. The build runs vector templates, then **`postprocessAiIcons.ts`** (oni favicons from `scripts/generate/ai-cache/`, circular fireball logo).
 - **CI:** the Pages workflow runs the same build before deploy so `site/public/` stays in sync.
 - See `assets/MVP_ASSETS.md` for what ships from generators vs what you still supply (photography, final logo, copy).
 - Brand questions: `docs/BRAND_CONSULTATION.md`.

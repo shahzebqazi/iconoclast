@@ -4,6 +4,8 @@
   "type": "module",
   "scripts": {
     "assets:build": "tsx scripts/generate/index.ts",
+    "assets:gallery": "ICONOCLAST_DEV_GALLERY=1 tsx scripts/generate/index.ts",
+    "verify:public": "node scripts/verifyPublicSite.mjs",
     "assets:clean": "node -e \"import('node:fs/promises').then(fs=>fs.rm('site/public',{recursive:true,force:true}))\""
   },
   "devDependencies": {

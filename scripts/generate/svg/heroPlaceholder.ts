@@ -7,10 +7,10 @@ export function heroPlaceholderSvg(brand: Brand, width = 1920, height = 1080): s
     brand.colors;
 
   const pills = [
-    { label: "Digital mastering", fill: digital },
-    { label: "Analog", fill: analog },
-    { label: "Vinyl", fill: vinyl },
-    { label: "Lab · AI · Plugins", fill: lab },
+    { label: "Extreme mastering", fill: digital },
+    { label: "Production", fill: analog },
+    { label: "Mixing", fill: vinyl },
+    { label: "Bass · Guitar", fill: lab },
   ];
 
   const pillEls = pills

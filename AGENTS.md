@@ -8,7 +8,7 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 |------|------|
 | `site/` | **Public website** — source for what GitHub Pages publishes; **`site/index.html`** is **`https://iconoclastaud.io/`** |
 | `site/.nojekyll` | Disables Jekyll when building from this folder |
-| `site/public/` | **Generated asset gallery** — `npm run assets:build`; live at **`/public/`** on the host (e.g. `/public/generated/…`) |
+| `site/public/generated/` | **Generated public assets** — `npm run assets:build`; files are served under **`/public/generated/…`** |
 | `CNAME` | Copied into **`site/`** by the workflow — custom domain `iconoclastaud.io` |
 | `assets/readme-banner.svg` | Glass-style banner for the GitHub README only |
 | `assets/readme-oni-mask.png` | Copy of `site/public/generated/icons/oni-mask-128.png` for README (favicon / brand glyph) |
@@ -56,5 +56,6 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 
 - Public-safe content only; no secrets in commits.
 - Prefer matching tone with [docs/executive-summary.md](docs/executive-summary.md) (direct, technical, WIP-friendly).
+- **Dev-only gallery/design docs:** `npm run assets:gallery` may create `site/public/index.html` locally. Do not link it from public pages; the Pages workflow removes it and `site/design/` before deploy.
 - **Site CSS:** `site/style.css` — flat layout, Bauhaus palette tokens (`--bg`, `--rose-gold`, `--baby-blue`, etc.). Avoid glass/backdrop-filter, card stacks, and heavy shadows on user-facing pages; use borders and section spacing instead.
 - **Agent prompts** (`docs/agent-prompt-*.md`): each file is a **disposable task spec**. When the described work is done and merged, **delete that prompt file** and remove its row from the layout table and links in this file so the repo does not accumulate stale instructions.

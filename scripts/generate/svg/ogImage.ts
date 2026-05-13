@@ -9,7 +9,7 @@ export function ogImageSvg(brand: Brand): string {
   const bg = brand.colors.background;
   const fg = brand.colors.primary;
   const accent = brand.colors.accent;
-  const line2 = escapeXml(`${brand.tagline} · Digital · Analog · Vinyl · Lab`);
+  const line2 = escapeXml(`${brand.tagline} · Production · Mixing · Session Bass/Guitar`);
 
   const mark = leviathanCrossGroup(980, 300, 4.5, { stroke: accent, strokeWidth: 6 });
 

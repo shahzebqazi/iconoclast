@@ -23,7 +23,7 @@ export type GalleryOptions = {
 };
 
 /**
- * Asset index at `site/public/index.html` — flat list, same stylesheet as main site.
+ * Dev-only asset index at `site/public/index.html` — flat list, same stylesheet as main site.
  */
 export function buildGalleryHtml(
   entries: AssetEntry[],

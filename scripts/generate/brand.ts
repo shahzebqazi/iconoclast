@@ -4,7 +4,7 @@
  */
 export const brand = {
   name: "Iconoclast Audio",
-  tagline: "Mastering & audio lab",
+  tagline: "Extreme Metal Mastering",
 
   /** Wordmark lines (generators use these; keep headline short for layouts). */
   wordmark: {
@@ -19,8 +19,8 @@ export const brand = {
     background: "#06080d",
     surface: "#0e1118",
     primary: "#eef0f5",
-    accent: "#d4b84a",
-    accentMuted: "#94823a",
+    accent: "#d4121f",
+    accentMuted: "#8d1018",
     digital: "#8ab4ff",
     analog: "#b85c4a",
     vinyl: "#9b8bc9",

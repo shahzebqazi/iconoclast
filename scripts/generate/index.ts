@@ -2,9 +2,10 @@
  * Build raster assets from SVG templates + brand tokens.
  * Run: npm run assets:build
  *
- * Outputs under `site/public/generated/` and `site/public/index.html` (asset gallery).
+ * Outputs under `site/public/generated/`.
+ * Set ICONOCLAST_DEV_GALLERY=1 to also write the local-only asset gallery.
  */
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
@@ -62,7 +63,7 @@ async function main(): Promise<void> {
   const manifest = {
     name: brand.name,
     short_name: "Iconoclast",
-    description: `${brand.tagline}. Digital mastering, analog & vinyl, lab: Tone3000, AI, plugins.`,
+    description: `${brand.tagline}. Production, session bass and guitar, mixing, and mastering.`,
     /** Site root on custom domain (iconoclastaud.io). */
     start_url: "/",
     display: "standalone",
@@ -97,17 +98,26 @@ async function main(): Promise<void> {
 
   await writeFile(path.join(outDir, "theme.css"), themeCss, "utf8");
 
-  const galleryHtml = buildGalleryHtml(assetCatalog, brand.name, {
-    assetPrefix: "generated/",
-    homeHref: "https://iconoclastaud.io/",
-  });
-  await mkdir(path.join(repoRoot, "site", "public"), { recursive: true });
-  await writeFile(path.join(repoRoot, "site", "public", "index.html"), galleryHtml, "utf8");
+  const galleryPath = path.join(repoRoot, "site", "public", "index.html");
+  if (process.env.ICONOCLAST_DEV_GALLERY === "1") {
+    const galleryHtml = buildGalleryHtml(assetCatalog, brand.name, {
+      assetPrefix: "generated/",
+      homeHref: "https://iconoclastaud.io/",
+    });
+    await mkdir(path.join(repoRoot, "site", "public"), { recursive: true });
+    await writeFile(galleryPath, galleryHtml, "utf8");
+  } else {
+    await rm(galleryPath, { force: true });
+  }
 
   await runPostprocessAiIcons();
 
   console.log(`Wrote MVP assets to ${path.relative(repoRoot, outDir)}/`);
-  console.log(`Gallery: ${path.relative(repoRoot, path.join(repoRoot, "site", "public", "index.html"))}`);
+  console.log(
+    process.env.ICONOCLAST_DEV_GALLERY === "1"
+      ? `Gallery: ${path.relative(repoRoot, galleryPath)}`
+      : "Gallery: skipped for public build (set ICONOCLAST_DEV_GALLERY=1 for dev)",
+  );
 }
 
 main().catch((err) => {
