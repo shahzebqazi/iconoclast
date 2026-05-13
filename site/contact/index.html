@@ -10,54 +10,80 @@
     <link rel="apple-touch-icon" href="../public/generated/apple-touch-icon.png" />
     <link rel="stylesheet" href="../style.css" />
   </head>
-  <body>
+  <body class="page-art">
     <a class="skip" href="#main">Skip to content</a>
     <div class="site-shell">
       <nav class="site-nav" aria-label="Primary">
         <a class="nav-brand" href="../index.html"
           ><img
-            src="../public/generated/logo/iconoclast-mastering-blackletter.png"
+            src="../public/generated/icons/oni-mask-128.png"
             alt=""
             class="nav-brand__logo"
-            width="200"
-            height="43"
+            width="128"
+            height="128"
           />Iconoclast Audio</a
         >
         <span class="nav-sep" aria-hidden="true"></span>
         <a href="../index.html">Home</a>
         <a href="../ritual/index.html">Ritual</a>
+        <a href="../session-bassist-vst/index.html" class="nav-link--stack">Session Bassist<br />VST</a>
         <a href="../rates/index.html">Rates</a>
         <a href="../links/index.html">Links</a>
-        <a href="../faq/index.html">FAQ</a>
-        <a href="../legal/index.html">Legal</a>
         <a href="index.html" aria-current="page">Contact</a>
-        <a href="../public/index.html">Assets</a>
-        <a href="../design/palette.html">Design</a>
       </nav>
     </div>
     <header class="site-header">
       <h1>Contact</h1>
-      <p class="tagline">Same stack as Links—use whatever you actually check.</p>
+      <p class="tagline">Use whatever you actually check.</p>
     </header>
     <main id="main">
       <section aria-labelledby="stack-heading">
         <h2 id="stack-heading" class="visually-hidden">Elsewhere</h2>
+        <ul class="link-stack platform-list">
+          <li>
+            <a href="mailto:willy@iconoclastaud.io"
+              ><span class="platform-icon" aria-hidden="true">@</span>Email</a
+            >
+          </li>
+          <li>
+            <a href="https://matrix.to/#/@metalmasteringengineer:matrix.org"
+              ><span class="platform-icon" aria-hidden="true">[]</span>Matrix</a
+            >
+          </li>
+          <li>
+            <a href="https://mastodon.social/@iconoclastaudio"
+              ><span class="platform-icon" aria-hidden="true">M</span>Mastodon</a
+            >
+          </li>
+          <li>
+            <a href="https://www.instagram.com/kongposhmosh/"
+              ><span class="platform-icon" aria-hidden="true">IG</span>Instagram</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section aria-labelledby="soon-heading">
+        <h2 id="soon-heading">Coming soon</h2>
+        <p class="hint">Booking intake will live here. For now, email is fastest.</p>
+        <form class="coming-soon-form" aria-label="Coming soon booking form">
+          <label for="booking-email">Booking email</label>
+          <div class="coming-soon-form__row">
+            <input
+              id="booking-email"
+              type="email"
+              name="email"
+              placeholder="you@domain.com"
+              disabled
+            />
+            <button type="button" disabled>Coming soon</button>
+          </div>
+        </form>
+      </section>
+      <section aria-labelledby="details-heading">
+        <h2 id="details-heading">Details</h2>
         <ul class="link-stack">
-          <li><a href="mailto:willy@iconoclastaud.io">Email</a></li>
-          <li>
-            <a href="https://matrix.to/#/@metalmasteringengineer:matrix.org">Matrix</a>
-          </li>
-          <li>
-            <a href="https://mastodon.social/@iconoclastaudio">Mastodon</a>
-          </li>
-          <li><a href="https://reverb.com/ca/shop/gearacquisitionsyndrome">Reverb</a></li>
-          <li>
-            <a href="https://www.tone3000.com/iconoclastaudio">Tone3000</a>
-          </li>
-          <li><a href="https://www.youtube.com/@Kongposhmosh">YouTube</a></li>
-          <li>
-            <a href="https://www.instagram.com/kongposhmosh/">Instagram</a>
-          </li>
+          <li><a href="../faq/index.html">FAQ</a></li>
+          <li><a href="../legal/index.html">Legal</a></li>
         </ul>
       </section>
     </main>
@@ -73,8 +99,6 @@
           <a href="../faq/index.html">FAQ</a>
           <a href="../legal/index.html">Legal</a>
           <a href="index.html">Contact</a>
-          <a href="../design/palette.html">Design</a>
-          <a href="https://github.com/shahzebqazi/iconoclast">GitHub</a>
         </nav>
       </div>
       <p class="wip">Site is a living document—rough edges are honest.</p>
