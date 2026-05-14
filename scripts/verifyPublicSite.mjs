@@ -75,6 +75,11 @@ if (!home.includes("public/generated/hero/mastering-analog-01.png")) {
 if (!/<div class="home-actions">[\s\S]*href="links\/index\.html"[\s\S]*href="contact\/index\.html"[\s\S]*<\/div>/.test(home)) {
   errors.push("site/index.html: homepage must include Links and Contact buttons");
 }
+if (/<ul class="home-services"/.test(home)) {
+  errors.push(
+    "site/index.html: remove legacy home-services chip list from hero (scope lives on About / Rates)",
+  );
+}
 
 const links = readFileSync(path.join(root, "site/links/index.html"), "utf8");
 if (/One column, thumb-friendly|Same list as Contact/i.test(links)) {
