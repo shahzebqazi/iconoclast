@@ -394,16 +394,6 @@ main h3 {
   color: var(--signal-red);
 }
 
-.home-kicker--loc {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.home-kicker__pin {
-  flex-shrink: 0;
-}
-
 .home-hero h1 {
   max-width: 12ch;
   margin: 0;
