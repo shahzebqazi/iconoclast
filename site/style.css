@@ -655,15 +655,6 @@ body.rates-menu-page.page-art .site-header h1 {
   margin-top: 0.85rem;
 }
 
-body.rates-menu-page .rates-menu__establishment {
-  margin: 0;
-  font-family: Georgia, "Palatino Linotype", Palatino, serif;
-  font-size: 0.68rem;
-  letter-spacing: 0.48em;
-  text-transform: uppercase;
-  color: #6b5343;
-}
-
 body.rates-menu-page .rates-menu__ornament {
   margin: 0.65rem 0 0;
   font-size: 0.62rem;
@@ -790,13 +781,79 @@ body.rates-menu-page.page-art main h2 {
 }
 
 body.rates-menu-page.page-art .rates-menu__column-label {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.85rem;
   text-align: center;
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   font-weight: 400;
-  letter-spacing: 0.42em;
-  text-transform: uppercase;
-  color: #6b5343;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  font-style: italic;
+  color: #5c534a;
+  line-height: 1.45;
+}
+
+body.rates-menu-page.page-art .rates-menu__reservations-copy {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #3a3530;
+}
+
+body.rates-menu-page.page-art .rates-menu__reservations-copy strong {
+  font-weight: 700;
+}
+
+body.rates-menu-page.page-art .rates-menu__section-lede {
+  margin: 0 0 0.85rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.45;
+  color: #5c534a;
+}
+
+body.rates-menu-page.page-art .rates-menu__details {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px dotted rgba(28, 25, 23, 0.22);
+}
+
+body.rates-menu-page.page-art .rates-menu__details:first-of-type {
+  border-top: 1px dotted rgba(28, 25, 23, 0.22);
+}
+
+body.rates-menu-page.page-art .rates-menu__details summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.55rem 0;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 0.98rem;
+  color: #1c1917;
+}
+
+body.rates-menu-page.page-art .rates-menu__details summary::-webkit-details-marker {
+  display: none;
+}
+
+body.rates-menu-page.page-art .rates-menu__details summary::after {
+  content: "+";
+  float: right;
+  font-weight: 400;
+  color: #8b6914;
+  letter-spacing: 0;
+}
+
+body.rates-menu-page.page-art .rates-menu__details[open] summary::after {
+  content: "–";
+}
+
+body.rates-menu-page.page-art .rates-menu__details > p {
+  margin: 0 0 0.75rem;
+  padding: 0 0 0.15rem 0.15rem;
+  font-size: 0.88rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: #5c534a;
 }
 
 body.rates-menu-page.page-art .rates-menu-bilingual {
