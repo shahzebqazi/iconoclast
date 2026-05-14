@@ -1,1 +1,4 @@
 node_modules/
+EMAIL_TEMPLATES/
+
+.DS_Store
