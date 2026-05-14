@@ -562,6 +562,215 @@ body:has(.home-main) .site-footer-brand img {
   }
 }
 
+/* About — service tags on dark art skin */
+.page-art.theme-invert .about-service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  max-width: 28rem;
+  margin: 0.5rem 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.page-art.theme-invert .about-service-tags li {
+  margin: 0;
+  padding: 0.28rem 0.5rem;
+  border: 1px solid rgba(247, 244, 239, 0.55);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.78rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--paper);
+}
+
+/* Rates — fine dining menu (cream, serif, dot leaders) */
+body.rates-menu-page {
+  background: #e8e0d4;
+  color: #1c1917;
+}
+
+body.rates-menu-page .site-shell {
+  background: #f7f2ea;
+}
+
+body.rates-menu-page.page-art .site-header,
+body.rates-menu-page.page-art main,
+body.rates-menu-page.page-art .site-footer {
+  max-width: 34rem;
+}
+
+body.rates-menu-page.page-art .site-header {
+  text-align: center;
+  border-bottom: 1px solid rgba(139, 105, 20, 0.42);
+  padding-bottom: 1.75rem;
+}
+
+body.rates-menu-page.page-art .site-header h1 {
+  font-family: Georgia, "Palatino Linotype", Palatino, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  font-size: clamp(1.25rem, 3.2vw, 1.85rem);
+  color: #1c1917;
+  max-width: none;
+  margin-top: 0.85rem;
+}
+
+body.rates-menu-page .rates-menu__establishment {
+  margin: 0;
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.48em;
+  text-transform: uppercase;
+  color: #6b5343;
+}
+
+body.rates-menu-page .rates-menu__tagline {
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: #4a4239;
+  max-width: 26rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.rates-menu-page.page-art main {
+  font-family: Georgia, "Palatino Linotype", Palatino, "Times New Roman", serif;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+body.rates-menu-page.page-art main > section {
+  margin-top: 2.25rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid rgba(139, 105, 20, 0.32);
+}
+
+body.rates-menu-page.page-art main > section:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+body.rates-menu-page.page-art main h2.rates-menu__course {
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: #8b6914;
+  margin-bottom: 1.35rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(28, 25, 23, 0.1);
+}
+
+body.rates-menu-page.page-art main h2 {
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+}
+
+.rates-menu__item {
+  margin-bottom: 1.4rem;
+}
+
+.rates-menu__item:last-child {
+  margin-bottom: 0;
+}
+
+.rates-menu__row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: end;
+  gap: 0.5rem 0.75rem;
+  width: 100%;
+}
+
+.rates-menu__name {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 1.02rem;
+}
+
+.rates-menu__dots {
+  border-bottom: 1px dotted rgba(28, 25, 23, 0.3);
+  height: 1px;
+  margin-bottom: 0.32em;
+  min-width: 1.25rem;
+}
+
+.rates-menu__price {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: 1.02rem;
+}
+
+.rates-menu__gloss {
+  margin: 0.45rem 0 0;
+  max-width: none;
+  font-size: 0.88rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: #5c534a;
+}
+
+.rates-menu__steps {
+  margin: 0.65rem 0 0;
+  padding-left: 1.15rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #3a3530;
+}
+
+.rates-menu__steps strong {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.rates-menu__footer-note {
+  margin: 1.4rem 0 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #4a4239;
+}
+
+body.rates-menu-page.page-art a {
+  color: #6b1018;
+  text-decoration-color: rgba(139, 105, 20, 0.65);
+}
+
+body.rates-menu-page.page-art a:hover {
+  color: var(--signal-red);
+}
+
+body.rates-menu-page.page-art .site-footer {
+  background: #f0e9df;
+  color: #2a2622;
+  border-top: 1px solid rgba(139, 105, 20, 0.35);
+}
+
+body.rates-menu-page.page-art .site-footer a {
+  color: #1c1917;
+}
+
+@media (max-width: 640px) {
+  body.rates-menu-page.page-art .rates-menu__row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  body.rates-menu-page.page-art .rates-menu__dots {
+    display: none;
+  }
+
+  body.rates-menu-page.page-art .rates-menu__price {
+    justify-self: start;
+    font-size: 0.95rem;
+  }
+}
+
 .theme-invert {
   background: #111111;
   color: var(--paper);

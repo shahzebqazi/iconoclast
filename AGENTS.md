@@ -2,11 +2,21 @@
 
 Human-facing introduction: **[README.md](README.md)**. This file is for **people and tools** changing the repo: layout, hosting, and follow-up tasks.
 
+## Handoff — 2026-05-14
+
+- **About (was Ritual):** Canonical route is **`/about/`** (`site/about/index.html`). The **`site/ritual/`** tree was removed; external links to **`/ritual/`** 404 unless you add a redirect stub later. Nav label everywhere is **About**.
+- **Rates:** `site/rates/index.html` uses **`body.page-art.rates-menu-page`** — fine-dining–style menu (cream paper, serif, dot leaders). It is **not** `theme-invert`; footer wordmark there is **`wordmark-light-bg.svg`**. All rate copy strings are still enforced by **`npm run verify:public`** (including exact substrings like `250+ CAD` on one line where required).
+- **Verify:** `scripts/verifyPublicSite.mjs` **`publicPages`** list includes **`site/about/index.html`** (not `ritual`). Global forbidden patterns still block visible **GitHub** mentions and `github.com` links on *most* pages; if you re-add GitHub on Links, restore per-file **`skipFiles`** on those patterns (see git history around 2026-05-14).
+- **Session Bassist VST:** `site/session-bassist-vst/index.html` is a short offline stub; not linked from primary nav.
+- **CSS:** `site/style.css` — look for **`about-service-tags`**, **`rates-menu-page`**, and existing **`page-art` / `theme-invert` / `links-page`** blocks before editing layout.
+
 ## Layout
 
 | Path | Role |
 |------|------|
 | `site/` | **Public website** — source for what GitHub Pages publishes; **`site/index.html`** is **`https://iconoclastaud.io/`** |
+| `site/about/index.html` | **About** — bio, ethos, service tags (dark `theme-invert` skin). Replaces former **`/ritual/`** page. |
+| `site/rates/index.html` | **Rates** — `page-art` + **`rates-menu-page`** (cream “menu” layout); pricing copy must satisfy **`npm run verify:public`**. |
 | `site/.nojekyll` | Disables Jekyll when building from this folder |
 | `site/public/generated/` | **Generated public assets** — `npm run assets:build`; files are served under **`/public/generated/…`** |
 | `CNAME` | Copied into **`site/`** by the workflow — custom domain `iconoclastaud.io` |
@@ -22,7 +32,7 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 
 ## GitHub Pages (canonical URL)
 
-**Live homepage:** **`https://iconoclastaud.io/`** — contents of repo **`site/`** are published at the **domain root**. Older **`/site/…`** URL paths from a previous deploy layout are **deprecated**; do not document marketing URLs as `…/site/…`.
+**Live homepage:** **`https://iconoclastaud.io/`** — contents of repo **`site/`** are published at the **domain root**. Older **`/site/…`** URL paths from a previous deploy layout are **deprecated**; do not document marketing URLs as `…/site/…`. The old **`/ritual/`** path was renamed to **`/about/`**; bookmarks to **`/ritual/`** need a redirect if you still need them.
 
 **Project URL:** **`https://<user>.github.io/<repo>/`** — same: **`site/`** is the site root for the project Pages URL.
 

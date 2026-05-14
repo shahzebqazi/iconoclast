@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" href="../public/generated/apple-touch-icon.png" />
     <link rel="stylesheet" href="../style.css" />
   </head>
-  <body class="page-art theme-invert">
+  <body class="page-art rates-menu-page">
     <a class="skip" href="#main">Skip to content</a>
     <div class="site-shell">
       <nav class="site-nav" aria-label="Primary">
@@ -28,68 +28,81 @@
         >
         <span class="nav-sep" aria-hidden="true"></span>
         <a href="../index.html">Home</a>
-        <a href="../ritual/index.html">Ritual</a>
-        <a href="../rates/index.html">Rates</a>
+        <a href="../about/index.html">About</a>
+        <a href="index.html" aria-current="page">Rates</a>
       </nav>
     </div>
-    <header class="site-header">
+    <header class="site-header rates-menu__header">
+      <p class="rates-menu__establishment">Iconoclast Audio</p>
       <h1>Rates &amp; booking</h1>
-      <p class="tagline">USD for USA/international. Same number in CAD for Canadians.</p>
+      <p class="tagline rates-menu__tagline">
+        USD for USA/international. Same number in CAD for Canadians.
+      </p>
     </header>
-    <main id="main">
-      <div class="rates-hero-strip" role="presentation">
-        <img
-          src="../public/generated/hero/mastering-analog-01.png"
-          width="1920"
-          height="1080"
-          alt=""
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <section aria-labelledby="mastering-heading">
-        <h2 id="mastering-heading">Mastering</h2>
-        <div class="rate-grid">
-          <article class="rate-card">
-            <p class="rate-card__label">2 channel master</p>
-            <p class="rate-card__price">240 USD</p>
-            <p>One stereo mix. 5 day turnaround. Canadians pay 240 CAD.</p>
-          </article>
-          <article class="rate-card">
-            <p class="rate-card__label">72 hour turnaround</p>
-            <p class="rate-card__price">2x</p>
-            <p>Rush delivery when the queue allows it.</p>
-          </article>
-          <article class="rate-card">
-            <p class="rate-card__label">48 hour turnaround</p>
-            <p class="rate-card__price">3x</p>
-            <p>Fastest turnaround. Confirm availability before sending files.</p>
-          </article>
-        </div>
+    <main id="main" class="rates-menu">
+      <section class="rates-menu__section" aria-labelledby="rates-mastering">
+        <h2 id="rates-mastering" class="rates-menu__course">Mastering</h2>
+        <article class="rates-menu__item">
+          <div class="rates-menu__row">
+            <span class="rates-menu__name">Two-channel master</span>
+            <span class="rates-menu__dots" aria-hidden="true"></span>
+            <span class="rates-menu__price">240 USD</span>
+          </div>
+          <p class="rates-menu__gloss">
+            One stereo mix. 5 day turnaround. Canadians pay 240 CAD.
+          </p>
+        </article>
+        <article class="rates-menu__item">
+          <div class="rates-menu__row">
+            <span class="rates-menu__name">72 hour turnaround</span>
+            <span class="rates-menu__dots" aria-hidden="true"></span>
+            <span class="rates-menu__price">2x</span>
+          </div>
+          <p class="rates-menu__gloss">Rush delivery when the queue allows it.</p>
+        </article>
+        <article class="rates-menu__item">
+          <div class="rates-menu__row">
+            <span class="rates-menu__name">48 hour turnaround</span>
+            <span class="rates-menu__dots" aria-hidden="true"></span>
+            <span class="rates-menu__price">3x</span>
+          </div>
+          <p class="rates-menu__gloss">Fastest turnaround. Confirm availability before sending files.</p>
+        </article>
       </section>
-      <section aria-labelledby="formats-heading">
-        <h2 id="formats-heading">Other formats</h2>
-        <div class="rate-grid">
-          <article class="rate-card">
-            <p class="rate-card__label">Vinyl, cassette, etc.</p>
-            <p class="rate-card__price">+250+ USD</p>
-            <p>Additional format-specific mastering on top of the 2 channel master. Canadians pay +250+ CAD.</p>
-          </article>
-          <article class="rate-card">
-            <p class="rate-card__label">multitrack mastering</p>
-            <p class="rate-card__price">starting 500 USD</p>
-            <p>For projects that need access to grouped tracks or stems to land properly. Canadians start at 500 CAD.</p>
-          </article>
-        </div>
+
+      <section class="rates-menu__section" aria-labelledby="rates-formats">
+        <h2 id="rates-formats" class="rates-menu__course">Other formats</h2>
+        <article class="rates-menu__item">
+          <div class="rates-menu__row">
+            <span class="rates-menu__name">Vinyl, cassette, etc.</span>
+            <span class="rates-menu__dots" aria-hidden="true"></span>
+            <span class="rates-menu__price">+250+ USD</span>
+          </div>
+          <p class="rates-menu__gloss">
+            Additional format-specific mastering on top of the 2 channel master. Canadians pay +250+ CAD.
+          </p>
+        </article>
+        <article class="rates-menu__item">
+          <div class="rates-menu__row">
+            <span class="rates-menu__name">multitrack mastering</span>
+            <span class="rates-menu__dots" aria-hidden="true"></span>
+            <span class="rates-menu__price">starting 500 USD</span>
+          </div>
+          <p class="rates-menu__gloss">
+            For projects that need access to grouped tracks or stems to land properly. Canadians
+            start at 500 CAD.
+          </p>
+        </article>
       </section>
-      <section aria-labelledby="booking-heading">
-        <h2 id="booking-heading">Booking</h2>
-        <ol>
+
+      <section class="rates-menu__section rates-menu__section--reservations" aria-labelledby="rates-booking">
+        <h2 id="rates-booking" class="rates-menu__course">Reservations</h2>
+        <ol class="rates-menu__steps">
           <li><strong>Email first.</strong> Send length, target date, and what formats you need.</li>
           <li><strong>Files.</strong> 24-bit WAV or AIFF preferred. Do not clip the master bus.</li>
           <li><strong>References.</strong> Send references only if they describe a real target.</li>
         </ol>
-        <p class="pages-note">
+        <p class="rates-menu__footer-note">
           Contact: <a href="mailto:willy@iconoclastaud.io">willy@iconoclastaud.io</a>.
         </p>
       </section>
@@ -97,9 +110,10 @@
     <footer class="site-footer">
       <div class="site-footer-brand">
         <img
-          src="../public/generated/icons/oni-mask-128.png"
-          width="32"
-          height="32"
+          class="site-footer-brand__logo"
+          src="../public/generated/logo/wordmark-light-bg.svg"
+          width="200"
+          height="38"
           alt=""
         />
         <nav aria-label="Footer">

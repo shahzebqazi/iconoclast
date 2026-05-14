@@ -4,7 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const publicPages = [
   "site/index.html",
-  "site/ritual/index.html",
+  "site/about/index.html",
   "site/rates/index.html",
   "site/links/index.html",
   "site/contact/index.html",
