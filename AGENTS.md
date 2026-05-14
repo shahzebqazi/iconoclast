@@ -1,81 +1,61 @@
 # Repository guide (contributors & automation)
 
-Human-facing introduction: **[README.md](README.md)**. This file is for **people and tools** changing the repo: layout, hosting, and follow-up tasks.
+Visitor intro: **[README.md](README.md)**. This file orients people and agents working on hosting, routes, and the static site.
 
-## Handoff — 2026-05-14
+## Live URLs
 
-- **About (was Ritual):** Canonical route is **`/about/`** (`site/about/index.html`). The **`site/ritual/`** tree was removed; external links to **`/ritual/`** 404 unless you add a redirect stub later. Nav label everywhere is **About**.
-- **Rates:** `site/rates/index.html` uses **`body.page-art.rates-menu-page`** — fine-dining–style menu (cream paper, serif, dot leaders); **wide** viewports show **EN | FR** columns; **narrow** viewports use an **EN / FR** toggle. Listed prices are **USD**; Canadian **CAD** parity is one footnote in the English column. Copy is still checked by **`npm run verify:public`** (required rate substrings must appear somewhere in the file).
-- **Verify:** `scripts/verifyPublicSite.mjs` **`publicPages`** list includes **`site/about/index.html`** (not `ritual`). Global forbidden patterns still block visible **GitHub** mentions and `github.com` links on *most* pages; if you re-add GitHub on Links, restore per-file **`skipFiles`** on those patterns (see git history around 2026-05-14).
-- **Session Bassist VST:** `site/session-bassist-vst/index.html` is a short offline stub; not linked from primary nav.
-- **CSS:** `site/style.css` — look for **`about-service-tags`**, **`rates-menu-page`**, and existing **`page-art` / `theme-invert` / `links-page`** blocks before editing layout.
+- **Production:** `https://iconoclastaud.io/` — **`site/`** is the **domain root** (do not market `…/site/…` paths from older layouts).
+- **`/about/`** is canonical (`site/about/index.html`). **`/ritual/`** was removed; add a redirect stub only if legacy bookmarks matter.
+- **`https://<user>.github.io/<repo>/`** uses the same **`site/`**-as-root layout.
 
-## Layout
+## GitHub Pages
 
-| Path | Role |
-|------|------|
-| `site/` | **Public website** — source for what GitHub Pages publishes; **`site/index.html`** is **`https://iconoclastaud.io/`** |
-| `site/about/index.html` | **About** — bio, ethos, service tags (dark `theme-invert` skin). Replaces former **`/ritual/`** page. |
-| `site/rates/index.html` | **Rates** — `page-art` + **`rates-menu-page`** (cream “menu” layout); pricing copy must satisfy **`npm run verify:public`**. |
-| `site/.nojekyll` | Disables Jekyll when building from this folder |
-| `site/public/generated/` | **Generated public assets** — `npm run assets:build`; files are served under **`/public/generated/…`** |
-| `CNAME` | Copied into **`site/`** by the workflow — custom domain `iconoclastaud.io` |
-| `assets/readme-banner.svg` | Glass-style banner for the GitHub README only |
-| `assets/readme-oni-mask.png` | Copy of `site/public/generated/icons/oni-mask-128.png` for README (favicon / brand glyph) |
-| `README.md` | GitHub repo landing (not rendered as the live homepage) |
-| `docs/` | Markdown sources; not the static site |
-| `docs/executive-summary.md` | Longer narrative and product alignment |
-| `docs/agent-prompt-typescript-github-pages.md` | Prompt for a future TypeScript slice (replace `OWNER/REPO`) |
-| `docs/agent-prompt-site-ux.md` | Prompt for layout/CSS refactors on the public site |
-| `docs/agent-prompt-normalize-site-structure.md` | **Spec + agent prompt:** dedupe HTML across routes (templates / small static build); read before large IA changes |
-| `.github/workflows/pages.yml` | Runs `npm run assets:build`, copies `CNAME` into `site/`, then deploys **`site/`** as the Pages artifact |
+- **Workflow:** `.github/workflows/pages.yml` — `npm ci`, `npm run assets:build`, copy **`CNAME`** into **`site/`**, keep **`site/.nojekyll`**, publish **`site/`**. **Source:** GitHub Actions; **custom domain:** `iconoclastaud.io`. First run on `main` may require approving the **`github-pages`** environment once.
+- **Ship:** edit **`site/`**; push **`main`** to update the live site.
 
-## GitHub Pages (canonical URL)
+## Key paths
 
-**Live homepage:** **`https://iconoclastaud.io/`** — contents of repo **`site/`** are published at the **domain root**. Older **`/site/…`** URL paths from a previous deploy layout are **deprecated**; do not document marketing URLs as `…/site/…`. The old **`/ritual/`** path was renamed to **`/about/`**; bookmarks to **`/ritual/`** need a redirect if you still need them.
+| Path | Notes |
+|------|--------|
+| `site/` | Public site source (artifact root). |
+| `site/about/index.html` | About — `theme-invert`, service tags. |
+| `site/mastering/index.html` | Mastering — `page-art` + `theme-invert`; explains process and role in a project. |
+| `site/rates/index.html` | Rates — `page-art` + `rates-menu-page` (cream menu, serif, dot leaders); wide **EN \| FR**, narrow EN/FR toggle; **USD** + **CAD** footnote. Must satisfy **`npm run verify:public`**. |
+| `site/style.css` | Reuse `about-service-tags`, `rates-menu-page`, `page-art`, `theme-invert`, `links-page` before inventing layout. |
+| `site/public/generated/` | **`npm run assets:build`** → served as **`/public/generated/…`**. |
+| `site/.nojekyll`, `CNAME` | Jekyll off; domain file (workflow copies `CNAME` into `site/`). |
+| `assets/` | README-only (`readme-banner.svg`, `readme-oni-mask.png`). |
+| `README.md` | GitHub repo landing, not the homepage. |
+| `docs/` | Markdown; **`docs/executive-summary.md`** for tone. **`docs/agent-prompt-*.md`** are disposable specs — when work is merged, **delete the file** and **remove its links** from this doc. |
 
-**Project URL:** **`https://<user>.github.io/<repo>/`** — same: **`site/`** is the site root for the project Pages URL.
+`site/session-bassist-vst/index.html` is a short offline stub; not in primary nav.
 
-1. **Settings → Pages → Build and deployment** → **Source: GitHub Actions**
-2. **Custom domain:** `iconoclastaud.io` (DNS per GitHub docs)
-3. Workflow: **`npm ci`**, **`npm run assets:build`**, copy **`CNAME`** into **`site/`**, ensure **`site/.nojekyll`**, upload **`site/`** as the artifact
+## Verification
 
-**First-time setup:** After the workflow exists on `main`, GitHub may prompt once to approve the `github-pages` environment.
+- Run **`npm run verify:public`** for public HTML/CSS/JS changes (rates substrings, page list, forbidden patterns). **`publicPages`** in **`scripts/verifyPublicSite.mjs`** must include **`site/about/index.html`** (not `ritual`).
+- Most pages must not show **GitHub** or `github.com`; if an exception (e.g. Links) is needed, use per-file **`skipFiles`** on those checks (see git history ~2026-05-14).
 
-**Editing:** change files under **`site/`**; push to **`main`**.
+## Next prompts
 
-## Next implementation slice
+- [docs/agent-prompt-typescript-github-pages.md](docs/agent-prompt-typescript-github-pages.md) — TS / build slice (`OWNER/REPO` placeholders).
+- [docs/agent-prompt-site-ux.md](docs/agent-prompt-site-ux.md) — layout / responsiveness.
+- [docs/agent-prompt-normalize-site-structure.md](docs/agent-prompt-normalize-site-structure.md) — dedupe HTML / IA (read before large structural refactors).
 
-- **TypeScript / build:** [docs/agent-prompt-typescript-github-pages.md](docs/agent-prompt-typescript-github-pages.md)
-- **Layout / responsiveness / visual structure:** [docs/agent-prompt-site-ux.md](docs/agent-prompt-site-ux.md)
-- **Normalize structure (shared templates, less duplicated HTML):** read **[docs/agent-prompt-normalize-site-structure.md](docs/agent-prompt-normalize-site-structure.md)** — spec for hosting/URLs plus the agent task for refactoring.
+## Backlog
 
-## Backlog — bugs and changes
-
-**Workflow:** Log items here as they are identified. **Do not implement** fixes until this file is updated to say implementation is started (or a separate go-ahead is given).
-
-**Repo scan (ad hoc):** No `TODO` / `FIXME` markers were found in tracked `*.md`, `*.html`, `*.css`, `*.js`, `*.ts`, `*.json`, `*.yml` files at the time this section was added.
+Log rows as issues appear. **Do not implement** until this file or the user explicitly starts work.
 
 | ID | Type | Description | Notes |
 |----|------|-------------|-------|
-| README-1 | change | README hero and structure | Addressed: single primary wordmark (`wordmark-dark-bg.svg` for GitHub), one logo row table, split About/sitemap, table headers, footer tone. |
+| — | — | *No open items.* | Delete this placeholder row when adding real backlog entries. |
 
----
+## Ship finished work (Git)
 
-## GitHub — commit when a feature works
-
-When a **feature (or fix) is implemented and verified working**, do not stop at a green local tree only: **commit and push to GitHub** as part of the same session, unless the user explicitly asked not to push or there is no `git` remote / credentials (then say so and stop).
-
-1. **Verify** using commands that match the change (at minimum **`npm run verify:public`** for edits under **`site/`**; run **`npm test`** or other scripts if the task touched them).
-2. **Commit** with a clear message: what changed and why, one logical change set per commit when practical.
-3. **Push** to the tracked remote (typically **`origin`**) on the branch you are on — usually **`main`** for this repo’s Pages flow. Prefer a normal push; do not **force-push** or rewrite published history unless the user explicitly requests it.
-
-If verification fails, fix first, then commit and push. If you cannot push (auth, branch protection, merge conflicts), report the exact error and leave the commit ready locally.
+When a feature or fix **works**: **verify** (at least **`npm run verify:public`** for `site/`; **`npm test`** if touched) → **commit** (clear subject; one logical change when practical) → **push** **`origin`** (usually **`main`**). No **force-push** without an explicit request. If the user forbids push or there is no remote/credentials, say so. On push failure (auth, protection, conflicts), report the error and leave commits ready locally.
 
 ## Conventions
 
 - Public-safe content only; no secrets in commits.
-- Prefer matching tone with [docs/executive-summary.md](docs/executive-summary.md) (direct, technical, WIP-friendly).
-- **Dev-only gallery/design docs:** `npm run assets:gallery` may create `site/public/index.html` locally. Do not link it from public pages; the Pages workflow removes it and `site/design/` before deploy.
-- **Site CSS:** `site/style.css` — flat layout, Bauhaus palette tokens (`--bg`, `--rose-gold`, `--baby-blue`, etc.). Avoid glass/backdrop-filter, card stacks, and heavy shadows on user-facing pages; use borders and section spacing instead.
-- **Agent prompts** (`docs/agent-prompt-*.md`): each file is a **disposable task spec**. When the described work is done and merged, **delete that prompt file** and remove its row from the layout table and links in this file so the repo does not accumulate stale instructions.
+- Match tone with [docs/executive-summary.md](docs/executive-summary.md).
+- **`npm run assets:gallery`** may create local-only `site/public/index.html`; do not link it from public pages; the workflow drops gallery/design artifacts before deploy.
+- **CSS:** flat layout, Bauhaus palette tokens (`--bg`, `--rose-gold`, `--baby-blue`, …). Avoid glass/backdrop-filter, card stacks, and heavy shadows on user-facing pages; prefer borders and spacing.

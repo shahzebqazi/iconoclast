@@ -5,6 +5,7 @@ const root = process.cwd();
 const publicPages = [
   "site/index.html",
   "site/about/index.html",
+  "site/mastering/index.html",
   "site/rates/index.html",
   "site/links/index.html",
   "site/contact/index.html",

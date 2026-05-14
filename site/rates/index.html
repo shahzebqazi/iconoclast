@@ -30,17 +30,14 @@
         <a href="../index.html">Home</a>
         <a href="../about/index.html">About</a>
         <a href="index.html" aria-current="page">Rates</a>
+        <a href="../mastering/index.html">Mastering</a>
       </nav>
     </div>
     <header class="site-header rates-menu__header">
-      <p class="rates-menu__establishment">Iconoclast Audio</p>
       <p class="rates-menu__ornament" aria-hidden="true">✶ ✶ ✶</p>
       <h1>Rates &amp; booking</h1>
       <p class="rates-menu__deckle" aria-hidden="true"></p>
-      <p class="tagline rates-menu__tagline">
-        All prices below are in US dollars. Canadian billing uses the same numerals in CAD (see
-        note at end of the English column).
-      </p>
+      <p class="tagline rates-menu__tagline">A summary of the services offered.</p>
     </header>
     <main id="main" class="rates-menu">
       <div
@@ -59,7 +56,20 @@
 
       <div class="rates-menu-bilingual">
         <div class="rates-menu-lang-column rates-menu-lang-column--en" lang="en">
-          <p class="rates-menu__column-label">English</p>
+          <p class="rates-menu__column-label">Prices exclude VAT where applicable.</p>
+
+          <section
+            class="rates-menu__section rates-menu__section--reservations"
+            aria-labelledby="rates-booking-en"
+          >
+            <h2 id="rates-booking-en" class="rates-menu__course">Reservations</h2>
+            <p class="rates-menu__reservations-copy">
+              <strong>Email first.</strong> Send length, target date, and what formats you need to
+              <a href="mailto:willy@iconoclastaud.io">willy@iconoclastaud.io</a>. For file prep,
+              timing, and how references are used, see the
+              <a href="../faq/index.html">FAQ</a>.
+            </p>
+          </section>
 
           <section class="rates-menu__section" aria-labelledby="rates-mastering-en">
             <h2 id="rates-mastering-en" class="rates-menu__course">Mastering</h2>
@@ -115,25 +125,37 @@
             </article>
           </section>
 
-          <section
-            class="rates-menu__section rates-menu__section--reservations"
-            aria-labelledby="rates-booking-en"
-          >
-            <h2 id="rates-booking-en" class="rates-menu__course">Reservations</h2>
-            <ol class="rates-menu__steps">
-              <li>
-                <strong>Email first.</strong> Send length, target date, and what formats you need.
-              </li>
-              <li>
-                <strong>Files.</strong> 24-bit WAV or AIFF preferred. Do not clip the master bus.
-              </li>
-              <li>
-                <strong>References.</strong> Send references only if they describe a real target.
-              </li>
-            </ol>
-            <p class="rates-menu__footer-note">
-              Contact: <a href="mailto:willy@iconoclastaud.io">willy@iconoclastaud.io</a>.
-            </p>
+          <section class="rates-menu__section" aria-labelledby="rates-more-en">
+            <h2 id="rates-more-en" class="rates-menu__course">More services</h2>
+            <p class="rates-menu__section-lede">Quoted per project. Open a section for a short scope note.</p>
+            <details class="rates-menu__details">
+              <summary>Mixing</summary>
+              <p>Balance, tone, and arrangement support when the record is not yet at master stage.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>Video game mastering</summary>
+              <p>Loudness, stems, and platform targets for interactive mixes.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>Film and content mastering</summary>
+              <p>Dialogue-forward beds, stems, and delivery specs for picture.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>Post production and correction / repair</summary>
+              <p>Noise reduction, edits, and surgical fixes when the source needs it.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>DAW lessons</summary>
+              <p>Workflow, routing, and mix prep in your environment.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>Guitar lessons</summary>
+              <p>Technique and tone for heavy writing sessions.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>Consulting</summary>
+              <p>Second opinions, chain design, and release planning.</p>
+            </details>
           </section>
 
           <p class="rates-menu__billing-note">
@@ -144,7 +166,20 @@
         </div>
 
         <div class="rates-menu-lang-column rates-menu-lang-column--fr" lang="fr">
-          <p class="rates-menu__column-label">Français</p>
+          <p class="rates-menu__column-label">Les prix affichés sont hors TVA lorsqu’elle s’applique.</p>
+
+          <section
+            class="rates-menu__section rates-menu__section--reservations"
+            aria-labelledby="rates-booking-fr"
+          >
+            <h2 id="rates-booking-fr" class="rates-menu__course">Réservations</h2>
+            <p class="rates-menu__reservations-copy">
+              <strong>Courriel d’abord.</strong> Durée, date cible et formats souhaités à
+              <a href="mailto:willy@iconoclastaud.io">willy@iconoclastaud.io</a>. Pour la préparation
+              des fichiers, les délais et l’usage des références, voir la
+              <a href="../faq/index.html">FAQ</a>.
+            </p>
+          </section>
 
           <section class="rates-menu__section" aria-labelledby="rates-mastering-fr">
             <h2 id="rates-mastering-fr" class="rates-menu__course">Mastering</h2>
@@ -200,31 +235,42 @@
             </article>
           </section>
 
-          <section
-            class="rates-menu__section rates-menu__section--reservations"
-            aria-labelledby="rates-booking-fr"
-          >
-            <h2 id="rates-booking-fr" class="rates-menu__course">Réservations</h2>
-            <ol class="rates-menu__steps">
-              <li>
-                <strong>Courriel d’abord.</strong> Durée, date cible et formats souhaités.
-              </li>
-              <li>
-                <strong>Fichiers.</strong> WAV ou AIFF 24&nbsp;bits de préférence. Évitez la
-                saturation du bus de mixage.
-              </li>
-              <li>
-                <strong>Références.</strong> Uniquement si elles décrivent une cible réelle.
-              </li>
-            </ol>
-            <p class="rates-menu__footer-note">
-              Contact : <a href="mailto:willy@iconoclastaud.io">willy@iconoclastaud.io</a>.
-            </p>
+          <section class="rates-menu__section" aria-labelledby="rates-more-fr">
+            <h2 id="rates-more-fr" class="rates-menu__course">Autres prestations</h2>
+            <p class="rates-menu__section-lede">Sur devis. Ouvrez une section pour un bref descriptif.</p>
+            <details class="rates-menu__details">
+              <summary>Mixage</summary>
+              <p>Équilibre, couleur et soutien d’arrangement lorsque le disque n’est pas encore au stade master.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>Mastering jeux vidéo</summary>
+              <p>Sonorité, stems et cibles plateforme pour des mix interactifs.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>Mastering cinéma et contenus</summary>
+              <p>Lits axés dialogue, stems et livraisons pour l’image.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>Post-production et correction / réparation</summary>
+              <p>Réduction de bruit, montage et retouches ciblées sur la source.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>Cours DAW</summary>
+              <p>Workflow, routage et préparation de mix dans votre environnement.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>Cours de guitare</summary>
+              <p>Technique et sonorité pour l’écriture heavy.</p>
+            </details>
+            <details class="rates-menu__details">
+              <summary>Conseil</summary>
+              <p>Second avis, conception de chaîne et préparation de sortie.</p>
+            </details>
           </section>
 
           <p class="rates-menu__billing-note rates-menu__billing-note--fr">
-            Les tarifs affichés sont en dollars US. Au Canada, la facturation en dollars canadiens
-            reprend les mêmes montants numériques (voir la note en bas de la colonne anglaise).
+            Les montants en dollars US ci-dessus ; pour l’équivalence en dollars canadiens, voir la
+            note en bas de la colonne anglaise.
           </p>
         </div>
       </div>
