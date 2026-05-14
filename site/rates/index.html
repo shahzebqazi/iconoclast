@@ -31,6 +31,10 @@
         <a href="../about/index.html">About</a>
         <a href="index.html" aria-current="page">Rates</a>
         <a href="../mastering/index.html">Mastering</a>
+        <span class="nav-lang" role="group" aria-label="Site language" data-site-lang-switcher>
+          <button type="button" class="nav-lang__btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="nav-lang__btn" data-lang="fr" aria-pressed="false">FR</button>
+        </span>
       </nav>
     </div>
     <header class="site-header rates-menu__header">
@@ -40,20 +44,6 @@
       <p class="tagline rates-menu__tagline">A summary of the services offered.</p>
     </header>
     <main id="main" class="rates-menu">
-      <div
-        class="rates-lang-switcher"
-        role="group"
-        aria-label="Menu language"
-        data-rates-lang-switcher
-      >
-        <button type="button" class="rates-lang-switcher__btn" data-lang="en" aria-pressed="true">
-          EN
-        </button>
-        <button type="button" class="rates-lang-switcher__btn" data-lang="fr" aria-pressed="false">
-          FR
-        </button>
-      </div>
-
       <div class="rates-menu-bilingual">
         <div class="rates-menu-lang-column rates-menu-lang-column--en" lang="en">
           <p class="rates-menu__column-label">Prices exclude VAT where applicable.</p>
@@ -293,41 +283,6 @@
       </div>
       <p class="wip">Site is a living document—rough edges are honest.</p>
     </footer>
-    <script>
-      (function () {
-        var root = document.documentElement;
-        var body = document.body;
-        var mq = window.matchMedia("(min-width: 900px)");
-        var group = document.querySelector("[data-rates-lang-switcher]");
-        if (!group) return;
-        var btnEn = group.querySelector('[data-lang="en"]');
-        var btnFr = group.querySelector('[data-lang="fr"]');
-        function setLang(isFr) {
-          body.classList.toggle("rates-lang-fr", isFr);
-          if (btnEn) btnEn.setAttribute("aria-pressed", isFr ? "false" : "true");
-          if (btnFr) btnFr.setAttribute("aria-pressed", isFr ? "true" : "false");
-          if (!mq.matches) {
-            root.lang = isFr ? "fr" : "en";
-          } else {
-            root.lang = "en";
-          }
-        }
-        function onWide() {
-          if (mq.matches) {
-            root.lang = "en";
-          } else {
-            setLang(body.classList.contains("rates-lang-fr"));
-          }
-        }
-        btnEn.addEventListener("click", function () {
-          setLang(false);
-        });
-        btnFr.addEventListener("click", function () {
-          setLang(true);
-        });
-        mq.addEventListener("change", onWide);
-        onWide();
-      })();
-    </script>
+    <script src="../js/site-lang.js" defer></script>
   </body>
 </html>

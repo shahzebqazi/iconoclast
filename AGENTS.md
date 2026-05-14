@@ -33,6 +33,7 @@ Visitor intro: **[README.md](README.md)**. This file orients people and agents w
 ## Verification
 
 - Run **`npm run verify:public`** for public HTML/CSS/JS changes (rates substrings, page list, forbidden patterns). **`publicPages`** in **`scripts/verifyPublicSite.mjs`** must include **`site/about/index.html`** (not `ritual`).
+- **Site language:** `site/js/site-lang.js` persists `localStorage` key **`iconoclastSiteLang`** (`en` \| `fr`). Optional override: query **`?lang=en`** or **`?lang=fr`**. On **Rates** below 900px width, `fr` shows the French column; at wider widths both columns stay visible; other pages stay English in copy but the nav toggle reflects saved preference.
 - Most pages must not show **GitHub** or `github.com`; if an exception (e.g. Links) is needed, use per-file **`skipFiles`** on those checks (see git history ~2026-05-14).
 
 ## Next prompts
