@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" href="../public/generated/apple-touch-icon.png" />
     <link rel="stylesheet" href="../style.css" />
   </head>
-  <body class="page-art theme-invert">
+  <body class="page-art theme-invert mastering-page">
     <a class="skip" href="#main">Skip to content</a>
     <div class="site-shell">
       <nav class="site-nav" aria-label="Primary">
@@ -31,9 +31,19 @@
         <a href="../about/index.html">About</a>
         <a href="../rates/index.html">Rates</a>
         <a href="index.html" aria-current="page">Mastering</a>
-        <span class="nav-lang" role="group" aria-label="Site language" data-site-lang-switcher>
-          <button type="button" class="nav-lang__btn" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" class="nav-lang__btn" data-lang="fr" aria-pressed="false">FR</button>
+        <span
+          class="nav-lang"
+          role="group"
+          aria-label="Site language"
+          aria-disabled="true"
+          data-site-lang-switcher
+        >
+          <button type="button" class="nav-lang__btn" data-lang="en" aria-pressed="true" tabindex="-1">
+            EN
+          </button>
+          <button type="button" class="nav-lang__btn" data-lang="fr" aria-pressed="false" tabindex="-1">
+            FR
+          </button>
         </span>
       </nav>
     </div>

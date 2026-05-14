@@ -129,8 +129,27 @@ body {
   }
 
   .site-nav .nav-brand {
+    width: 100%;
+    flex-basis: 100%;
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
     min-height: 2.75rem;
     align-items: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-nav .nav-brand {
+    flex-direction: column;
+    gap: 0.35rem;
+    line-height: 1.15;
+    min-height: 0;
+    padding: 0.4rem 0 0.35rem;
+  }
+
+  .site-nav .nav-brand .nav-brand__logo {
+    margin: 0;
   }
 }
 
@@ -186,8 +205,8 @@ body {
   }
 }
 
-/* Site language (EN/FR) — nav on every page; preference: localStorage iconoclastSiteLang */
-.site-nav .nav-lang {
+/* Site language (EN/FR) — localStorage iconoclastSiteLang; see site/js/site-lang.js */
+.nav-lang {
   display: inline-flex;
   align-items: stretch;
   gap: 0;
@@ -203,7 +222,7 @@ body {
   }
 }
 
-.site-nav .nav-lang__btn {
+.nav-lang__btn {
   margin: 0;
   padding: 0.22rem 0.5rem;
   font-family: var(--font-nav);
@@ -219,79 +238,84 @@ body {
   line-height: 1.2;
 }
 
-.site-nav .nav-lang__btn:last-child {
+.nav-lang__btn:last-child {
   border-right: none;
 }
 
-.site-nav .nav-lang__btn[aria-pressed="false"]:hover {
+.nav-lang__btn[aria-pressed="false"]:hover {
   color: var(--signal-red);
   background: rgba(212, 18, 31, 0.08);
 }
 
-.site-nav .nav-lang__btn[aria-pressed="true"] {
+.nav-lang__btn[aria-pressed="true"] {
   background: var(--signal-red);
   color: var(--paper);
 }
 
-.site-nav .nav-lang__btn:focus-visible {
+.nav-lang__btn:focus-visible {
   outline: 2px solid var(--signal-red);
   outline-offset: 2px;
   z-index: 1;
 }
 
 @media (max-width: 639px) {
-  .site-nav .nav-lang__btn {
+  .site-nav .nav-lang__btn,
+  .home-actions .nav-lang__btn {
     padding: 0.42rem 0.55rem;
     min-height: 2.75rem;
   }
 }
 
-body.page-art.theme-invert .site-nav .nav-lang {
+body.page-art.theme-invert .nav-lang {
   border-color: rgba(247, 244, 239, 0.35);
 }
 
-body.page-art.theme-invert .site-nav .nav-lang__btn {
+body.page-art.theme-invert .nav-lang__btn {
   color: rgba(247, 244, 239, 0.42);
   background: rgba(0, 0, 0, 0.25);
   border-right-color: rgba(247, 244, 239, 0.35);
 }
 
-body.page-art.theme-invert .site-nav .nav-lang__btn[aria-pressed="false"]:hover {
+body.page-art.theme-invert .nav-lang__btn[aria-pressed="false"]:hover {
   color: var(--paper);
   background: rgba(212, 18, 31, 0.35);
 }
 
-body.page-art.theme-invert .site-nav .nav-lang__btn[aria-pressed="true"] {
+body.page-art.theme-invert .nav-lang__btn[aria-pressed="true"] {
   background: var(--signal-red);
   color: var(--paper);
 }
 
-body.rates-menu-page.page-art .site-nav .nav-lang {
-  border-color: rgba(139, 105, 20, 0.55);
+/* Mastering: EN/FR remains in nav for chrome parity but is inactive (page copy is EN-only). */
+body.mastering-page.page-art.theme-invert .site-nav .nav-lang {
+  pointer-events: none;
+  opacity: 0.48;
+  border-color: rgba(247, 244, 239, 0.22);
 }
 
-body.rates-menu-page.page-art .site-nav .nav-lang__btn {
-  font-family: Georgia, "Palatino Linotype", Palatino, serif;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  color: #8a8278;
-  background: rgba(255, 252, 247, 0.45);
-  border-right-color: rgba(139, 105, 20, 0.45);
+body.mastering-page.page-art.theme-invert .site-nav .nav-lang__btn {
+  cursor: default;
+  color: rgba(247, 244, 239, 0.28);
+  background: rgba(0, 0, 0, 0.18);
+  border-right-color: rgba(247, 244, 239, 0.2);
 }
 
-body.rates-menu-page.page-art .site-nav .nav-lang__btn[aria-pressed="false"]:hover {
-  color: #3a3530;
-  background: rgba(139, 105, 20, 0.12);
+body.mastering-page.page-art.theme-invert .site-nav .nav-lang__btn[aria-pressed="false"]:hover {
+  color: rgba(247, 244, 239, 0.28);
+  background: rgba(0, 0, 0, 0.18);
 }
 
-body.rates-menu-page.page-art .site-nav .nav-lang__btn[aria-pressed="true"] {
-  background: #6b1018;
-  color: #f7f2ea;
+body.mastering-page.page-art.theme-invert .site-nav .nav-lang__btn[aria-pressed="true"] {
+  background: rgba(247, 244, 239, 0.08);
+  color: rgba(247, 244, 239, 0.32);
 }
 
-body.rates-menu-page.page-art .site-nav .nav-lang__btn:focus-visible {
-  outline-color: #6b1018;
+body.mastering-page.page-art.theme-invert .site-nav .nav-lang__btn:focus-visible {
+  outline: none;
+}
+
+.home-actions .nav-lang {
+  align-self: center;
 }
 
 .site-header,
@@ -755,6 +779,14 @@ body.about-newspaper-page.page-art main.about-newspaper {
   padding-bottom: clamp(2rem, 5vw, 3.5rem);
 }
 
+body.about-newspaper-page .about-body-lang {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0 0 0.85rem;
+  width: 100%;
+}
+
 body.about-newspaper-page .about-paper-masthead {
   text-align: center;
   border-bottom: 3px double rgba(247, 244, 239, 0.38);
@@ -775,11 +807,29 @@ body.about-newspaper-page .about-paper-masthead .tagline {
   max-width: 36rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0.75rem;
+  font-family: Georgia, "Palatino Linotype", Palatino, "Times New Roman", serif;
+  font-size: clamp(0.95rem, 1.85vw, 1.12rem);
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: rgba(216, 210, 200, 0.82);
 }
 
 body.about-newspaper-page .about-paper-masthead h1 {
   margin-left: auto;
   margin-right: auto;
+  width: fit-content;
+  max-width: 100%;
+  text-align: center;
+  font-family: Georgia, "Palatino Linotype", Palatino, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 6.5vw, 3.85rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  text-transform: none;
+  color: var(--paper);
 }
 
 body.about-newspaper-page .about-paper-lead {
@@ -807,6 +857,18 @@ body.about-newspaper-page .about-paper-lead > p {
 
 body.about-newspaper-page .about-paper-lead > p:first-of-type {
   margin-top: 0.85rem;
+}
+
+@media (min-width: 520px) {
+  body.about-newspaper-page .about-paper-lead > p:first-of-type::first-letter {
+    float: left;
+    margin: 0.06em 0.12em 0 0;
+    font-family: Georgia, "Palatino Linotype", Palatino, serif;
+    font-size: 3.15rem;
+    font-weight: 700;
+    line-height: 0.78;
+    color: var(--paper);
+  }
 }
 
 body.about-newspaper-page .about-paper-grid {
@@ -854,6 +916,12 @@ body.about-newspaper-page .about-paper-story p {
 
 body.about-newspaper-page .about-paper-story h2 {
   font-family: "Courier New", Courier, monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(216, 210, 200, 0.78);
+  margin: 0 0 0.55rem;
 }
 
 body.about-newspaper-page .about-paper-refer {

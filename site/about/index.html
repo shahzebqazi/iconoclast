@@ -6,14 +6,14 @@
     <title>About — Iconoclast Audio</title>
     <meta
       name="description"
-      content="About Iconoclast Audio — Willy S. Qazi, practice scope, the word iconoclast, and production through mastering for heavy music."
+      content="About Iconoclast Audio — practice scope, the word iconoclast, and heavy-music mastering from Toronto."
     />
     <link rel="icon" href="../public/generated/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="../public/generated/favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="../public/generated/apple-touch-icon.png" />
     <link rel="stylesheet" href="../style.css" />
   </head>
-  <body class="page-art theme-invert">
+  <body class="page-art theme-invert about-newspaper-page">
     <a class="skip" href="#main">Skip to content</a>
     <div class="site-shell">
       <nav class="site-nav" aria-label="Primary">
@@ -31,43 +31,22 @@
         <a href="index.html" aria-current="page">About</a>
         <a href="../rates/index.html">Rates</a>
         <a href="../mastering/index.html">Mastering</a>
+      </nav>
+    </div>
+    <header class="site-header about-paper-masthead">
+      <p class="about-paper-edition">Iconoclast Audio · Toronto</p>
+      <h1>About</h1>
+      <p class="tagline">What the practice is, what it covers, and how decisions get made.</p>
+    </header>
+    <main id="main" class="about-newspaper">
+      <div class="about-body-lang">
         <span class="nav-lang" role="group" aria-label="Site language" data-site-lang-switcher>
           <button type="button" class="nav-lang__btn" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" class="nav-lang__btn" data-lang="fr" aria-pressed="false">FR</button>
         </span>
-      </nav>
-    </div>
-    <header class="site-header">
-      <h1>About</h1>
-      <p class="tagline">What the practice is, what it covers, and how decisions get made.</p>
-    </header>
-    <main id="main">
-      <article>
-        <h2>Who runs this</h2>
-        <p class="lede">
-          Willy S. Qazi, Toronto—FOSS-oriented mastering engineer and programmer—bridges mixing,
-          mastering, DSP, and gear with software: agents, tooling, static sites. He ships
-          client-facing audio with product-minded engineering and clear communication. Ventures span
-          Iconoclast Audio, Mystic Labs, Gankmid Co., and a Reverb shop; TMU Computer Science
-          (honours). His personal site is sqazi.sh.
-        </p>
-        <p>
-          Link hub and socials:
-          <a href="https://shahzeb.me/">shahzeb.me</a>
-          ·
-          <a href="https://sqazi.sh/content.html?page=cv">Online CV</a>
-        </p>
-      </article>
-      <article>
-        <h2>Iconoclast</h2>
-        <p>
-          <dfn>Iconoclast</dfn> (noun): a person who attacks established beliefs, customs, or
-          institutions; historically, someone who opposed the veneration of religious images. Here it
-          means skepticism toward audio clichés and template mastering—not hostility toward artists.
-        </p>
-      </article>
-      <article>
-        <h2>Practice</h2>
+      </div>
+      <section class="about-paper-lead" aria-labelledby="about-practice-h">
+        <h2 id="about-practice-h">Practice</h2>
         <p>
           Iconoclast Audio is an audio engineering practice focused on heavy and extreme music:
           production through mastering, with Extreme Metal Mastering as the main workload.
@@ -77,45 +56,74 @@
           up on more than one playback path. The job is to finish the record, not to run it through a
           fixed template.
         </p>
-      </article>
-      <article>
-        <h2>Scope</h2>
-        <ul class="about-service-tags" aria-label="Services">
-          <li>production</li>
-          <li>session bass</li>
-          <li>session guitar</li>
-          <li>mixing</li>
-          <li>mastering</li>
-        </ul>
-        <p>
-          Stereo mastering and stem-based work when the mix needs targeted fixes. Mix and session
-          roles are available when the project calls for them; rates and turnaround live on the Rates
-          page.
-        </p>
-        <p>
-          Signal chains and processing choices are chosen per project. Expect direct notes when
-          something in the source is limiting the master.
-        </p>
-      </article>
-      <article>
-        <h2>Stance</h2>
-        <p>
-          No borrowed “analog warmth” marketing, no pretend mystique about gear. Preference is for
-          clear intent, honest limits, and sound that still reads after limiting—not a polished
-          generic sheen.
-        </p>
-      </article>
-      <figure class="brand-emblem">
-        <img
-          src="../public/generated/icons/oni-mask-128.png"
-          width="88"
-          height="88"
-          alt=""
-        />
-        <figcaption>
-          The site icon is a pen-style oni mask: a bookmark glyph, not a cultural claim.
-        </figcaption>
-      </figure>
+      </section>
+
+      <div class="about-paper-grid">
+        <div class="about-paper-well">
+          <article class="about-paper-story">
+            <h2>Scope</h2>
+            <ul class="about-service-tags" aria-label="Services">
+              <li>production</li>
+              <li>session bass</li>
+              <li>session guitar</li>
+              <li>mixing</li>
+              <li>mastering</li>
+            </ul>
+            <p>
+              Stereo mastering and stem-based work when the mix needs targeted fixes. Mix and session
+              roles are available when the project calls for them; rates and turnaround live on the
+              <a href="../rates/index.html">Rates</a> page.
+            </p>
+            <p>
+              Signal chains and processing choices are chosen per project. Expect direct notes when
+              something in the source is limiting the master.
+            </p>
+          </article>
+          <article class="about-paper-story">
+            <h2>Stance</h2>
+            <p>
+              No borrowed “analog warmth” marketing, no pretend mystique about gear. Preference is for
+              clear intent, honest limits, and sound that still reads after limiting—not a polished
+              generic sheen.
+            </p>
+          </article>
+        </div>
+
+        <aside class="about-paper-rail" aria-label="Practice notes">
+          <article class="about-paper-story">
+            <h2>Who runs this</h2>
+            <p class="lede">
+              The practice is operated from Toronto by a mastering engineer who also writes software,
+              DSP tooling, and static web infrastructure in support of audio work. Projects are handled
+              with the same discipline applied to engineering: explicit briefs, level-matched listening,
+              and plain-language feedback when a source limit affects the master.
+            </p>
+            <p class="about-paper-refer">
+              Public channels, examples, and booking routes are listed on
+              <a href="../links/index.html">Links</a>. Common questions live on
+              <a href="../faq/index.html">FAQ</a>; pricing and scheduling on
+              <a href="../rates/index.html">Rates</a>.
+            </p>
+          </article>
+          <article class="about-paper-story about-paper-story--note">
+            <h2>Iconoclast</h2>
+            <p>
+              <dfn>Iconoclast</dfn> (noun): a person who attacks established beliefs, customs, or
+              institutions; historically, someone who opposed the veneration of religious images. Here
+              it means skepticism toward audio clichés and template mastering—not hostility toward
+              artists.
+            </p>
+          </article>
+          <figure class="brand-emblem brand-emblem--rail">
+            <img
+              src="../public/generated/icons/oni-mask-128.png"
+              width="88"
+              height="88"
+              alt="The site icon is a pen-style oni mask: a bookmark glyph, not a cultural claim."
+            />
+          </figure>
+        </aside>
+      </div>
     </main>
     <footer class="site-footer">
       <div class="site-footer-brand">

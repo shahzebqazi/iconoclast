@@ -55,7 +55,18 @@ for (const file of publicPages) {
   if (/href=["'][^"']*contact\/index\.html["']/i.test(primaryNav)) {
     errors.push(`${file}: Contact must not be in primary nav`);
   }
-  if (!primaryNav.includes("data-site-lang-switcher")) {
+  if (file === "site/rates/index.html") {
+    if (primaryNav.includes("data-site-lang-switcher")) {
+      errors.push(`${file}: language switcher must not be in primary nav (bilingual UI is in-page)`);
+    }
+  } else if (file === "site/index.html" || file === "site/about/index.html") {
+    if (!html.includes("data-site-lang-switcher")) {
+      errors.push(`${file}: must include site language switcher`);
+    }
+    if (primaryNav.includes("data-site-lang-switcher")) {
+      errors.push(`${file}: language switcher must not be in primary nav`);
+    }
+  } else if (!primaryNav.includes("data-site-lang-switcher")) {
     errors.push(`${file}: primary nav must include site language switcher`);
   }
   if (!/site-lang\.js/.test(html)) {
