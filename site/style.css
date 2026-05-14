@@ -211,8 +211,8 @@ body {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--signal-red);
-  background: transparent;
+  color: #6f6d6a;
+  background: rgba(15, 15, 16, 0.06);
   border: none;
   border-right: 1px solid var(--border-strong);
   cursor: pointer;
@@ -221,6 +221,11 @@ body {
 
 .site-nav .nav-lang__btn:last-child {
   border-right: none;
+}
+
+.site-nav .nav-lang__btn[aria-pressed="false"]:hover {
+  color: var(--signal-red);
+  background: rgba(212, 18, 31, 0.08);
 }
 
 .site-nav .nav-lang__btn[aria-pressed="true"] {
@@ -246,8 +251,14 @@ body.page-art.theme-invert .site-nav .nav-lang {
 }
 
 body.page-art.theme-invert .site-nav .nav-lang__btn {
-  color: var(--paper);
+  color: rgba(247, 244, 239, 0.42);
+  background: rgba(0, 0, 0, 0.25);
   border-right-color: rgba(247, 244, 239, 0.35);
+}
+
+body.page-art.theme-invert .site-nav .nav-lang__btn[aria-pressed="false"]:hover {
+  color: var(--paper);
+  background: rgba(212, 18, 31, 0.35);
 }
 
 body.page-art.theme-invert .site-nav .nav-lang__btn[aria-pressed="true"] {
@@ -264,8 +275,14 @@ body.rates-menu-page.page-art .site-nav .nav-lang__btn {
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.22em;
-  color: #3a3530;
+  color: #8a8278;
+  background: rgba(255, 252, 247, 0.45);
   border-right-color: rgba(139, 105, 20, 0.45);
+}
+
+body.rates-menu-page.page-art .site-nav .nav-lang__btn[aria-pressed="false"]:hover {
+  color: #3a3530;
+  background: rgba(139, 105, 20, 0.12);
 }
 
 body.rates-menu-page.page-art .site-nav .nav-lang__btn[aria-pressed="true"] {
