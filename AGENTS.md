@@ -20,7 +20,7 @@ Visitor intro: **[README.md](README.md)**. This file orients people and agents w
 | `site/` | Public site source (artifact root). |
 | `site/index.html` | **Homepage** — `home-strip` booking line, `home-hero` (no `home-services` chip list; scope on About). High-conflict file: avoid parallel edits without rebasing. |
 | `site/js/site-lang.js` | Site-wide EN/FR preference (`localStorage` **`iconoclastSiteLang`**); loaded from every public page. |
-| `site/about/index.html` | About — `theme-invert`, service tags. |
+| `site/about/index.html` | About — `theme-invert`, **`about-newspaper-page`** layout; paired CSS lives in **`site/style.css`** (scoped `body.about-newspaper-page`). |
 | `site/mastering/index.html` | Mastering — `page-art` + `theme-invert`; explains process and role in a project. |
 | `site/rates/index.html` | Rates — `page-art` + `rates-menu-page` (cream menu, serif, dot leaders); wide **EN \| FR**, narrow EN/FR toggle; **USD** + **CAD** footnote. Must satisfy **`npm run verify:public`**. |
 | `site/style.css` | Reuse `about-service-tags`, `rates-menu-page`, `page-art`, `theme-invert`, `links-page` before inventing layout. |
@@ -56,6 +56,8 @@ Log rows as issues appear. **Do not implement** until this file or the user expl
 ## Ship finished work (Git)
 
 When a feature or fix **works**: **verify** (at least **`npm run verify:public`** for `site/`; **`npm test`** if touched) → **commit** (clear subject; one logical change when practical) → **push** **`origin`** (usually **`main`**). No **force-push** without an explicit request. If the user forbids push or there is no remote/credentials, say so. On push failure (auth, protection, conflicts), report the error and leave commits ready locally.
+
+- Before **`git commit`**, use **`git diff --staged`** (and stage with explicit paths or **`git add -p`**) so unrelated local edits—especially in **`site/style.css`**—are not swept into the same commit as homepage or copy fixes.
 
 ## Conventions
 
