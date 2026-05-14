@@ -40,8 +40,11 @@ for (const file of publicPages) {
   if (!primaryNav.includes("oni-mask-128.png")) {
     errors.push(`${file}: primary nav must use the oni logo`);
   }
-  if (/href=["'][^"']*faq\/index\.html["']/i.test(primaryNav)) {
-    errors.push(`${file}: FAQ must not be in primary nav`);
+  if (!/href=["'][^"']*faq\/index\.html["']/i.test(primaryNav)) {
+    errors.push(`${file}: primary nav must link to FAQ`);
+  }
+  if (!/href=["'][^"']*onboarding\/index\.html["']/i.test(primaryNav)) {
+    errors.push(`${file}: primary nav must link to onboarding`);
   }
   if (/href=["'][^"']*legal\/index\.html["']/i.test(primaryNav)) {
     errors.push(`${file}: Legal must not be in primary nav`);
@@ -106,11 +109,11 @@ for (const platform of ["Email", "Matrix", "Mastodon", "Instagram"]) {
     errors.push(`site/contact/index.html: ${platform} link must include a platform icon`);
   }
 }
-if (!/<form class="coming-soon-form"/.test(contact)) {
-  errors.push("site/contact/index.html: missing coming-soon form");
+if (!/class="booking-intake-callout"/.test(contact)) {
+  errors.push("site/contact/index.html: missing booking intake callout");
 }
-if (!/<input[^>]+type="email"[^>]+disabled/.test(contact)) {
-  errors.push("site/contact/index.html: coming-soon form must include disabled email input");
+if (!/booking intake/i.test(contact)) {
+  errors.push("site/contact/index.html: booking callout must mention booking intake");
 }
 
 const rates = readFileSync(path.join(root, "site/rates/index.html"), "utf8");

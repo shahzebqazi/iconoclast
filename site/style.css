@@ -117,6 +117,20 @@ body {
   font-weight: 900;
 }
 
+@media (max-width: 639px) {
+  .site-nav a {
+    padding: 0.42rem 0.5rem;
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-nav .nav-brand {
+    min-height: 2.75rem;
+    align-items: center;
+  }
+}
+
 /* Two-line nav label — keeps the bar compact */
 .site-nav a.nav-link--stack {
   display: inline-block;
@@ -312,6 +326,20 @@ main h3 {
   text-transform: uppercase;
 }
 
+.home-scope-hint {
+  margin: 0.85rem 0 0;
+  max-width: 26rem;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: #222222;
+}
+
+.home-scope-hint a {
+  color: var(--signal-red);
+  font-weight: 800;
+  text-decoration-color: #111111;
+}
+
 .home-hero__image {
   margin: 0;
   position: relative;
@@ -320,6 +348,7 @@ main h3 {
   border: 2px solid #111111;
   background: #111111;
   transform: rotate(1.2deg);
+  padding-bottom: 2.75rem;
 }
 
 .home-hero__image img {
@@ -1222,6 +1251,19 @@ code {
   font-size: 0.72rem;
   line-height: 1;
   text-decoration: none;
+}
+
+.booking-intake-callout {
+  margin-top: 0.85rem;
+  max-width: 32rem;
+  padding: 1rem 1.1rem;
+  border: 2px solid #111111;
+  background: #f0ebe4;
+}
+
+.booking-intake-callout p {
+  margin: 0;
+  color: #25211f;
 }
 
 .coming-soon-form {

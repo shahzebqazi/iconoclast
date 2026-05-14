@@ -28,7 +28,7 @@ Visitor intro: **[README.md](README.md)**. This file orients people and agents w
 | `README.md` | GitHub repo landing, not the homepage. |
 | `docs/` | Markdown; **`docs/executive-summary.md`** for tone. **`docs/agent-prompt-*.md`** are disposable specs — when work is merged, **delete the file** and **remove its links** from this doc. |
 
-`site/session-bassist-vst/index.html` is a short offline stub; not in primary nav.
+`site/session-bassist-vst/index.html` is a short offline stub (`noindex`); it mirrors the primary nav for consistency when the URL is opened directly.
 
 ## Verification
 
