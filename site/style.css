@@ -394,6 +394,16 @@ main h3 {
   color: var(--signal-red);
 }
 
+.home-kicker--loc {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.home-kicker__pin {
+  flex-shrink: 0;
+}
+
 .home-hero h1 {
   max-width: 12ch;
   margin: 0;
@@ -415,26 +425,6 @@ main h3 {
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: var(--signal-red);
-}
-
-.home-services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  max-width: 25rem;
-  margin: 0.4rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.home-services li {
-  margin: 0;
-  padding: 0.28rem 0.5rem;
-  border: 1px solid #111111;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 0.78rem;
-  line-height: 1;
-  text-transform: uppercase;
 }
 
 .home-scope-hint {

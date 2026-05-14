@@ -63,7 +63,7 @@ async function main(): Promise<void> {
   const manifest = {
     name: brand.name,
     short_name: "Iconoclast",
-    description: `${brand.tagline}. Production, session bass and guitar, mixing, and mastering.`,
+    description: `${brand.tagline}. Based in Toronto, Canada.`,
     /** Site root on custom domain (iconoclastaud.io). */
     start_url: "/",
     display: "standalone",
