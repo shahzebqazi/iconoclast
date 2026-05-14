@@ -597,12 +597,12 @@ body.rates-menu-page .site-shell {
 body.rates-menu-page.page-art .site-header,
 body.rates-menu-page.page-art main,
 body.rates-menu-page.page-art .site-footer {
-  max-width: 34rem;
+  max-width: min(56rem, 94vw);
 }
 
 body.rates-menu-page.page-art .site-header {
   text-align: center;
-  border-bottom: 1px solid rgba(139, 105, 20, 0.42);
+  border-bottom: 3px double rgba(139, 105, 20, 0.45);
   padding-bottom: 1.75rem;
 }
 
@@ -626,13 +626,28 @@ body.rates-menu-page .rates-menu__establishment {
   color: #6b5343;
 }
 
+body.rates-menu-page .rates-menu__ornament {
+  margin: 0.65rem 0 0;
+  font-size: 0.62rem;
+  letter-spacing: 0.55em;
+  color: rgba(107, 83, 67, 0.75);
+}
+
+body.rates-menu-page .rates-menu__deckle {
+  margin: 0.85rem auto 0;
+  width: min(11rem, 55%);
+  height: 0;
+  border: none;
+  border-top: 1px solid rgba(139, 105, 20, 0.35);
+}
+
 body.rates-menu-page .rates-menu__tagline {
   font-family: Georgia, "Palatino Linotype", Palatino, serif;
   font-style: italic;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   color: #4a4239;
-  max-width: 26rem;
+  max-width: min(36rem, 92vw);
   margin-left: auto;
   margin-right: auto;
 }
@@ -643,13 +658,13 @@ body.rates-menu-page.page-art main {
   padding-bottom: 3rem;
 }
 
-body.rates-menu-page.page-art main > section {
+body.rates-menu-page.page-art .rates-menu-lang-column > .rates-menu__section {
   margin-top: 2.25rem;
   padding-top: 2.25rem;
   border-top: 1px solid rgba(139, 105, 20, 0.32);
 }
 
-body.rates-menu-page.page-art main > section:first-child {
+body.rates-menu-page.page-art .rates-menu-lang-column > .rates-menu__section:first-of-type {
   margin-top: 0;
   padding-top: 0;
   border-top: none;
@@ -734,6 +749,115 @@ body.rates-menu-page.page-art main h2 {
   font-size: 0.9rem;
   font-style: italic;
   color: #4a4239;
+}
+
+body.rates-menu-page.page-art .rates-menu__column-label {
+  margin: 0 0 0.35rem;
+  text-align: center;
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: #6b5343;
+}
+
+body.rates-menu-page.page-art .rates-menu-bilingual {
+  display: block;
+}
+
+body.rates-menu-page.page-art .rates-menu-lang-column--fr {
+  display: none;
+}
+
+body.rates-menu-page.page-art.rates-lang-fr .rates-menu-lang-column--en {
+  display: none;
+}
+
+body.rates-menu-page.page-art.rates-lang-fr .rates-menu-lang-column--fr {
+  display: block;
+}
+
+body.rates-menu-page.page-art .rates-lang-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin: 0 0 1.75rem;
+  border: 1px solid rgba(139, 105, 20, 0.55);
+  border-radius: 2px;
+  align-self: center;
+  max-width: 11rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  background: rgba(255, 252, 247, 0.65);
+}
+
+body.rates-menu-page.page-art .rates-lang-switcher__btn {
+  flex: 1;
+  margin: 0;
+  padding: 0.45rem 0.75rem;
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #3a3530;
+  background: transparent;
+  border: none;
+  border-right: 1px solid rgba(139, 105, 20, 0.45);
+  cursor: pointer;
+}
+
+body.rates-menu-page.page-art .rates-lang-switcher__btn:last-child {
+  border-right: none;
+}
+
+body.rates-menu-page.page-art .rates-lang-switcher__btn[aria-pressed="true"] {
+  background: #6b1018;
+  color: #f7f2ea;
+}
+
+body.rates-menu-page.page-art .rates-lang-switcher__btn:focus-visible {
+  outline: 2px solid #6b1018;
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+body.rates-menu-page.page-art .rates-menu__billing-note {
+  margin: 1.75rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(139, 105, 20, 0.28);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  font-style: normal;
+  color: #4a4239;
+}
+
+body.rates-menu-page.page-art .rates-menu__billing-note--fr {
+  font-style: italic;
+}
+
+@media (min-width: 900px) {
+  body.rates-menu-page.page-art .rates-lang-switcher {
+    display: none;
+  }
+
+  body.rates-menu-page.page-art .rates-menu-bilingual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.75rem, 4vw, 3.25rem);
+    align-items: start;
+  }
+
+  body.rates-menu-page.page-art .rates-menu-lang-column--en,
+  body.rates-menu-page.page-art .rates-menu-lang-column--fr {
+    display: block !important;
+  }
+
+  body.rates-menu-page.page-art .rates-menu-lang-column--fr {
+    padding-left: clamp(1.25rem, 3vw, 2rem);
+    border-left: 1px solid rgba(139, 105, 20, 0.28);
+  }
 }
 
 body.rates-menu-page.page-art a {

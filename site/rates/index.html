@@ -34,78 +34,200 @@
     </div>
     <header class="site-header rates-menu__header">
       <p class="rates-menu__establishment">Iconoclast Audio</p>
+      <p class="rates-menu__ornament" aria-hidden="true">✶ ✶ ✶</p>
       <h1>Rates &amp; booking</h1>
+      <p class="rates-menu__deckle" aria-hidden="true"></p>
       <p class="tagline rates-menu__tagline">
-        USD for USA/international. Same number in CAD for Canadians.
+        All prices below are in US dollars. Canadian billing uses the same numerals in CAD (see
+        note at end of the English column).
       </p>
     </header>
     <main id="main" class="rates-menu">
-      <section class="rates-menu__section" aria-labelledby="rates-mastering">
-        <h2 id="rates-mastering" class="rates-menu__course">Mastering</h2>
-        <article class="rates-menu__item">
-          <div class="rates-menu__row">
-            <span class="rates-menu__name">Two-channel master</span>
-            <span class="rates-menu__dots" aria-hidden="true"></span>
-            <span class="rates-menu__price">240 USD</span>
-          </div>
-          <p class="rates-menu__gloss">
-            One stereo mix. 5 day turnaround. Canadians pay 240 CAD.
-          </p>
-        </article>
-        <article class="rates-menu__item">
-          <div class="rates-menu__row">
-            <span class="rates-menu__name">72 hour turnaround</span>
-            <span class="rates-menu__dots" aria-hidden="true"></span>
-            <span class="rates-menu__price">2x</span>
-          </div>
-          <p class="rates-menu__gloss">Rush delivery when the queue allows it.</p>
-        </article>
-        <article class="rates-menu__item">
-          <div class="rates-menu__row">
-            <span class="rates-menu__name">48 hour turnaround</span>
-            <span class="rates-menu__dots" aria-hidden="true"></span>
-            <span class="rates-menu__price">3x</span>
-          </div>
-          <p class="rates-menu__gloss">Fastest turnaround. Confirm availability before sending files.</p>
-        </article>
-      </section>
+      <div
+        class="rates-lang-switcher"
+        role="group"
+        aria-label="Menu language"
+        data-rates-lang-switcher
+      >
+        <button type="button" class="rates-lang-switcher__btn" data-lang="en" aria-pressed="true">
+          EN
+        </button>
+        <button type="button" class="rates-lang-switcher__btn" data-lang="fr" aria-pressed="false">
+          FR
+        </button>
+      </div>
 
-      <section class="rates-menu__section" aria-labelledby="rates-formats">
-        <h2 id="rates-formats" class="rates-menu__course">Other formats</h2>
-        <article class="rates-menu__item">
-          <div class="rates-menu__row">
-            <span class="rates-menu__name">Vinyl, cassette, etc.</span>
-            <span class="rates-menu__dots" aria-hidden="true"></span>
-            <span class="rates-menu__price">+250+ USD</span>
-          </div>
-          <p class="rates-menu__gloss">
-            Additional format-specific mastering on top of the 2 channel master. Canadians pay +250+ CAD.
-          </p>
-        </article>
-        <article class="rates-menu__item">
-          <div class="rates-menu__row">
-            <span class="rates-menu__name">multitrack mastering</span>
-            <span class="rates-menu__dots" aria-hidden="true"></span>
-            <span class="rates-menu__price">starting 500 USD</span>
-          </div>
-          <p class="rates-menu__gloss">
-            For projects that need access to grouped tracks or stems to land properly. Canadians
-            start at 500 CAD.
-          </p>
-        </article>
-      </section>
+      <div class="rates-menu-bilingual">
+        <div class="rates-menu-lang-column rates-menu-lang-column--en" lang="en">
+          <p class="rates-menu__column-label">English</p>
 
-      <section class="rates-menu__section rates-menu__section--reservations" aria-labelledby="rates-booking">
-        <h2 id="rates-booking" class="rates-menu__course">Reservations</h2>
-        <ol class="rates-menu__steps">
-          <li><strong>Email first.</strong> Send length, target date, and what formats you need.</li>
-          <li><strong>Files.</strong> 24-bit WAV or AIFF preferred. Do not clip the master bus.</li>
-          <li><strong>References.</strong> Send references only if they describe a real target.</li>
-        </ol>
-        <p class="rates-menu__footer-note">
-          Contact: <a href="mailto:willy@iconoclastaud.io">willy@iconoclastaud.io</a>.
-        </p>
-      </section>
+          <section class="rates-menu__section" aria-labelledby="rates-mastering-en">
+            <h2 id="rates-mastering-en" class="rates-menu__course">Mastering</h2>
+            <article class="rates-menu__item">
+              <div class="rates-menu__row">
+                <span class="rates-menu__name">Two-channel master</span>
+                <span class="rates-menu__dots" aria-hidden="true"></span>
+                <span class="rates-menu__price">240 USD</span>
+              </div>
+              <p class="rates-menu__gloss">One stereo mix. 5 day turnaround.</p>
+            </article>
+            <article class="rates-menu__item">
+              <div class="rates-menu__row">
+                <span class="rates-menu__name">72 hour turnaround</span>
+                <span class="rates-menu__dots" aria-hidden="true"></span>
+                <span class="rates-menu__price">2x</span>
+              </div>
+              <p class="rates-menu__gloss">Rush delivery when the queue allows it.</p>
+            </article>
+            <article class="rates-menu__item">
+              <div class="rates-menu__row">
+                <span class="rates-menu__name">48 hour turnaround</span>
+                <span class="rates-menu__dots" aria-hidden="true"></span>
+                <span class="rates-menu__price">3x</span>
+              </div>
+              <p class="rates-menu__gloss">
+                Fastest turnaround. Confirm availability before sending files.
+              </p>
+            </article>
+          </section>
+
+          <section class="rates-menu__section" aria-labelledby="rates-formats-en">
+            <h2 id="rates-formats-en" class="rates-menu__course">Other formats</h2>
+            <article class="rates-menu__item">
+              <div class="rates-menu__row">
+                <span class="rates-menu__name">Vinyl, cassette, etc.</span>
+                <span class="rates-menu__dots" aria-hidden="true"></span>
+                <span class="rates-menu__price">+250+ USD</span>
+              </div>
+              <p class="rates-menu__gloss">
+                Format-specific mastering on top of the two-channel master.
+              </p>
+            </article>
+            <article class="rates-menu__item">
+              <div class="rates-menu__row">
+                <span class="rates-menu__name">multitrack mastering</span>
+                <span class="rates-menu__dots" aria-hidden="true"></span>
+                <span class="rates-menu__price">starting 500 USD</span>
+              </div>
+              <p class="rates-menu__gloss">
+                For projects that need grouped tracks or stems to finish correctly.
+              </p>
+            </article>
+          </section>
+
+          <section
+            class="rates-menu__section rates-menu__section--reservations"
+            aria-labelledby="rates-booking-en"
+          >
+            <h2 id="rates-booking-en" class="rates-menu__course">Reservations</h2>
+            <ol class="rates-menu__steps">
+              <li>
+                <strong>Email first.</strong> Send length, target date, and what formats you need.
+              </li>
+              <li>
+                <strong>Files.</strong> 24-bit WAV or AIFF preferred. Do not clip the master bus.
+              </li>
+              <li>
+                <strong>References.</strong> Send references only if they describe a real target.
+              </li>
+            </ol>
+            <p class="rates-menu__footer-note">
+              Contact: <a href="mailto:willy@iconoclastaud.io">willy@iconoclastaud.io</a>.
+            </p>
+          </section>
+
+          <p class="rates-menu__billing-note">
+            Billing: USD for USA/international. CAD for Canadians uses the same printed figures:
+            two-channel 240 CAD; add +250+ CAD for vinyl and similar format work; multitrack from
+            500 CAD.
+          </p>
+        </div>
+
+        <div class="rates-menu-lang-column rates-menu-lang-column--fr" lang="fr">
+          <p class="rates-menu__column-label">Français</p>
+
+          <section class="rates-menu__section" aria-labelledby="rates-mastering-fr">
+            <h2 id="rates-mastering-fr" class="rates-menu__course">Mastering</h2>
+            <article class="rates-menu__item">
+              <div class="rates-menu__row">
+                <span class="rates-menu__name">Master stéréo (2&nbsp;pistes)</span>
+                <span class="rates-menu__dots" aria-hidden="true"></span>
+                <span class="rates-menu__price">240 USD</span>
+              </div>
+              <p class="rates-menu__gloss">Un mix stéréo. Délai : cinq jours ouvrables.</p>
+            </article>
+            <article class="rates-menu__item">
+              <div class="rates-menu__row">
+                <span class="rates-menu__name">Livraison sous 72&nbsp;h</span>
+                <span class="rates-menu__dots" aria-hidden="true"></span>
+                <span class="rates-menu__price">2x</span>
+              </div>
+              <p class="rates-menu__gloss">Express si la charge du studio le permet.</p>
+            </article>
+            <article class="rates-menu__item">
+              <div class="rates-menu__row">
+                <span class="rates-menu__name">Livraison sous 48&nbsp;h</span>
+                <span class="rates-menu__dots" aria-hidden="true"></span>
+                <span class="rates-menu__price">3x</span>
+              </div>
+              <p class="rates-menu__gloss">
+                Délai le plus court. Confirmez la disponibilité avant d’envoyer les fichiers.
+              </p>
+            </article>
+          </section>
+
+          <section class="rates-menu__section" aria-labelledby="rates-formats-fr">
+            <h2 id="rates-formats-fr" class="rates-menu__course">Autres formats</h2>
+            <article class="rates-menu__item">
+              <div class="rates-menu__row">
+                <span class="rates-menu__name">Vinyle, cassette, etc.</span>
+                <span class="rates-menu__dots" aria-hidden="true"></span>
+                <span class="rates-menu__price">+250+ USD</span>
+              </div>
+              <p class="rates-menu__gloss">
+                Passage dédié au format, en complément du master stéréo.
+              </p>
+            </article>
+            <article class="rates-menu__item">
+              <div class="rates-menu__row">
+                <span class="rates-menu__name">Mastering multipiste</span>
+                <span class="rates-menu__dots" aria-hidden="true"></span>
+                <span class="rates-menu__price">à partir de 500&nbsp;USD</span>
+              </div>
+              <p class="rates-menu__gloss">
+                Pistes groupées ou stems lorsque le mix l’exige pour un rendu propre.
+              </p>
+            </article>
+          </section>
+
+          <section
+            class="rates-menu__section rates-menu__section--reservations"
+            aria-labelledby="rates-booking-fr"
+          >
+            <h2 id="rates-booking-fr" class="rates-menu__course">Réservations</h2>
+            <ol class="rates-menu__steps">
+              <li>
+                <strong>Courriel d’abord.</strong> Durée, date cible et formats souhaités.
+              </li>
+              <li>
+                <strong>Fichiers.</strong> WAV ou AIFF 24&nbsp;bits de préférence. Évitez la
+                saturation du bus de mixage.
+              </li>
+              <li>
+                <strong>Références.</strong> Uniquement si elles décrivent une cible réelle.
+              </li>
+            </ol>
+            <p class="rates-menu__footer-note">
+              Contact : <a href="mailto:willy@iconoclastaud.io">willy@iconoclastaud.io</a>.
+            </p>
+          </section>
+
+          <p class="rates-menu__billing-note rates-menu__billing-note--fr">
+            Les tarifs affichés sont en dollars US. Au Canada, la facturation en dollars canadiens
+            reprend les mêmes montants numériques (voir la note en bas de la colonne anglaise).
+          </p>
+        </div>
+      </div>
     </main>
     <footer class="site-footer">
       <div class="site-footer-brand">
@@ -125,5 +247,41 @@
       </div>
       <p class="wip">Site is a living document—rough edges are honest.</p>
     </footer>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var body = document.body;
+        var mq = window.matchMedia("(min-width: 900px)");
+        var group = document.querySelector("[data-rates-lang-switcher]");
+        if (!group) return;
+        var btnEn = group.querySelector('[data-lang="en"]');
+        var btnFr = group.querySelector('[data-lang="fr"]');
+        function setLang(isFr) {
+          body.classList.toggle("rates-lang-fr", isFr);
+          if (btnEn) btnEn.setAttribute("aria-pressed", isFr ? "false" : "true");
+          if (btnFr) btnFr.setAttribute("aria-pressed", isFr ? "true" : "false");
+          if (!mq.matches) {
+            root.lang = isFr ? "fr" : "en";
+          } else {
+            root.lang = "en";
+          }
+        }
+        function onWide() {
+          if (mq.matches) {
+            root.lang = "en";
+          } else {
+            setLang(body.classList.contains("rates-lang-fr"));
+          }
+        }
+        btnEn.addEventListener("click", function () {
+          setLang(false);
+        });
+        btnFr.addEventListener("click", function () {
+          setLang(true);
+        });
+        mq.addEventListener("change", onWide);
+        onWide();
+      })();
+    </script>
   </body>
 </html>

@@ -5,7 +5,7 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 ## Handoff — 2026-05-14
 
 - **About (was Ritual):** Canonical route is **`/about/`** (`site/about/index.html`). The **`site/ritual/`** tree was removed; external links to **`/ritual/`** 404 unless you add a redirect stub later. Nav label everywhere is **About**.
-- **Rates:** `site/rates/index.html` uses **`body.page-art.rates-menu-page`** — fine-dining–style menu (cream paper, serif, dot leaders). It is **not** `theme-invert`; footer wordmark there is **`wordmark-light-bg.svg`**. All rate copy strings are still enforced by **`npm run verify:public`** (including exact substrings like `250+ CAD` on one line where required).
+- **Rates:** `site/rates/index.html` uses **`body.page-art.rates-menu-page`** — fine-dining–style menu (cream paper, serif, dot leaders); **wide** viewports show **EN | FR** columns; **narrow** viewports use an **EN / FR** toggle. Listed prices are **USD**; Canadian **CAD** parity is one footnote in the English column. Copy is still checked by **`npm run verify:public`** (required rate substrings must appear somewhere in the file).
 - **Verify:** `scripts/verifyPublicSite.mjs` **`publicPages`** list includes **`site/about/index.html`** (not `ritual`). Global forbidden patterns still block visible **GitHub** mentions and `github.com` links on *most* pages; if you re-add GitHub on Links, restore per-file **`skipFiles`** on those patterns (see git history around 2026-05-14).
 - **Session Bassist VST:** `site/session-bassist-vst/index.html` is a short offline stub; not linked from primary nav.
 - **CSS:** `site/style.css` — look for **`about-service-tags`**, **`rates-menu-page`**, and existing **`page-art` / `theme-invert` / `links-page`** blocks before editing layout.
@@ -61,6 +61,16 @@ Human-facing introduction: **[README.md](README.md)**. This file is for **people
 | README-1 | change | README hero and structure | Addressed: single primary wordmark (`wordmark-dark-bg.svg` for GitHub), one logo row table, split About/sitemap, table headers, footer tone. |
 
 ---
+
+## GitHub — commit when a feature works
+
+When a **feature (or fix) is implemented and verified working**, do not stop at a green local tree only: **commit and push to GitHub** as part of the same session, unless the user explicitly asked not to push or there is no `git` remote / credentials (then say so and stop).
+
+1. **Verify** using commands that match the change (at minimum **`npm run verify:public`** for edits under **`site/`**; run **`npm test`** or other scripts if the task touched them).
+2. **Commit** with a clear message: what changed and why, one logical change set per commit when practical.
+3. **Push** to the tracked remote (typically **`origin`**) on the branch you are on — usually **`main`** for this repo’s Pages flow. Prefer a normal push; do not **force-push** or rewrite published history unless the user explicitly requests it.
+
+If verification fails, fix first, then commit and push. If you cannot push (auth, branch protection, merge conflicts), report the exact error and leave the commit ready locally.
 
 ## Conventions
 
