@@ -40,11 +40,11 @@ for (const file of publicPages) {
   if (!primaryNav.includes("oni-mask-128.png")) {
     errors.push(`${file}: primary nav must use the oni logo`);
   }
-  if (!/href=["'][^"']*faq\/index\.html["']/i.test(primaryNav)) {
-    errors.push(`${file}: primary nav must link to FAQ`);
+  if (/href=["'][^"']*faq\/index\.html["']/i.test(primaryNav)) {
+    errors.push(`${file}: FAQ must not be in primary nav`);
   }
-  if (!/href=["'][^"']*onboarding\/index\.html["']/i.test(primaryNav)) {
-    errors.push(`${file}: primary nav must link to onboarding`);
+  if (/href=["'][^"']*onboarding\/index\.html["']/i.test(primaryNav)) {
+    errors.push(`${file}: Onboarding must not be in primary nav`);
   }
   if (/href=["'][^"']*legal\/index\.html["']/i.test(primaryNav)) {
     errors.push(`${file}: Legal must not be in primary nav`);
