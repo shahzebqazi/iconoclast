@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FAQ — Iconoclast Audio</title>
-    <meta name="description" content="Frequently asked questions about mastering at Iconoclast Audio." />
+    <meta
+      name="description"
+      content="Practical FAQ for heavy-music mastering at Iconoclast Audio—files, loudness, stems, revisions, and what we will not pretend to fix."
+    />
     <link rel="icon" href="../public/generated/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="../public/generated/favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="../public/generated/apple-touch-icon.png" />
@@ -32,76 +35,162 @@
     </div>
     <header class="site-header">
       <h1>FAQ</h1>
-      <p class="tagline">Mastering for heavy music—questions we get before the first bounce.</p>
+      <p class="tagline">Files, loudness, and scope—before money changes hands.</p>
     </header>
     <main id="main">
-      <section aria-labelledby="faq-list" class="faq-cassettes">
+      <section aria-labelledby="faq-list">
         <h2 id="faq-list" class="visually-hidden">Questions</h2>
-        <dl class="faq-cassettes__list">
-          <div class="cassette">
-            <dt>Do you only work on metal?</dt>
-            <dd>
-              The work centers on metal and aggressive music—that is where the ear is calibrated
-              longest. Adjacent loud genres are fair game if the material fits our strengths.
-            </dd>
-          </div>
-          <div class="cassette">
-            <dt>What should I send for mastering?</dt>
-            <dd>
+        <dl>
+          <dt>Do you only work on metal?</dt>
+          <dd>
+              Mostly. That is where the listening habit is deepest. If you are adjacent (grind, hardcore,
+              noise, ugly electronics) and the arrangement is dense, it probably fits. Polite pop is a
+              bad fit; we will say no instead of faking enthusiasm.
+          </dd>
+          <dt>What should I send for mastering?</dt>
+          <dd>
               <p>
-                Lossless WAV at the highest practical bit depth (32-bit / 44.1&nbsp;kHz is typical for
-                stem work), master bus out of the red, and real headroom left for processing. If you
-                printed hot “for loudness,” say so—we will work with reality, not mythology.
+                WAV or AIFF, lossless, native sample rate (do not upsample to “look pro”). Leave the
+                master bus clean: no clip lights, no limiter slammed “for loudness” unless that print
+                is the only thing that exists—then say so in the email.
               </p>
               <p>
-                For stem or multitrack packages: split prints with peaks around −12&nbsp;dBFS or
-                lower, follow the naming template we send, upload to the link we provide, and include
-                2–3 references, a rough mix bounce, and a short note on intent. Turnaround, revisions,
-                exact masters and stem exports, and metadata handling are spelled out in your quote.
+                Stems or multitrack jobs: print cooler than your ego wants; peaks around
+                −12&nbsp;dBFS (or lower) on each stem is normal. Use the naming scheme we send. Add a
+                rough mix bounce, 2–3 references, and three sentences on what still bothers you in the
+                rough.
+              </p>
+              <div class="faq-annot">
+                <a href="../onboarding/index.html">Project onboarding checklist</a>
+                <p class="faq-annot__note">
+                  Long-form intake for stem/multitrack work. Stereo mastering uses the same headroom
+                  rules; less packaging drama.
+                </p>
+              </div>
+          </dd>
+          <dt>Stems or stereo?</dt>
+          <dd>
+              Stereo unless we both agree stems buy a real fix—priced as its own line item so nobody
+              “sort of remixes” through the mastering slot by accident.
+          </dd>
+          <dt>How loud will the master be?</dt>
+          <dd>
+              <p>
+                As loud as the material can take without turning cymbals into bacon and kicks into a
+                flat smear. You pick a reference; we match intent, not a fantasy LUFS number written
+                on a forum in 2014.
               </p>
               <p>
-                Full checklist:
-                <a href="../onboarding/index.html">Project onboarding</a>.
+                Platforms normalize playback. Chasing “loudest on SoundCloud” is a moving target and
+                usually costs punch—say what you want the listener to feel, not what meter you think
+                wins an argument.
               </p>
-            </dd>
-          </div>
-          <div class="cassette">
-            <dt>Stems or stereo?</dt>
-            <dd>
-              Stereo first. Stems when we agree the song needs it—priced and scoped separately so we
-              never half-remix a mix by accident.
-            </dd>
-          </div>
-          <div class="cassette">
-            <dt>How loud will my master be?</dt>
-            <dd>
-              Loud enough for your genre and platform targets, without erasing punch and motion. If you
-              want a brick wall with no transient left, we can talk—but you will hear the tradeoff
-              before it ships.
-            </dd>
-          </div>
-          <div class="cassette">
-            <dt>How fast is turnaround?</dt>
-            <dd>
-              Depends on queue and complexity. Ask in email with a real deadline and we will tell you
-              if it is possible without ruining the work.
-            </dd>
-          </div>
-          <div class="cassette">
-            <dt>Revisions?</dt>
-            <dd>
-              One round of meaningful tweaks is normal when we missed the mark. Vague “make it louder”
-              loops without a reference are not a revision strategy.
-            </dd>
-          </div>
+          </dd>
+          <dt>True peak, codecs, and “digital clipping”</dt>
+          <dd>
+              <p>
+                Intersample peaks can poke over 0&nbsp;dBFS even when the sample meter looks fine. If
+                your distro or aggregator cares about headroom for encoding, we leave air there on
+                purpose. If you do not care, say that too—then nobody is surprised at the result.
+              </p>
+              <div class="faq-annot">
+                <a href="https://www.apple.com/apple-music/apple-digital-masters/docs/apple-digital-masters.pdf"
+                  >Apple Digital Masters (PDF)</a
+                >
+                <p class="faq-annot__note">
+                  Apple’s published delivery notes—bit depth, sample rates, and why they specify true
+                  peak headroom for lossy encoding. Not an endorsement; it is the spec sheet people
+                  argue about in mastering threads.
+                </p>
+              </div>
+              <div class="faq-annot">
+                <a href="https://tech.ebu.ch/loudness">EBU loudness hub</a>
+                <p class="faq-annot__note">
+                  Broadcast and streaming loudness standards live here. Useful if you are comparing
+                  meters or trying to understand LUFS vs peak.
+                </p>
+              </div>
+          </dd>
+          <dt>What will mastering not fix?</dt>
+          <dd>
+              Arrangement problems, weak performances, masking that needs fader moves, clipped prints
+              with missing waveform, or a mix that never decided what the kick is doing. Those get a
+              straight note back, not a billable fantasy pass.
+          </dd>
+          <dt>References—how to send them</dt>
+          <dd>
+              Two or three full songs, same rough level as each other, not a forty-track playlist.
+              Say what you want from each: “snare crack from A, low-mid density from B.” If every ref
+              is a different subgenre, we will ask which fight you actually want to win.
+          </dd>
+          <dt>How fast is turnaround?</dt>
+          <dd>
+              Queue-dependent. Email with a real deadline and the track count; you get a yes, a no, or
+              a rush rate—not silence. Rush does not mean “skip QC.”
+          </dd>
+          <dt>Revisions?</dt>
+          <dd>
+              One focused pass if we missed the agreed target. “Different” without a reference is not a
+              brief. Looping vague louder/brighter requests without a compass burns time and goodwill.
+          </dd>
+          <dt>Vinyl cut vs streaming file—same master?</dt>
+          <dd>
+              Sometimes one print works; often the vinyl side wants a different low-end and sibilance
+              ride than the streaming master. Say where the record is going first so we do not ship the
+              wrong compromise.
+          </dd>
+          <dt>How other shops say the same thing</dt>
+          <dd>
+              <p>
+                Large studios publish patient explanations of the same workflow—useful when you have never
+                hired mastering before. Their policies are not ours; they are contrast, not scripture.
+              </p>
+              <div class="faq-annot">
+                <a href="https://www.peerlessmastering.com/faq">Peerless Mastering — FAQ</a>
+                <p class="faq-annot__note">
+                  Boston facility; long-running FAQ on files, revisions, and expectations—written like
+                  humans who charge money run the shop.
+                </p>
+              </div>
+              <div class="faq-annot">
+                <a href="https://www.abbeyroad.com/help/what-is-mastering-1">Abbey Road — What is mastering?</a>
+                <p class="faq-annot__note">
+                  Major-studio version of the “where does mastering sit?” story—good baseline
+                  vocabulary for artists new to the pipeline.
+                </p>
+              </div>
+              <div class="faq-annot">
+                <a href="https://onlinemastering.thisismetropolis.com/im-new-here?currency=GBP"
+                  >Metropolis — Online mastering “I’m new here”</a
+                >
+                <p class="faq-annot__note">
+                  Large UK house; their remote onboarding copy is basically a competitor FAQ aimed at
+                  first-time uploaders—compare their steps to ours above.
+                </p>
+              </div>
+          </dd>
         </dl>
       </section>
-      <section>
-        <h2>Still stuck?</h2>
-        <p>
-          <a href="mailto:willy@iconoclastaud.io">Email</a> or use the
-          <a href="../links/index.html">Links</a> page—same destinations, pick your tool.
-        </p>
+      <section aria-labelledby="faq-next">
+        <h2 id="faq-next">Rates, mastering write-up, contact</h2>
+        <div class="faq-annot">
+          <a href="../rates/index.html">Rates &amp; booking</a>
+          <p class="faq-annot__note">Money, turnaround multipliers, and what “stem job” means on paper.</p>
+        </div>
+        <div class="faq-annot">
+          <a href="../mastering/index.html">Mastering</a>
+          <p class="faq-annot__note">
+            Short page on where mastering sits in a project—read before you paste a novel into email.
+          </p>
+        </div>
+        <div class="faq-annot">
+          <a href="mailto:willy@iconoclastaud.io">willy@iconoclastaud.io</a>
+          <p class="faq-annot__note">Direct line for quotes and attachments.</p>
+        </div>
+        <div class="faq-annot">
+          <a href="../links/index.html">Links</a>
+          <p class="faq-annot__note">Socials and other inboxes if email is not your thing.</p>
+        </div>
       </section>
     </main>
     <footer class="site-footer">
