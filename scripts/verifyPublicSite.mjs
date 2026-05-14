@@ -9,6 +9,7 @@ const publicPages = [
   "site/links/index.html",
   "site/contact/index.html",
   "site/faq/index.html",
+  "site/onboarding/index.html",
   "site/legal/index.html",
   "site/404.html",
 ];
